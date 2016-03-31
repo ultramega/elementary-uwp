@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The MIT License (MIT)
+  Copyright © 2016 Steve Guidetti
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the “Software”), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="PT.Categories" xml:space="preserve">
+    <value>Non-metal;Noble gas;Alkali metal;Alkaline earth metal;Metalloid;Halogen;Metal;Transition metal;Lanthanide;Actinide</value>
+  </data>
+  <data name="Settings.ElementColors.Block.Content" xml:space="preserve">
+    <value>Block</value>
+  </data>
+  <data name="Settings.ElementColors.Category.Content" xml:space="preserve">
+    <value>Category</value>
+  </data>
+  <data name="Settings.ElementColors.Description.Text" xml:space="preserve">
+    <value>Property to use to color the elements</value>
+  </data>
+  <data name="Settings.ElementColors.Header.Text" xml:space="preserve">
+    <value>Element Colors</value>
+  </data>
+  <data name="Title.ElementDetails" xml:space="preserve">
+    <value>Element Details - {0}</value>
+  </data>
+  <data name="Title.PeriodicTable.Text" xml:space="preserve">
+    <value>Periodic Table of the Elements</value>
+  </data>
+  <data name="Title.Settings.Text" xml:space="preserve">
+    <value>Elementary Options</value>
+  </data>
+  <data name="Settings.TemperatureUnits.Description.Text" xml:space="preserve">
+    <value>Units used to display temperature values</value>
+  </data>
+  <data name="Settings.TemperatureUnits.Header.Text" xml:space="preserve">
+    <value>Temperature Units</value>
+  </data>
+  <data name="Menu.ListView.Label" xml:space="preserve">
+    <value>List View</value>
+  </data>
+  <data name="Menu.Settings.Label" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="Label.Number.Text" xml:space="preserve">
+    <value>Atomic Number:</value>
+  </data>
+  <data name="Label.Symbol.Text" xml:space="preserve">
+    <value>Symbol:</value>
+  </data>
+  <data name="Label.Name.Text" xml:space="preserve">
+    <value>Name:</value>
+  </data>
+  <data name="Label.Weight.Text" xml:space="preserve">
+    <value>Atomic Weight:</value>
+  </data>
+  <data name="Label.Category.Text" xml:space="preserve">
+    <value>Category:</value>
+  </data>
+  <data name="Label.GPB.Text" xml:space="preserve">
+    <value>Group, Period, Block:</value>
+  </data>
+  <data name="Label.Configuration.Text" xml:space="preserve">
+    <value>Electron Configuration:</value>
+  </data>
+  <data name="Label.Electrons.Text" xml:space="preserve">
+    <value>Electrons Per Shell:</value>
+  </data>
+  <data name="Label.Density.Text" xml:space="preserve">
+    <value>Density:</value>
+  </data>
+  <data name="Label.Melt.Text" xml:space="preserve">
+    <value>Melting Point:</value>
+  </data>
+  <data name="Label.Boil.Text" xml:space="preserve">
+    <value>Boiling Point:</value>
+  </data>
+  <data name="Label.Heat.Text" xml:space="preserve">
+    <value>Heat:</value>
+  </data>
+  <data name="Label.Negativity.Text" xml:space="preserve">
+    <value>Electronegativity:</value>
+  </data>
+  <data name="Label.Abundance.Text" xml:space="preserve">
+    <value>Abundance:</value>
+  </data>
+  <data name="Unknown" xml:space="preserve">
+    <value>unknown</value>
+  </data>
+  <data name="Button.Sort.Content" xml:space="preserve">
+    <value>Sort</value>
+  </data>
+  <data name="Input.Filter.PlaceholderText" xml:space="preserve">
+    <value>Filter by Name or Symbol</value>
+  </data>
+  <data name="Sort.Name.Text" xml:space="preserve">
+    <value>Element Name</value>
+  </data>
+  <data name="Sort.Number.Text" xml:space="preserve">
+    <value>Atomic Number</value>
+  </data>
+  <data name="Title.Sort.Text" xml:space="preserve">
+    <value>Sort by:</value>
+  </data>
+</root>
