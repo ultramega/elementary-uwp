@@ -90,12 +90,12 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <Content Include="Assets\ButtonVideo.png" />
+    <Content Include="Assets\ButtonWiki.png" />
     <Content Include="Assets\elements.db" />
-    <None Include="CHANGELOG.md" />
     <None Include="elementary.licenseheader" />
     <None Include="elementary_StoreKey.pfx" />
     <None Include="project.json" />
-    <None Include="README.md" />
     <PRIResource Include="Strings\en-US\Elements.resw">
       <SubType>Designer</SubType>
     </PRIResource>

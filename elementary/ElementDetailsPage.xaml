@@ -102,19 +102,27 @@
                     TextWrapping="NoWrap"
                     Padding="12,0" />
                 <Button
+                    x:Uid="Button/Wiki"
                     Tag="{x:Bind Element.Wiki}"
                     Width="80"
-                    VerticalAlignment="Stretch"
-                    Margin="2"
+                    Height="80"
+                    Margin="4"
                     Grid.Column="2"
-                    Click="OnButtonClick" />
+                    Click="OnButtonClick">
+                    <Image
+                        Source="Assets/ButtonWiki.png" />
+                </Button>
                 <Button
+                    x:Uid="Button/Video"
                     Tag="{x:Bind Element.Video}"
                     Width="80"
-                    VerticalAlignment="Stretch"
-                    Margin="2"
+                    Height="80"
+                    Margin="4"
                     Grid.Column="3"
-                    Click="OnButtonClick" />
+                    Click="OnButtonClick">
+                    <Image
+                        Source="Assets/ButtonVideo.png" />
+                </Button>
             </Grid>
             <Grid>
                 <Grid.RowDefinitions>

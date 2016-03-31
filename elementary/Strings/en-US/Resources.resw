@@ -142,6 +142,12 @@
   <data name="Button.Sort.Content" xml:space="preserve">
     <value>Sort</value>
   </data>
+  <data name="Button.Video.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Watch Video</value>
+  </data>
+  <data name="Button.Wiki.ToolTipService.ToolTip" xml:space="preserve">
+    <value>Wikipedia</value>
+  </data>
   <data name="Input.Filter.PlaceholderText" xml:space="preserve">
     <value>Filter by Name or Symbol</value>
   </data>
