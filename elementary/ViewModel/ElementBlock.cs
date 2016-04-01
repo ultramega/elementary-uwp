@@ -22,6 +22,7 @@
 */
 using elementary.Model;
 using elementary.Util;
+using System.ComponentModel;
 using Windows.UI.Xaml.Media;
 
 namespace elementary.ViewModel
@@ -29,7 +30,7 @@ namespace elementary.ViewModel
     /// <summary>
     /// Represents a block on the periodic table.
     /// </summary>
-    public class ElementBlock : ElementBase
+    public class ElementBlock : ElementBase, INotifyPropertyChanged
     {
         /// <summary>
         /// The element number as a string.
@@ -92,12 +93,18 @@ namespace elementary.ViewModel
         public int Col { get; private set; }
 
         /// <summary>
+        /// Occurs when a mutable property changes.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+        /// <summary>
         /// Constructor.
         /// </summary>
         /// <param name="el">The Element to represent.</param>
         public ElementBlock(Element el) : base(el)
         {
             CalcPosition(el);
+            Settings.SettingChanged += OnSettingChanged;
         }
 
         /// <summary>
@@ -123,6 +130,19 @@ namespace elementary.ViewModel
             {
                 Row = (int)el.Period;
                 Col = (int)el.Group;
+            }
+        }
+
+        /// <summary>
+        /// Sets the Color when the setting for element colors is changed.
+        /// </summary>
+        /// <param name="key">The key for the setting that has changed.</param>
+        /// <param name="val">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object val)
+        {
+            if (key == Settings.Key.ElementColors)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs("Color"));
             }
         }
     }

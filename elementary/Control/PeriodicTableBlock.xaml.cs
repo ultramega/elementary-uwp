@@ -25,7 +25,6 @@ using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
 
 namespace elementary.Control
 {
@@ -40,72 +39,15 @@ namespace elementary.Control
         public event RoutedEventHandler Clicked;
 
         /// <summary>
-        /// The dependency property for the element number.
-        /// </summary>
-        public string Number
-        {
-            get { return (string)GetValue(NumberProperty); }
-            set { SetValue(NumberProperty, value); }
-        }
-        public static readonly DependencyProperty NumberProperty =
-            DependencyProperty.Register("Number", typeof(string), typeof(PeriodicTableBlock), null);
-
-        /// <summary>
-        /// The dependency property for the element symbol.
-        /// </summary>
-        public string Symbol
-        {
-            get { return (string)GetValue(SymbolProperty); }
-            set { SetValue(SymbolProperty, value); }
-        }
-        public static readonly DependencyProperty SymbolProperty =
-            DependencyProperty.Register("Symbol", typeof(string), typeof(PeriodicTableBlock), null);
-
-        /// <summary>
-        /// The dependency property for the subtext of the block.
-        /// </summary>
-        public string Subtext
-        {
-            get { return (string)GetValue(SubtextProperty); }
-            set { SetValue(SubtextProperty, value); }
-        }
-        public static readonly DependencyProperty SubtextProperty =
-            DependencyProperty.Register("Subtext", typeof(string), typeof(PeriodicTableBlock), null);
-
-        /// <summary>
-        /// The dependency property for the block Background.
-        /// </summary>
-        public Brush BlockColor
-        {
-            get { return (Brush)GetValue(BlockColorProperty); }
-            set { SetValue(BlockColorProperty, value); }
-        }
-        public static readonly DependencyProperty BlockColorProperty =
-            DependencyProperty.Register("BlockColor", typeof(Brush), typeof(PeriodicTableBlock), null);
-
-        /// <summary>
-        /// The data source for this block.
-        /// </summary>
-        private ElementBlock _element;
-
-        /// <summary>
         /// Gets or sets the ElementBlock represented by this block.
         /// </summary>
         public ElementBlock Element
         {
-            get
-            {
-                return _element;
-            }
-            set
-            {
-                _element = value;
-                Number = value.Number;
-                Symbol = value.Symbol;
-                Subtext = value.Subtext;
-                BlockColor = value.Color;
-            }
+            get { return (ElementBlock)GetValue(ElementProperty); }
+            set { SetValue(ElementProperty, value); }
         }
+        public static readonly DependencyProperty ElementProperty =
+            DependencyProperty.Register("Element", typeof(ElementBlock), typeof(PeriodicTableBlock), new PropertyMetadata(0));
 
         /// <summary>
         /// The TextBlock to display the element number.
@@ -140,21 +82,6 @@ namespace elementary.Control
 
             SizeChanged += OnSizeChanged;
             PointerPressed += OnDown;
-
-            Settings.SettingChanged += OnSettingChanged;
-        }
-
-        /// <summary>
-        /// Sets the Color of the block when the setting for element colors is changed.
-        /// </summary>
-        /// <param name="key">The key for the setting that has changed.</param>
-        /// <param name="val">The new value for the setting.</param>
-        private void OnSettingChanged(Settings.Key key, object val)
-        {
-            if (key == Settings.Key.ElementColors)
-            {
-                BlockColor = Element.Color;
-            }
         }
 
         /// <summary>
