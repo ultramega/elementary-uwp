@@ -21,39 +21,14 @@
   THE SOFTWARE.
 */
 using elementary.Model;
-using elementary.Util;
-using System.ComponentModel;
-using Windows.UI.Xaml.Media;
 
 namespace elementary.ViewModel
 {
     /// <summary>
     /// Represents a block on the periodic table.
     /// </summary>
-    public class ElementBlock : ElementBase, INotifyPropertyChanged
+    public class ElementBlock : ElementBase
     {
-        /// <summary>
-        /// The element number as a string.
-        /// </summary>
-        public string Number
-        {
-            get
-            {
-                return Element.Number.ToString();
-            }
-        }
-
-        /// <summary>
-        /// The element symbol.
-        /// </summary>
-        public string Symbol
-        {
-            get
-            {
-                return Element.Symbol;
-            }
-        }
-
         /// <summary>
         /// The string to display under the element symbol. For stable elements, this is the atomic
         /// weight with up to 4 decimal places. For unstable elements, this is the atomic weight as
@@ -72,17 +47,6 @@ namespace elementary.ViewModel
         }
 
         /// <summary>
-        /// The background color of the block.
-        /// </summary>
-        public Brush Color
-        {
-            get
-            {
-                return ElementUtils.GetBlockColor(Element);
-            }
-        }
-
-        /// <summary>
         /// The row number of the periodic table to place the block.
         /// </summary>
         public int Row { get; private set; }
@@ -93,18 +57,12 @@ namespace elementary.ViewModel
         public int Col { get; private set; }
 
         /// <summary>
-        /// Occurs when a mutable property changes.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged = delegate { };
-
-        /// <summary>
         /// Constructor.
         /// </summary>
         /// <param name="el">The Element to represent.</param>
         public ElementBlock(Element el) : base(el)
         {
             CalcPosition(el);
-            Settings.SettingChanged += OnSettingChanged;
         }
 
         /// <summary>
@@ -130,19 +88,6 @@ namespace elementary.ViewModel
             {
                 Row = (int)el.Period;
                 Col = (int)el.Group;
-            }
-        }
-
-        /// <summary>
-        /// Sets the Color when the setting for element colors is changed.
-        /// </summary>
-        /// <param name="key">The key for the setting that has changed.</param>
-        /// <param name="val">The new value for the setting.</param>
-        private void OnSettingChanged(Settings.Key key, object val)
-        {
-            if (key == Settings.Key.ElementColors)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs("Color"));
             }
         }
     }

@@ -21,19 +21,60 @@
   THE SOFTWARE.
 */
 using elementary.Model;
+using elementary.Util;
 using System;
+using System.ComponentModel;
+using Windows.UI.Xaml.Media;
 
 namespace elementary.ViewModel
 {
     /// <summary>
     /// Base for all Element ViewModels.
     /// </summary>
-    public abstract class ElementBase
+    public abstract class ElementBase : INotifyPropertyChanged
     {
+        /// <summary>
+        /// Occurs when a mutable property changes.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
         /// <summary>
         /// The Element being represented by this ViewModel.
         /// </summary>
         public Element Element { get; private set; }
+
+        /// <summary>
+        /// The element number as a string.
+        /// </summary>
+        public string Number
+        {
+            get
+            {
+                return Element.Number.ToString();
+            }
+        }
+
+        /// <summary>
+        /// The element symbol.
+        /// </summary>
+        public string Symbol
+        {
+            get
+            {
+                return Element.Symbol;
+            }
+        }
+
+        /// <summary>
+        /// The background color of the block.
+        /// </summary>
+        public Brush Color
+        {
+            get
+            {
+                return ElementUtils.GetBlockColor(Element);
+            }
+        }
 
         /// <summary>
         /// Constructor.
@@ -46,6 +87,20 @@ namespace elementary.ViewModel
                 throw new ArgumentNullException("el");
             }
             Element = el;
+            Settings.SettingChanged += OnSettingChanged;
+        }
+
+        /// <summary>
+        /// Sets the Color when the setting for element colors is changed.
+        /// </summary>
+        /// <param name="key">The key for the setting that has changed.</param>
+        /// <param name="val">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object val)
+        {
+            if (key == Settings.Key.ElementColors)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs("Color"));
+            }
         }
     }
 }

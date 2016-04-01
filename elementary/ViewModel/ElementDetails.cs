@@ -27,7 +27,6 @@ using System.ComponentModel;
 using System.Text;
 using System.Text.RegularExpressions;
 using Windows.ApplicationModel.Resources;
-using Windows.UI.Xaml.Media;
 
 namespace elementary.ViewModel
 {
@@ -40,28 +39,6 @@ namespace elementary.ViewModel
         /// The localized string for unknown values.
         /// </summary>
         private static readonly string _unknown = ResourceLoader.GetForCurrentView().GetString("Unknown");
-
-        /// <summary>
-        /// The element number as a string.
-        /// </summary>
-        public string Number
-        {
-            get
-            {
-                return Element.Number.ToString();
-            }
-        }
-
-        /// <summary>
-        /// The element symbol.
-        /// </summary>
-        public string Symbol
-        {
-            get
-            {
-                return Element.Symbol;
-            }
-        }
 
         /// <summary>
         /// The name of the element.
@@ -264,20 +241,9 @@ namespace elementary.ViewModel
         }
 
         /// <summary>
-        /// The Background for the element block.
-        /// </summary>
-        public Brush Color
-        {
-            get
-            {
-                return ElementUtils.GetBlockColor(Element);
-            }
-        }
-
-        /// <summary>
         /// Occurs when a mutable property changes.
         /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged;
+        public new event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         /// <summary>
         /// Constructor.
@@ -289,18 +255,14 @@ namespace elementary.ViewModel
         }
 
         /// <summary>
-        /// Triggers the PropertyChanged event for the Color or temperature fields when the
-        /// respective setting is changed.
+        /// Triggers the PropertyChanged event for the temperature field when the setting for
+        /// temperature units is changed.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
         /// <param name="val">The new value for the setting.</param>
         private void OnSettingChanged(Settings.Key key, object val)
         {
-            if (key == Settings.Key.ElementColors)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs("Color"));
-            }
-            else if (key == Settings.Key.TemperatureUnits)
+            if (key == Settings.Key.TemperatureUnits)
             {
                 PropertyChanged(this, new PropertyChangedEventArgs("Melt"));
                 PropertyChanged(this, new PropertyChangedEventArgs("Boil"));
