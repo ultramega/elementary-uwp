@@ -184,8 +184,7 @@ namespace elementary.Control
         /// <param name="e">The event arguments.</param>
         private void OnDown(object sender, PointerRoutedEventArgs e)
         {
-            _content.BorderThickness = new Thickness(2);
-            _content.Padding = new Thickness(-2);
+            VisualStateManager.GoToState(this, "statePressed", true);
             PointerReleased += OnUp;
             PointerReleased += OnClicked;
             PointerExited += OnUp;
@@ -199,8 +198,7 @@ namespace elementary.Control
         /// <param name="e">The event arguments.</param>
         private void OnUp(object sender, PointerRoutedEventArgs e)
         {
-            _content.BorderThickness = new Thickness(0);
-            _content.Padding = new Thickness(0);
+            VisualStateManager.GoToState(this, "stateNormal", true);
             PointerReleased -= OnUp;
             PointerReleased -= OnClicked;
             PointerExited -= OnUp;

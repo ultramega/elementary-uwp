@@ -33,9 +33,29 @@
 
     <Grid
         Margin="1"
-        CornerRadius="2"
-        BorderBrush="DodgerBlue"
         Background="{x:Bind BlockColor, Mode=OneWay}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState
+                    x:Name="stateNormal" />
+                <VisualState
+                    x:Name="statePressed">
+                    <Storyboard>
+                        <DoubleAnimation
+                            Storyboard.TargetName="border"
+                            Storyboard.TargetProperty="Opacity"
+                            To="1"
+                            Duration="0:0:0.2" />
+                    </Storyboard>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Border
+            x:Name="border"
+            BorderBrush="DodgerBlue"
+            BorderThickness="2"
+            CornerRadius="2"
+            Opacity="0" />
         <TextBlock
             x:Name="txtNumber"
             Text="{x:Bind Number, Mode=OneWay}" />
