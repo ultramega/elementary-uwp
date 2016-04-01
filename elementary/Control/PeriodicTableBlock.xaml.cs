@@ -140,7 +140,6 @@ namespace elementary.Control
 
             SizeChanged += OnSizeChanged;
             PointerPressed += OnDown;
-            PointerReleased += OnClicked;
 
             Settings.SettingChanged += OnSettingChanged;
         }
@@ -188,6 +187,7 @@ namespace elementary.Control
             _content.BorderThickness = new Thickness(2);
             _content.Padding = new Thickness(-2);
             PointerReleased += OnUp;
+            PointerReleased += OnClicked;
             PointerExited += OnUp;
         }
 
@@ -202,6 +202,7 @@ namespace elementary.Control
             _content.BorderThickness = new Thickness(0);
             _content.Padding = new Thickness(0);
             PointerReleased -= OnUp;
+            PointerReleased -= OnClicked;
             PointerExited -= OnUp;
         }
 
