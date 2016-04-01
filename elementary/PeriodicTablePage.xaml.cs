@@ -146,11 +146,11 @@ namespace elementary
         /// </summary>
         /// <param name="sender">The clicked PeriodicTableBlock.</param>
         /// <param name="e">The event arguments.</param>
-        private void BlockClicked(object sender, RoutedEventArgs e)
+        private async void BlockClicked(object sender, RoutedEventArgs e)
         {
             var id = (sender as PeriodicTableBlock).Element.Element._ID;
             (_detailsDialog.Content as Frame).Navigate(typeof(ElementDetailsPage), id);
-            _detailsDialog.ShowAsync();
+            await _detailsDialog.ShowAsync();
         }
     }
 }
