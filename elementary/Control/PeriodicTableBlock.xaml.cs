@@ -123,7 +123,7 @@ namespace elementary.Control
         /// <param name="e">The event arguments.</param>
         private void OnDown(object sender, PointerRoutedEventArgs e)
         {
-            VisualStateManager.GoToState(this, "statePressed", true);
+            VisualStateManager.GoToState(this, "PressedState", true);
             PointerReleased += OnUp;
             PointerReleased += OnClicked;
             PointerExited += OnUp;
@@ -137,7 +137,7 @@ namespace elementary.Control
         /// <param name="e">The event arguments.</param>
         private void OnUp(object sender, PointerRoutedEventArgs e)
         {
-            VisualStateManager.GoToState(this, "stateNormal", true);
+            VisualStateManager.GoToState(this, "NormalState", true);
             PointerReleased -= OnUp;
             PointerReleased -= OnClicked;
             PointerExited -= OnUp;

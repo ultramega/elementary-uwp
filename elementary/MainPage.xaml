@@ -28,7 +28,6 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     x:Class="elementary.MainPage"
     mc:Ignorable="d">
-
     <Grid
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -36,12 +35,14 @@
                 Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
+
         <CommandBar>
             <AppBarToggleButton
                 x:Uid="Menu/ListView"
                 Icon="List"
                 Checked="OnListViewToggled"
                 Unchecked="OnListViewToggled" />
+
             <AppBarButton
                 x:Uid="Menu/Settings"
                 Icon="Setting">
@@ -52,59 +53,71 @@
                                 x:Uid="Title/Settings"
                                 Style="{ThemeResource TitleTextBlockStyle}"
                                 HorizontalAlignment="Center" />
+
                             <MenuFlyoutSeparator />
+
                             <StackPanel>
                                 <TextBlock
                                     x:Uid="Settings/TemperatureUnits/Header"
                                     Style="{ThemeResource SubtitleTextBlockStyle}" />
+
                                 <TextBlock
                                     x:Uid="Settings/TemperatureUnits/Description"
                                     TextWrapping="Wrap" />
+
                                 <StackPanel
-                                    x:Name="settingTemperatureUnits">
+                                    x:Name="TemperatureUnitsSetting">
                                     <RadioButton
                                         Content="Kelvin (K)"
                                         Tag="K"
                                         Checked="OnTemperatureUnitsChecked"
-                                        GroupName="settingTemperatureUnits" />
+                                        GroupName="TemperatureUnits" />
+
                                     <RadioButton
                                         Content="Celsius (°C)"
                                         Tag="C"
                                         Checked="OnTemperatureUnitsChecked"
-                                        GroupName="settingTemperatureUnits" />
+                                        GroupName="TemperatureUnits" />
+
                                     <RadioButton
                                         Content="Fahrenheit (°F)"
                                         Tag="F"
                                         Checked="OnTemperatureUnitsChecked"
-                                        GroupName="settingTemperatureUnits" />
+                                        GroupName="TemperatureUnits" />
                                 </StackPanel>
                             </StackPanel>
+
                             <MenuFlyoutSeparator />
+
                             <StackPanel>
                                 <TextBlock
                                     x:Uid="Settings/ElementColors/Header"
                                     Style="{ThemeResource SubtitleTextBlockStyle}" />
+
                                 <TextBlock
                                     x:Uid="Settings/ElementColors/Description"
                                     TextWrapping="Wrap" />
+
                                 <StackPanel
-                                    x:Name="settingElementColors">
+                                    x:Name="ElementColorsSetting">
                                     <RadioButton
                                         x:Uid="Settings/ElementColors/Category"
                                         Tag="cat"
                                         Checked="OnElementColorsChecked"
-                                        GroupName="settingElementColors" />
+                                        GroupName="ElementColors" />
+
                                     <RadioButton
                                         x:Uid="Settings/ElementColors/Block"
                                         Tag="block"
                                         Checked="OnElementColorsChecked"
-                                        GroupName="settingElementColors" />
+                                        GroupName="ElementColors" />
                                 </StackPanel>
                             </StackPanel>
                         </StackPanel>
                     </Flyout>
                 </AppBarButton.Flyout>
             </AppBarButton>
+
             <CommandBar.Content>
                 <TextBlock
                     Style="{ThemeResource TitleTextBlockStyle}"
@@ -112,8 +125,9 @@
                     Margin="12,8" />
             </CommandBar.Content>
         </CommandBar>
+
         <Frame
-            x:Name="contentFrame"
+            x:Name="ContentFrame"
             Grid.Row="1"
             SourcePageType="local:PeriodicTablePage" />
     </Grid>

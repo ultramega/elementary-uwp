@@ -32,20 +32,14 @@ namespace elementary
     public sealed partial class MainPage : Page
     {
         /// <summary>
-        /// The Frame to display the application Pages.
-        /// </summary>
-        private readonly Frame _contentFrame;
-
-        /// <summary>
         /// Constructor.
         /// </summary>
         public MainPage()
         {
             InitializeComponent();
-            _contentFrame = FindName("contentFrame") as Frame;
             DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
 
-            foreach (RadioButton setting in (FindName("settingTemperatureUnits") as StackPanel).Children)
+            foreach (RadioButton setting in TemperatureUnitsSetting.Children)
             {
                 if (setting.Tag as string == Settings.TemperatureUnits)
                 {
@@ -54,7 +48,7 @@ namespace elementary
                 }
             }
 
-            foreach (RadioButton setting in (FindName("settingElementColors") as StackPanel).Children)
+            foreach (RadioButton setting in ElementColorsSetting.Children)
             {
                 if (setting.Tag as string == Settings.ElementColors)
                 {
@@ -73,12 +67,12 @@ namespace elementary
         {
             if ((sender as AppBarToggleButton).IsChecked == true)
             {
-                _contentFrame.Navigate(typeof(ElementListPage));
+                ContentFrame.Navigate(typeof(ElementListPage));
                 DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
             }
             else
             {
-                _contentFrame.Navigate(typeof(PeriodicTablePage));
+                ContentFrame.Navigate(typeof(PeriodicTablePage));
                 DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
             }
         }

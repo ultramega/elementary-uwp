@@ -44,19 +44,19 @@
                             MinWindowWidth="720" />
                     </VisualState.StateTriggers>
                 </VisualState>
-                
+
                 <VisualState
                     x:Name="NarrowState">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger
                             MinWindowWidth="0" />
                     </VisualState.StateTriggers>
-                    
+
                     <VisualState.Setters>
                         <Setter
                             Target="DetailColumn.Width"
                             Value="0" />
-                        
+
                         <Setter
                             Target="MasterList.SelectionMode"
                             Value="None" />
@@ -68,31 +68,31 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
+
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
-        
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition
                 x:Name="DetailColumn" />
         </Grid.ColumnDefinitions>
-        
+
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition
                     Width="Auto" />
             </Grid.ColumnDefinitions>
-            
+
             <TextBox
                 x:Uid="Input/Filter"
                 Margin="2"
                 TextChanged="OnFilterChanged" />
-            
+
             <Button
                 x:Uid="Button/Sort"
                 Grid.Column="1"
@@ -102,13 +102,13 @@
                         <MenuFlyoutItem
                             x:Uid="Title/Sort"
                             IsEnabled="False" />
-                        
+
                         <ToggleMenuFlyoutItem
                             x:Name="SortNumber"
                             x:Uid="Sort/Number"
                             IsChecked="True"
                             Click="OnSortButtonClick" />
-                        
+
                         <ToggleMenuFlyoutItem
                             x:Name="SortName"
                             x:Uid="Sort/Name"
@@ -117,7 +117,7 @@
                 </Button.Flyout>
             </Button>
         </Grid>
-        
+
         <ListView
             x:Name="MasterList"
             Grid.Row="1"
@@ -130,13 +130,13 @@
                     <Setter
                         Property="BorderBrush"
                         Value="LightGray" />
-                    
+
                     <Setter
                         Property="BorderThickness"
                         Value="0,0,0,1" />
                 </Style>
             </ListView.ItemContainerStyle>
-            
+
             <ListView.ItemTemplate>
                 <DataTemplate
                     x:DataType="vm:ElementListItem">
@@ -150,7 +150,7 @@
                             <TextBlock
                                 FontSize="16"
                                 Text="{x:Bind Number}" />
-                            
+
                             <TextBlock
                                 HorizontalAlignment="Center"
                                 FontSize="36"
@@ -158,7 +158,7 @@
                                 Text="{x:Bind Symbol}"
                                 Margin="0,8,0,0" />
                         </Grid>
-                        
+
                         <TextBlock
                             Margin="8,0"
                             FontSize="36"
@@ -167,7 +167,7 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        
+
         <Frame
             x:Name="DetailsFrame"
             Grid.Column="1"

@@ -30,11 +30,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     NavigationCacheMode="Required">
-
     <Grid
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid
-            x:Name="ptGrid"
+            x:Name="PeriodicTable"
             Margin="10">
             <Grid.RowDefinitions>
                 <RowDefinition
@@ -51,6 +50,7 @@
                 <RowDefinition />
                 <RowDefinition />
             </Grid.RowDefinitions>
+
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
                     Width="Auto" />
@@ -73,6 +73,7 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
+
             <TextBlock
                 x:Uid="Title/PeriodicTable"
                 Grid.Row="1"
@@ -81,12 +82,14 @@
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind TitleSize, Mode=OneWay}"
                 FontWeight="SemiBold" />
+
             <c:PeriodicTableLegend
                 Grid.Row="1"
                 Grid.Column="4"
                 Grid.RowSpan="3"
                 Grid.ColumnSpan="9"
                 Margin="{x:Bind LegendMargin, Mode=OneWay}" />
+
             <TextBlock
                 Text="1"
                 Grid.Row="1"
@@ -94,42 +97,49 @@
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}"
                 Margin="{x:Bind HeaderMargin, Mode=OneWay}" />
+
             <TextBlock
                 Text="2"
                 Grid.Row="2"
                 Grid.Column="0"
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="3"
                 Grid.Row="3"
                 Grid.Column="0"
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="4"
                 Grid.Row="4"
                 Grid.Column="0"
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="5"
                 Grid.Row="5"
                 Grid.Column="0"
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="6"
                 Grid.Row="6"
                 Grid.Column="0"
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="7"
                 Grid.Row="7"
                 Grid.Column="0"
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="1"
                 Grid.Row="0"
@@ -137,108 +147,126 @@
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}"
                 Margin="{x:Bind HeaderMargin, Mode=OneWay}" />
+
             <TextBlock
                 Text="2"
                 Grid.Row="0"
                 Grid.Column="2"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="3"
                 Grid.Row="0"
                 Grid.Column="3"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="4"
                 Grid.Row="0"
                 Grid.Column="4"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="5"
                 Grid.Row="0"
                 Grid.Column="5"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="6"
                 Grid.Row="0"
                 Grid.Column="6"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="7"
                 Grid.Row="0"
                 Grid.Column="7"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="8"
                 Grid.Row="0"
                 Grid.Column="8"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="9"
                 Grid.Row="0"
                 Grid.Column="9"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="10"
                 Grid.Row="0"
                 Grid.Column="10"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="11"
                 Grid.Row="0"
                 Grid.Column="11"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="12"
                 Grid.Row="0"
                 Grid.Column="12"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="13"
                 Grid.Row="0"
                 Grid.Column="13"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="14"
                 Grid.Row="0"
                 Grid.Column="14"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="15"
                 Grid.Row="0"
                 Grid.Column="15"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="16"
                 Grid.Row="0"
                 Grid.Column="16"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="17"
                 Grid.Row="0"
                 Grid.Column="17"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="18"
                 Grid.Row="0"
                 Grid.Column="18"
                 HorizontalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="57-71"
                 Grid.Row="6"
@@ -246,6 +274,7 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <TextBlock
                 Text="89-103"
                 Grid.Row="7"
@@ -253,12 +282,14 @@
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
                 FontSize="{x:Bind HeaderSize, Mode=OneWay}" />
+
             <Grid
                 Grid.Row="8"
                 Height="{x:Bind SpacerWidth, Mode=OneWay}" />
         </Grid>
+
         <ContentDialog
-            x:Name="detailsDialog"
+            x:Name="DetailsDialog"
             PrimaryButtonText="Close">
             <Frame />
         </ContentDialog>

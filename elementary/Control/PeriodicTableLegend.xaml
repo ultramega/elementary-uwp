@@ -30,7 +30,6 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
@@ -38,6 +37,7 @@
             <RowDefinition />
             <RowDefinition />
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />

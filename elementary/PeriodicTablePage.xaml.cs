@@ -66,23 +66,11 @@ namespace elementary
         private Thickness LegendMargin { get; set; }
 
         /// <summary>
-        /// The reference to the Grid containing the Periodic Table.
-        /// </summary>
-        private readonly Grid _ptGrid;
-
-        /// <summary>
-        /// The reference to the ContentDialog for displaying the details of an element.
-        /// </summary>
-        private readonly ContentDialog _detailsDialog;
-
-        /// <summary>
         /// Constructor.
         /// </summary>
         public PeriodicTablePage()
         {
             InitializeComponent();
-            _ptGrid = FindName("ptGrid") as Grid;
-            _detailsDialog = FindName("detailsDialog") as ContentDialog;
             SizeChanged += OnSizeChanged;
             LoadBlocks();
         }
@@ -116,7 +104,7 @@ namespace elementary
                 block.Clicked += BlockClicked; ;
                 Grid.SetRow(block, el.Row);
                 Grid.SetColumn(block, el.Col);
-                _ptGrid.Children.Add(block);
+                PeriodicTable.Children.Add(block);
             }
         }
 
@@ -128,8 +116,8 @@ namespace elementary
         private async void BlockClicked(object sender, RoutedEventArgs e)
         {
             var id = (sender as PeriodicTableBlock).Element.Element._ID;
-            (_detailsDialog.Content as Frame).Navigate(typeof(ElementPage), id);
-            await _detailsDialog.ShowAsync();
+            (DetailsDialog.Content as Frame).Navigate(typeof(ElementPage), id);
+            await DetailsDialog.ShowAsync();
         }
     }
 }

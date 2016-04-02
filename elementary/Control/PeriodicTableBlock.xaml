@@ -30,19 +30,19 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-
     <Grid
         Margin="1"
         Background="{x:Bind Element.Color, Mode=OneWay}">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState
-                    x:Name="stateNormal" />
+                    x:Name="NormalState" />
+
                 <VisualState
-                    x:Name="statePressed">
+                    x:Name="PressedState">
                     <Storyboard>
                         <DoubleAnimation
-                            Storyboard.TargetName="border"
+                            Storyboard.TargetName="BlockBorder"
                             Storyboard.TargetProperty="Opacity"
                             To="1"
                             Duration="0:0:0.2" />
@@ -50,27 +50,28 @@
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
+
         <Border
-            x:Name="border"
+            x:Name="BlockBorder"
             BorderBrush="DodgerBlue"
             BorderThickness="2"
             CornerRadius="2"
             Opacity="0" />
+
         <TextBlock
-            x:Name="txtNumber"
             Margin="{x:Bind NumberMargin, Mode=OneWay}"
             FontSize="{x:Bind NumberFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Number}" />
+
         <TextBlock
-            x:Name="txtSymbol"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Margin="{x:Bind SymbolMargin, Mode=OneWay}"
             FontSize="{x:Bind SymbolFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Symbol}"
             FontWeight="SemiBold" />
+
         <TextBlock
-            x:Name="txtSubtext"
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom"
             Margin="{x:Bind SubtextMargin, Mode=OneWay}"
