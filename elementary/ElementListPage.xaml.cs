@@ -26,6 +26,8 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Navigation;
 
 namespace elementary
 {
@@ -54,22 +56,6 @@ namespace elementary
         private ObservableCollection<ElementListItem> ListItems { get; } = new ObservableCollection<ElementListItem>();
 
         /// <summary>
-        /// The reference to the ListView.
-        /// </summary>
-        private readonly ListView _list;
-
-        /// <summary>
-        /// The Frame for displaying the details of the selected element.
-        /// </summary>
-        private readonly Frame _detailsFrame;
-
-        /// <summary>
-        /// The sorting buttons.
-        /// </summary>
-        private readonly ToggleMenuFlyoutItem _sortNumber;
-        private readonly ToggleMenuFlyoutItem _sortName;
-
-        /// <summary>
         /// The field being used for sorting.
         /// </summary>
         private SortField _sortField = SortField.Number;
@@ -94,12 +80,17 @@ namespace elementary
         /// </summary>
         public ElementListPage()
         {
-            this.InitializeComponent();
-            _list = FindName("list") as ListView;
-            _detailsFrame = FindName("detailsFrame") as Frame;
-            _sortNumber = FindName("sortNumber") as ToggleMenuFlyoutItem;
-            _sortName = FindName("sortName") as ToggleMenuFlyoutItem;
+            InitializeComponent();
             _rawList = DBHelper.GetElementList();
+        }
+
+        /// <summary>
+        /// Loads the list when the page is navigated to.
+        /// </summary>
+        /// <param name="e">The event arguments.</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
             LoadList();
         }
 
@@ -130,8 +121,25 @@ namespace elementary
                 ListItems.Add(e);
                 if (e == _selection)
                 {
-                    _list.SelectedItem = e;
+                    MasterList.SelectedItem = e;
                 }
+            }
+        }
+
+        /// <summary>
+        /// Updates the layout when the visual state changes.
+        /// </summary>
+        /// <param name="sender">The VisualStateGroup.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnStateChanged(object sender, VisualStateChangedEventArgs e)
+        {
+            if(e.NewState == WideState)
+            {
+                MasterList.SelectedItem = _selection;
+            }
+            else if(_selection != null)
+            {
+                Frame.Navigate(typeof(ElementDetailsPage), _selection.Element._ID, new SuppressNavigationTransitionInfo());
             }
         }
 
@@ -149,17 +157,30 @@ namespace elementary
         }
 
         /// <summary>
-        /// Sets the selected item when a list item is selected. Ignores empty selections.
+        /// Sets the selected item when a list item is selected and loads the detail Frame. Ignores
+        /// empty selections. Occurs only in the wide state.
         /// </summary>
         /// <param name="sender">The ListView.</param>
         /// <param name="e">The event arguments which includes the SelectedItem.</param>
         private void OnItemSelected(object sender, SelectionChangedEventArgs e)
         {
-            if (_list.SelectedItem != null)
+            if (MasterList.SelectedItem != null)
             {
-                _selection = _list.SelectedItem as ElementListItem;
-                _detailsFrame.Navigate(typeof(ElementDetailsPage), _selection.Element._ID);
+                _selection = MasterList.SelectedItem as ElementListItem;
+                DetailsFrame.Navigate(typeof(ElementPage), _selection.Element._ID);
             }
+        }
+
+        /// <summary>
+        /// Sets the selected item when a list item is clicked and navigates the main Frame to the
+        /// details Page. Occurs only in the narrow state.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnItemClick(object sender, ItemClickEventArgs e)
+        {
+            _selection = e.ClickedItem as ElementListItem;
+            Frame.Navigate(typeof(ElementDetailsPage), _selection.Element._ID, new DrillInNavigationTransitionInfo());
         }
 
         /// <summary>
@@ -169,17 +190,17 @@ namespace elementary
         /// <param name="e">The event arguments.</param>
         private void OnSortButtonClick(object sender, RoutedEventArgs e)
         {
-            if (sender == _sortNumber)
+            if (sender == SortNumber)
             {
-                _sortNumber.IsChecked = true;
-                _sortName.IsChecked = false;
+                SortNumber.IsChecked = true;
+                SortName.IsChecked = false;
                 _sortAsc = _sortField == SortField.Number ? !_sortAsc : true;
                 _sortField = SortField.Number;
             }
             else
             {
-                _sortNumber.IsChecked = false;
-                _sortName.IsChecked = true;
+                SortNumber.IsChecked = false;
+                SortName.IsChecked = true;
                 _sortAsc = _sortField == SortField.Name ? !_sortAsc : true;
                 _sortField = SortField.Name;
             }

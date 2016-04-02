@@ -128,7 +128,7 @@ namespace elementary
         private async void BlockClicked(object sender, RoutedEventArgs e)
         {
             var id = (sender as PeriodicTableBlock).Element.Element._ID;
-            (_detailsDialog.Content as Frame).Navigate(typeof(ElementDetailsPage), id);
+            (_detailsDialog.Content as Frame).Navigate(typeof(ElementPage), id);
             await _detailsDialog.ShowAsync();
         }
     }

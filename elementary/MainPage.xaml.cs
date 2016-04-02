@@ -78,7 +78,7 @@ namespace elementary
             }
             else
             {
-                _contentFrame.GoBack();
+                _contentFrame.Navigate(typeof(PeriodicTablePage));
                 DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
             }
         }

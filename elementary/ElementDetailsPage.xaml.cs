@@ -24,21 +24,29 @@ using elementary.Model;
 using elementary.ViewModel;
 using System;
 using Windows.System;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Animation;
 using Windows.UI.Xaml.Navigation;
 
 namespace elementary
 {
     /// <summary>
-    /// Page for displaying the full details of an element.
+    /// Page for displaying the full details of an element as a standalone Page.
     /// </summary>
     public sealed partial class ElementDetailsPage : Page
     {
         /// <summary>
-        /// The data source for the page.
+        /// Whether this should be shown in master/detail format.
         /// </summary>
-        private ElementDetails Element { get; set; }
+        private bool ShouldGoToWideState
+        {
+            get
+            {
+                return Window.Current.Bounds.Width >= 720;
+            }
+        }
 
         /// <summary>
         /// Constructor.
@@ -49,7 +57,7 @@ namespace elementary
         }
 
         /// <summary>
-        /// Loads the requested element when the page is navigated to.
+        /// Loads the requested element when the Page is navigated to.
         /// </summary>
         /// <param name="e">
         /// The event arguments which contains the element database ID as the Parameter.
@@ -57,18 +65,91 @@ namespace elementary
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            Element = DBHelper.GetElement((long)e.Parameter);
+
+            (Content as Frame).Navigate(typeof(ElementPage), e.Parameter);
+
+            var systemNavigationManager = SystemNavigationManager.GetForCurrentView();
+            systemNavigationManager.BackRequested += OnBackRequested;
+            systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
         }
 
         /// <summary>
-        /// Launches a Web page when one of the buttons is pressed.
+        /// Called when the Page is navigated away from.
         /// </summary>
-        /// <param name="sender">The pressed Button.</param>
         /// <param name="e">The event arguments.</param>
-        private async void OnButtonClick(object sender, RoutedEventArgs e)
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
-            var url = (sender as FrameworkElement).Tag as string;
-            await Launcher.LaunchUriAsync(new Uri(url));
+            base.OnNavigatedFrom(e);
+
+            var systemNavigationManager = SystemNavigationManager.GetForCurrentView();
+            systemNavigationManager.BackRequested -= OnBackRequested;
+            systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+        }
+
+        /// <summary>
+        /// Navigates back to the list when the back button is pressed.
+        /// </summary>
+        /// <param name="sender">The event sender.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnBackRequested(object sender, BackRequestedEventArgs e)
+        {
+            e.Handled = true;
+            Frame.GoBack(new DrillInNavigationTransitionInfo());
+        }
+
+        /// <summary>
+        /// Navigates to the master/detail Page.
+        /// </summary>
+        /// <param name="useTransition">Whether to show the navigation transition.</param>
+        private void NavigateToWide(bool useTransition)
+        {
+            NavigationCacheMode = NavigationCacheMode.Disabled;
+            if (useTransition)
+            {
+                Frame.GoBack(new DrillInNavigationTransitionInfo());
+            }
+            else
+            {
+                Frame.GoBack(new SuppressNavigationTransitionInfo());
+            }
+        }
+
+        /// <summary>
+        /// Called when the Page is loaded.
+        /// </summary>
+        /// <param name="sender">The Page.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnPageLoaded(object sender, RoutedEventArgs e)
+        {
+            if (ShouldGoToWideState)
+            {
+                NavigateToWide(true);
+            }
+            Window.Current.SizeChanged += OnSizeChanged;
+        }
+
+        /// <summary>
+        /// Called when the Page is unloaded.
+        /// </summary>
+        /// <param name="sender">The Page.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnPageUnloaded(object sender, RoutedEventArgs e)
+        {
+            Window.Current.SizeChanged -= OnSizeChanged;
+        }
+
+        /// <summary>
+        /// Checks the screen width when the Window size changes and navigates to the master/detail
+        /// view if the screen is wide enough.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void OnSizeChanged(object sender, WindowSizeChangedEventArgs e)
+        {
+            if (ShouldGoToWideState)
+            {
+                NavigateToWide(false);
+            }
         }
     }
 }

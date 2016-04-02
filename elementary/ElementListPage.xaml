@@ -33,25 +33,66 @@
 
     <Grid
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup
+                x:Name="AdaptiveStates"
+                CurrentStateChanged="OnStateChanged">
+                <VisualState
+                    x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger
+                            MinWindowWidth="720" />
+                    </VisualState.StateTriggers>
+                </VisualState>
+                
+                <VisualState
+                    x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger
+                            MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    
+                    <VisualState.Setters>
+                        <Setter
+                            Target="DetailColumn.Width"
+                            Value="0" />
+                        
+                        <Setter
+                            Target="MasterList.SelectionMode"
+                            Value="None" />
+
+                        <Setter
+                            Target="MasterList.IsItemClickEnabled"
+                            Value="True" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="Auto" />
             <RowDefinition />
         </Grid.RowDefinitions>
+        
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition
+                x:Name="DetailColumn" />
         </Grid.ColumnDefinitions>
+        
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition
                     Width="Auto" />
             </Grid.ColumnDefinitions>
+            
             <TextBox
                 x:Uid="Input/Filter"
                 Margin="2"
                 TextChanged="OnFilterChanged" />
+            
             <Button
                 x:Uid="Button/Sort"
                 Grid.Column="1"
@@ -61,35 +102,41 @@
                         <MenuFlyoutItem
                             x:Uid="Title/Sort"
                             IsEnabled="False" />
+                        
                         <ToggleMenuFlyoutItem
-                            x:Name="sortNumber"
+                            x:Name="SortNumber"
                             x:Uid="Sort/Number"
                             IsChecked="True"
                             Click="OnSortButtonClick" />
+                        
                         <ToggleMenuFlyoutItem
-                            x:Name="sortName"
+                            x:Name="SortName"
                             x:Uid="Sort/Name"
                             Click="OnSortButtonClick" />
                     </MenuFlyout>
                 </Button.Flyout>
             </Button>
         </Grid>
+        
         <ListView
-            x:Name="list"
+            x:Name="MasterList"
             Grid.Row="1"
             ItemsSource="{x:Bind ListItems, Mode=OneWay}"
-            SelectionChanged="OnItemSelected">
+            SelectionChanged="OnItemSelected"
+            ItemClick="OnItemClick">
             <ListView.ItemContainerStyle>
                 <Style
                     TargetType="ListViewItem">
                     <Setter
                         Property="BorderBrush"
                         Value="LightGray" />
+                    
                     <Setter
                         Property="BorderThickness"
                         Value="0,0,0,1" />
                 </Style>
             </ListView.ItemContainerStyle>
+            
             <ListView.ItemTemplate>
                 <DataTemplate
                     x:DataType="vm:ElementListItem">
@@ -103,6 +150,7 @@
                             <TextBlock
                                 FontSize="16"
                                 Text="{x:Bind Number}" />
+                            
                             <TextBlock
                                 HorizontalAlignment="Center"
                                 FontSize="36"
@@ -110,6 +158,7 @@
                                 Text="{x:Bind Symbol}"
                                 Margin="0,8,0,0" />
                         </Grid>
+                        
                         <TextBlock
                             Margin="8,0"
                             FontSize="36"
@@ -118,8 +167,9 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        
         <Frame
-            x:Name="detailsFrame"
+            x:Name="DetailsFrame"
             Grid.Column="1"
             Grid.RowSpan="2" />
     </Grid>
