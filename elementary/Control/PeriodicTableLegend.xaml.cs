@@ -39,7 +39,6 @@ namespace elementary.Control
         public PeriodicTableLegend()
         {
             InitializeComponent();
-            (Content as FrameworkElement).DataContext = this;
             LoadLegend();
             SizeChanged += OnSizeChanged;
             Settings.SettingChanged += OnSettingChanged;
