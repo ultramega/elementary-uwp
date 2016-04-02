@@ -20,6 +20,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
+using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -42,6 +43,7 @@ namespace elementary
         {
             InitializeComponent();
             _contentFrame = FindName("contentFrame") as Frame;
+            DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
 
             foreach (RadioButton setting in (FindName("settingTemperatureUnits") as StackPanel).Children)
             {
@@ -72,10 +74,12 @@ namespace elementary
             if ((sender as AppBarToggleButton).IsChecked == true)
             {
                 _contentFrame.Navigate(typeof(ElementListPage));
+                DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
             }
             else
             {
                 _contentFrame.GoBack();
+                DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
             }
         }
 
