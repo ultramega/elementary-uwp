@@ -74,7 +74,8 @@
         </Style>
     </Page.Resources>
 
-    <ScrollViewer>
+    <ScrollViewer
+        HorizontalScrollBarVisibility="Auto">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup>
                 <VisualState>
@@ -100,8 +101,15 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
 
-        <StackPanel
+        <Grid
             Padding="6">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition
+                    Height="Auto" />
+            </Grid.RowDefinitions>
+
             <Grid
                 Margin="4">
                 <Grid.RowDefinitions>
@@ -179,7 +187,9 @@
                         Source="Assets/ButtonVideo.png" />
                 </Button>
             </Grid>
-            <Grid>
+
+            <Grid
+                Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
@@ -399,6 +409,6 @@
                     Style="{StaticResource Value}"
                     Text="{x:Bind Element.Abundance}" />
             </Grid>
-        </StackPanel>
+        </Grid>
     </ScrollViewer>
 </Page>

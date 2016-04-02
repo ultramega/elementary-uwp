@@ -117,7 +117,7 @@ namespace elementary
         {
             var id = (sender as PeriodicTableBlock).Element.Element._ID;
             var element = DBHelper.GetElement(id);
-            (DetailsDialog.Content as Frame).Navigate(typeof(ElementPage), element);
+            DetailsFrame.Navigate(typeof(ElementPage), element);
             await DetailsDialog.ShowAsync();
         }
     }
