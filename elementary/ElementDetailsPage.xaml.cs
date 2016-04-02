@@ -65,10 +65,10 @@ namespace elementary
         /// </summary>
         /// <param name="sender">The pressed Button.</param>
         /// <param name="e">The event arguments.</param>
-        private void OnButtonClick(object sender, RoutedEventArgs e)
+        private async void OnButtonClick(object sender, RoutedEventArgs e)
         {
             var url = (sender as FrameworkElement).Tag as string;
-            Launcher.LaunchUriAsync(new Uri(url));
+            await Launcher.LaunchUriAsync(new Uri(url));
         }
     }
 }
