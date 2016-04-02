@@ -102,8 +102,7 @@ namespace elementary.Control
         /// <param name="e">The event arguments.</param>
         private void OnSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            var content = Content as FrameworkElement;
-            var blockSize = Math.Min(content.ActualWidth, content.ActualHeight);
+            var blockSize = Math.Min(e.NewSize.Width, e.NewSize.Height);
 
             NumberFontSize = blockSize / 4;
             NumberMargin = new Thickness(blockSize / 20, 0, 0, 0);

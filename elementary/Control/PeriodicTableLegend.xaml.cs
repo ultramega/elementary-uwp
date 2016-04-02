@@ -65,7 +65,7 @@ namespace elementary.Control
         /// <param name="e">The event data.</param>
         private void OnSizeChanged(object sender, SizeChangedEventArgs e)
         {
-            FontSize = (Content as FrameworkElement).ActualHeight / 9;
+            FontSize = e.NewSize.Height / 9;
         }
 
         /// <summary>
