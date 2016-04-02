@@ -24,6 +24,7 @@ using elementary.Control;
 using elementary.Model;
 using elementary.ViewModel;
 using System;
+using System.ComponentModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -32,62 +33,37 @@ namespace elementary
     /// <summary>
     /// Page that displays the Periodic Table.
     /// </summary>
-    public sealed partial class PeriodicTablePage : Page
+    public sealed partial class PeriodicTablePage : Page, INotifyPropertyChanged
     {
         /// <summary>
-        /// The property determining the FontSize of the row and column headers.
+        /// Occurs when a property changes.
         /// </summary>
-        public double HeaderSize
-        {
-            get { return (double)GetValue(HeaderSizeProperty); }
-            set { SetValue(HeaderSizeProperty, value); }
-        }
-        public static readonly DependencyProperty HeaderSizeProperty =
-            DependencyProperty.Register("HeaderSize", typeof(double), typeof(PeriodicTablePage), new PropertyMetadata(1.0));
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         /// <summary>
-        /// The property determining the FontSize of the title.
+        /// Gets or sets the FontSize of the row and column headers.
         /// </summary>
-        public double TitleSize
-        {
-            get { return (double)GetValue(TitleSizeProperty); }
-            set { SetValue(TitleSizeProperty, value); }
-        }
-        public static readonly DependencyProperty TitleSizeProperty =
-            DependencyProperty.Register("TitleSize", typeof(double), typeof(PeriodicTablePage), new PropertyMetadata(1.0));
+        private double HeaderSize { get; set; } = 1.0;
 
         /// <summary>
-        /// The property determining the distance between the table and the Lantha/Actinides.
+        /// Gets or sets the FontSize of the title.
         /// </summary>
-        public double SpacerWidth
-        {
-            get { return (double)GetValue(SpacerWidthProperty); }
-            set { SetValue(SpacerWidthProperty, value); }
-        }
-        public static readonly DependencyProperty SpacerWidthProperty =
-            DependencyProperty.Register("SpacerWidth", typeof(double), typeof(PeriodicTablePage), new PropertyMetadata(1.0));
+        private double TitleSize { get; set; } = 1.0;
 
         /// <summary>
-        /// The property determining the Margin around the row and column headers.
+        /// Gets or sets the distance between the table and the Lantha/Actinides.
         /// </summary>
-        public Thickness HeaderMargin
-        {
-            get { return (Thickness)GetValue(HeaderMarginProperty); }
-            set { SetValue(HeaderMarginProperty, value); }
-        }
-        public static readonly DependencyProperty HeaderMarginProperty =
-            DependencyProperty.Register("HeaderMargin", typeof(Thickness), typeof(PeriodicTablePage), null);
+        private double SpacerWidth { get; set; } = 1.0;
 
         /// <summary>
-        /// The property determining the Margin around the color legend.
+        /// Gets or sets the Margin around the row and column headers.
         /// </summary>
-        public Thickness LegendMargin
-        {
-            get { return (Thickness)GetValue(LegendMarginProperty); }
-            set { SetValue(LegendMarginProperty, value); }
-        }
-        public static readonly DependencyProperty LegendMarginProperty =
-            DependencyProperty.Register("LegendMargin", typeof(Thickness), typeof(PeriodicTablePage), null);
+        private Thickness HeaderMargin { get; set; }
+
+        /// <summary>
+        /// Gets or sets the Margin around the color legend.
+        /// </summary>
+        private Thickness LegendMargin { get; set; }
 
         /// <summary>
         /// The reference to the Grid containing the Periodic Table.
@@ -119,11 +95,14 @@ namespace elementary
         private void OnSizeChanged(object sender, SizeChangedEventArgs e)
         {
             var blockSize = Math.Min(ActualWidth / 18, ActualHeight / 9);
+
             HeaderSize = blockSize / 4;
             TitleSize = blockSize / 2;
             SpacerWidth = blockSize / 4;
             HeaderMargin = new Thickness(0, 0, blockSize / 5, blockSize / 5);
             LegendMargin = new Thickness(blockSize / 3, blockSize * 0.75, blockSize / 3, blockSize / 4);
+
+            PropertyChanged(this, new PropertyChangedEventArgs(null));
         }
 
         /// <summary>
