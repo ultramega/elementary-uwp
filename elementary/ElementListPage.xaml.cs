@@ -139,7 +139,8 @@ namespace elementary
             }
             else if(_selection != null)
             {
-                Frame.Navigate(typeof(ElementDetailsPage), _selection.Element._ID, new SuppressNavigationTransitionInfo());
+                var element = DBHelper.GetElement(_selection.Element._ID);
+                Frame.Navigate(typeof(ElementDetailsPage), element, new SuppressNavigationTransitionInfo());
             }
         }
 
@@ -167,7 +168,8 @@ namespace elementary
             if (MasterList.SelectedItem != null)
             {
                 _selection = MasterList.SelectedItem as ElementListItem;
-                DetailsFrame.Navigate(typeof(ElementPage), _selection.Element._ID);
+                var element = DBHelper.GetElement(_selection.Element._ID);
+                DetailsFrame.Navigate(typeof(ElementPage), element);
             }
         }
 
@@ -180,7 +182,8 @@ namespace elementary
         private void OnItemClick(object sender, ItemClickEventArgs e)
         {
             _selection = e.ClickedItem as ElementListItem;
-            Frame.Navigate(typeof(ElementDetailsPage), _selection.Element._ID, new DrillInNavigationTransitionInfo());
+            var element = DBHelper.GetElement(_selection.Element._ID);
+            Frame.Navigate(typeof(ElementDetailsPage), element, new DrillInNavigationTransitionInfo());
         }
 
         /// <summary>

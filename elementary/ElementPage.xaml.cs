@@ -52,12 +52,12 @@ namespace elementary
         /// Loads the requested element when the Page is navigated to.
         /// </summary>
         /// <param name="e">
-        /// The event arguments which contains the element database ID as the Parameter.
+        /// The event arguments which contains the ElementDetails as the Parameter.
         /// </param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            Element = DBHelper.GetElement((long)e.Parameter);
+            Element = e.Parameter as ElementDetails;
         }
 
         /// <summary>

@@ -116,7 +116,8 @@ namespace elementary
         private async void BlockClicked(object sender, RoutedEventArgs e)
         {
             var id = (sender as PeriodicTableBlock).Element.Element._ID;
-            (DetailsDialog.Content as Frame).Navigate(typeof(ElementPage), id);
+            var element = DBHelper.GetElement(id);
+            (DetailsDialog.Content as Frame).Navigate(typeof(ElementPage), element);
             await DetailsDialog.ShowAsync();
         }
     }
