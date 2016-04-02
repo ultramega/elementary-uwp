@@ -22,6 +22,7 @@
 */
 using elementary.ViewModel;
 using System;
+using System.ComponentModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
@@ -31,12 +32,17 @@ namespace elementary.Control
     /// <summary>
     /// Displays a clickable block in the periodic table.
     /// </summary>
-    public sealed partial class PeriodicTableBlock : UserControl
+    public sealed partial class PeriodicTableBlock : UserControl, INotifyPropertyChanged
     {
         /// <summary>
         /// Occurs when a click event is detected on this block.
         /// </summary>
         public event RoutedEventHandler Clicked;
+
+        /// <summary>
+        /// Occurs when a property changes.
+        /// </summary>
+        public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         /// <summary>
         /// Gets or sets the ElementBlock represented by this block.
@@ -50,24 +56,34 @@ namespace elementary.Control
             DependencyProperty.Register("Element", typeof(ElementBlock), typeof(PeriodicTableBlock), new PropertyMetadata(0));
 
         /// <summary>
-        /// The TextBlock to display the element number.
+        /// Gets or sets the Margin property of the atomic number.
         /// </summary>
-        private readonly TextBlock _txtNumber;
+        private Thickness NumberMargin { get; set; }
 
         /// <summary>
-        /// The TextBlock to display the element symbol.
+        /// Gets or sets the FontSize of the atomic number.
         /// </summary>
-        private readonly TextBlock _txtSymbol;
+        private double NumberFontSize { get; set; } = 1.0;
 
         /// <summary>
-        /// The TextBlock to display the subtext of the block.
+        /// Gets or sets the Margin property of the element symbol.
         /// </summary>
-        private readonly TextBlock _txtSubtext;
+        private Thickness SymbolMargin { get; set; }
 
         /// <summary>
-        /// The main element of this user control.
+        /// Gets or sets the FontSize of the element symbol.
         /// </summary>
-        private readonly Grid _content;
+        private double SymbolFontSize { get; set; } = 1.0;
+
+        /// <summary>
+        /// Gets or sets the Margin property of the block subtext.
+        /// </summary>
+        private Thickness SubtextMargin { get; set; }
+
+        /// <summary>
+        /// Gets or sets the FontSize of the block subtext.
+        /// </summary>
+        private double SubtextFontSize { get; set; } = 1.0;
 
         /// <summary>
         /// Constructor.
@@ -75,11 +91,6 @@ namespace elementary.Control
         public PeriodicTableBlock()
         {
             InitializeComponent();
-            _content = Content as Grid;
-            _txtNumber = (TextBlock)_content.FindName("txtNumber");
-            _txtSymbol = (TextBlock)_content.FindName("txtSymbol");
-            _txtSubtext = (TextBlock)_content.FindName("txtSubtext");
-
             SizeChanged += OnSizeChanged;
             PointerPressed += OnDown;
         }
@@ -94,14 +105,16 @@ namespace elementary.Control
             var content = Content as FrameworkElement;
             var blockSize = Math.Min(content.ActualWidth, content.ActualHeight);
 
-            _txtNumber.FontSize = blockSize / 4;
-            _txtNumber.Margin = new Thickness(blockSize / 20, 0, 0, 0);
+            NumberFontSize = blockSize / 4;
+            NumberMargin = new Thickness(blockSize / 20, 0, 0, 0);
 
-            _txtSymbol.FontSize = blockSize / 2;
-            _txtSymbol.Margin = new Thickness(0, 0, 0, blockSize / 12);
+            SymbolFontSize = blockSize / 2;
+            SymbolMargin = new Thickness(0, 0, 0, blockSize / 12);
 
-            _txtSubtext.FontSize = blockSize / 5;
-            _txtSubtext.Margin = new Thickness(0, 0, 0, blockSize / 20);
+            SubtextFontSize = blockSize / 5;
+            SubtextMargin = new Thickness(0, 0, 0, blockSize / 20);
+
+            PropertyChanged(this, new PropertyChangedEventArgs(null));
         }
 
         /// <summary>

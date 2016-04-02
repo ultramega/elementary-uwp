@@ -58,17 +58,23 @@
             Opacity="0" />
         <TextBlock
             x:Name="txtNumber"
+            Margin="{x:Bind NumberMargin, Mode=OneWay}"
+            FontSize="{x:Bind NumberFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Number}" />
         <TextBlock
             x:Name="txtSymbol"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
+            Margin="{x:Bind SymbolMargin, Mode=OneWay}"
+            FontSize="{x:Bind SymbolFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Symbol}"
             FontWeight="SemiBold" />
         <TextBlock
             x:Name="txtSubtext"
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom"
+            Margin="{x:Bind SubtextMargin, Mode=OneWay}"
+            FontSize="{x:Bind SubtextFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Subtext}" />
     </Grid>
 </UserControl>
