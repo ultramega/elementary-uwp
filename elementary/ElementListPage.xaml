@@ -30,8 +30,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     NavigationCacheMode="Required">
-    <Grid
-        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup
                 x:Name="AdaptiveStates"

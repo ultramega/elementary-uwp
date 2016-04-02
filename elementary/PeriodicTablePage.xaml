@@ -159,8 +159,7 @@
         </ControlTemplate>
     </Page.Resources>
 
-    <Grid
-        Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <Grid
             x:Name="PeriodicTable"
             Margin="10">
