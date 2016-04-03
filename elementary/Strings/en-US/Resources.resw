@@ -202,6 +202,9 @@
   <data name="PT.Categories" xml:space="preserve">
     <value>Non-metal;Noble gas;Alkali metal;Alkaline earth metal;Metalloid;Halogen;Metal;Transition metal;Lanthanide;Actinide</value>
   </data>
+  <data name="PT.DetailsDialog.PrimaryButtonText" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Settings.DarkTheme.Button.Text" xml:space="preserve">
     <value>Use the dark theme</value>
   </data>
