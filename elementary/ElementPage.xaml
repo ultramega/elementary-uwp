@@ -38,7 +38,7 @@
 
             <Setter
                 Property="Grid.ColumnSpan"
-                Value="2" />
+                Value="3" />
         </Style>
 
         <Style
@@ -46,7 +46,7 @@
             TargetType="Border">
             <Setter
                 Property="Grid.ColumnSpan"
-                Value="2" />
+                Value="3" />
         </Style>
 
         <Style
@@ -208,6 +208,8 @@
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="Auto" />
                     <ColumnDefinition
                         Width="Auto" />
                     <ColumnDefinition />
