@@ -39,6 +39,7 @@
         <CommandBar>
             <AppBarToggleButton
                 x:Uid="Menu/ListView"
+                x:Name="ListViewButton"
                 Icon="List"
                 Checked="OnListViewToggled"
                 Unchecked="OnListViewToggled" />
@@ -129,6 +130,7 @@
         <Frame
             x:Name="ContentFrame"
             Grid.Row="1"
+            Navigated="OnContentFrameNavigated"
             SourcePageType="local:PeriodicTablePage" />
     </Grid>
 </Page>

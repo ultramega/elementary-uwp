@@ -23,6 +23,7 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Navigation;
 
 namespace elementary
 {
@@ -94,6 +95,24 @@ namespace elementary
         private void OnElementColorsChecked(object sender, RoutedEventArgs e)
         {
             Settings.ElementColors = (sender as FrameworkElement).Tag as string;
+        }
+
+        /// <summary>
+        /// Hides the list view toggle button when the content Frame is navigated away from the
+        /// relevant Pages.
+        /// </summary>
+        /// <param name="sender">The content Frame.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnContentFrameNavigated(object sender, NavigationEventArgs e)
+        {
+            if (e.SourcePageType == typeof(PeriodicTablePage) || e.SourcePageType == typeof(ElementListPage))
+            {
+                ListViewButton.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ListViewButton.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }
