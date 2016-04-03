@@ -20,7 +20,6 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
@@ -38,7 +37,6 @@ namespace elementary
         public MainPage()
         {
             InitializeComponent();
-            DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
 
             foreach (RadioButton setting in TemperatureUnitsSetting.Children)
             {
@@ -69,12 +67,10 @@ namespace elementary
             if ((sender as AppBarToggleButton).IsChecked == true)
             {
                 ContentFrame.Navigate(typeof(ElementListPage), null, new DrillInNavigationTransitionInfo());
-                DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
             }
             else
             {
                 ContentFrame.GoBack();
-                DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
             }
         }
 

@@ -25,8 +25,10 @@ using elementary.Model;
 using elementary.ViewModel;
 using System;
 using System.ComponentModel;
+using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
 
 namespace elementary
 {
@@ -73,6 +75,26 @@ namespace elementary
             InitializeComponent();
             SizeChanged += OnSizeChanged;
             LoadBlocks();
+        }
+
+        /// <summary>
+        /// Locks the screen in landscape mode when the Page is navigated to.
+        /// </summary>
+        /// <param name="e">The event arguments.</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
+        }
+
+        /// <summary>
+        /// Unlocks the screen orientation when the Page is navigated away from.
+        /// </summary>
+        /// <param name="e">The event arguments.</param>
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
         }
 
         /// <summary>
