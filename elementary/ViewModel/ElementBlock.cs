@@ -54,40 +54,40 @@ namespace elementary.ViewModel
         /// <summary>
         /// The column number of the periodic table to place the block.
         /// </summary>
-        public int Col { get; private set; }
+        public int Column { get; private set; }
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="el">The Element to represent.</param>
-        public ElementBlock(Element el) : base(el)
+        /// <param name="element">The Element to represent.</param>
+        public ElementBlock(Element element) : base(element)
         {
-            CalcPosition(el);
+            CalcPosition(element);
         }
 
         /// <summary>
         /// Determines and sets the row and column of the element block.
         /// </summary>
-        /// <param name="el">The Element represented by this block.</param>
-        private void CalcPosition(Element el)
+        /// <param name="element">The Element represented by this block.</param>
+        private void CalcPosition(Element element)
         {
-            if (el.Group == 0)
+            if (element.Group == 0)
             {
-                if (el.Period == 6)
+                if (element.Period == 6)
                 {
                     Row = 9;
-                    Col = (int)el.Number - 54;
+                    Column = (int)element.Number - 54;
                 }
-                else if (el.Period == 7)
+                else if (element.Period == 7)
                 {
                     Row = 10;
-                    Col = (int)el.Number - 86;
+                    Column = (int)element.Number - 86;
                 }
             }
             else
             {
-                Row = (int)el.Period;
-                Col = (int)el.Group;
+                Row = (int)element.Period;
+                Column = (int)element.Group;
             }
         }
     }

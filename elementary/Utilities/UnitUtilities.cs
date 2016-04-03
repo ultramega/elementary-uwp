@@ -20,31 +20,31 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-namespace elementary.Util
+namespace elementary.Utilities
 {
     /// <summary>
     /// Utility to convert values between different units.
     /// </summary>
-    public class UnitUtils
+    public class UnitUtilities
     {
         /// <summary>
         /// Converts a temperature value from Kelvin to degrees Celsius.
         /// </summary>
-        /// <param name="k">The value in Kevin.</param>
+        /// <param name="kelvinValue">The value in Kevin.</param>
         /// <returns>The value in degrees Celsius.</returns>
-        public static double KtoC(double k)
+        public static double KelvinToCelsius(double kelvinValue)
         {
-            return k - 273.15;
+            return kelvinValue - 273.15;
         }
 
         /// <summary>
         /// Converts a temperature value from Kelvin to degrees Fahrenheit.
         /// </summary>
-        /// <param name="k">The value in Kelvin.</param>
+        /// <param name="kelvinValue">The value in Kelvin.</param>
         /// <returns>The value in degrees Fahrenheit.</returns>
-        public static double KtoF(double k)
+        public static double KelvinToFahrenheit(double kelvinValue)
         {
-            return k * 9.0 / 5 - 459.67;
+            return kelvinValue * 9.0 / 5 - 459.67;
         }
     }
 }

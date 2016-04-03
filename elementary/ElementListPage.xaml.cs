@@ -62,7 +62,7 @@ namespace elementary
         /// <summary>
         /// Whether the list is sorted in ascending order.
         /// </summary>
-        private bool _sortAsc = true;
+        private bool _sortAscending = true;
 
         /// <summary>
         /// The text to use to filter the list.
@@ -109,18 +109,18 @@ namespace elementary
                 list = list.OrderBy(e => e.Element.Number);
             }
 
-            if (!_sortAsc)
+            if (!_sortAscending)
             {
                 list = list.Reverse();
             }
 
             ListItems.Clear();
-            foreach (var e in list)
+            foreach (var item in list)
             {
-                ListItems.Add(e);
-                if (e == _selection)
+                ListItems.Add(item);
+                if (item == _selection)
                 {
-                    MasterList.SelectedItem = e;
+                    MasterList.SelectedItem = item;
                 }
             }
         }
@@ -132,11 +132,11 @@ namespace elementary
         /// <param name="e">The event arguments.</param>
         private void OnStateChanged(object sender, VisualStateChangedEventArgs e)
         {
-            if(e.NewState == WideState)
+            if (e.NewState == WideState)
             {
                 MasterList.SelectedItem = _selection;
             }
-            else if(_selection != null)
+            else if (_selection != null)
             {
                 var element = DBHelper.GetElement(_selection.Element._ID);
                 Frame.Navigate(typeof(ElementDetailsPage), element, new SuppressNavigationTransitionInfo());
@@ -151,9 +151,9 @@ namespace elementary
         /// <returns>Whether the element matches the filter.</returns>
         private bool Matches(ElementListItem e)
         {
-            var symbol = e.Symbol.ToLower().StartsWith(_filter);
-            var name = e.Name.ToLower().StartsWith(_filter);
-            return symbol || name;
+            var symbolMatches = e.Symbol.ToLower().StartsWith(_filter);
+            var nameMatches = e.Name.ToLower().StartsWith(_filter);
+            return symbolMatches || nameMatches;
         }
 
         /// <summary>
@@ -196,14 +196,14 @@ namespace elementary
             {
                 SortNumber.IsChecked = true;
                 SortName.IsChecked = false;
-                _sortAsc = _sortField == SortField.Number ? !_sortAsc : true;
+                _sortAscending = _sortField == SortField.Number ? !_sortAscending : true;
                 _sortField = SortField.Number;
             }
             else
             {
                 SortNumber.IsChecked = false;
                 SortName.IsChecked = true;
-                _sortAsc = _sortField == SortField.Name ? !_sortAsc : true;
+                _sortAscending = _sortField == SortField.Name ? !_sortAscending : true;
                 _sortField = SortField.Name;
             }
             LoadList();

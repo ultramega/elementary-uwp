@@ -21,7 +21,7 @@
   THE SOFTWARE.
 */
 using elementary.Model;
-using elementary.Util;
+using elementary.Utilities;
 using System;
 using System.ComponentModel;
 using Windows.UI.Xaml.Media;
@@ -72,21 +72,21 @@ namespace elementary.ViewModel
         {
             get
             {
-                return ElementUtils.GetBlockColor(Element);
+                return ElementUtilities.GetBlockColor(Element);
             }
         }
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="el">The Element to represent.</param>
-        public ElementBase(Element el)
+        /// <param name="element">The Element to represent.</param>
+        public ElementBase(Element element)
         {
-            if (el == null)
+            if (element == null)
             {
-                throw new ArgumentNullException("el");
+                throw new ArgumentNullException("element");
             }
-            Element = el;
+            Element = element;
             Settings.SettingChanged += OnSettingChanged;
         }
 
@@ -94,8 +94,8 @@ namespace elementary.ViewModel
         /// Sets the Color when the setting for element colors is changed.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
-        /// <param name="val">The new value for the setting.</param>
-        private void OnSettingChanged(Settings.Key key, object val)
+        /// <param name="value">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object value)
         {
             if (key == Settings.Key.ElementColors)
             {

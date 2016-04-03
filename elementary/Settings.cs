@@ -27,8 +27,8 @@ namespace elementary
         /// Event handler for when an application setting changes.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
-        /// <param name="val">The new value for the setting.</param>
-        public delegate void OnSettingChangedHandler(Key key, object val);
+        /// <param name="value">The new value for the setting.</param>
+        public delegate void OnSettingChangedHandler(Key key, object value);
 
         /// <summary>
         /// Reference to the values of the RoamingSettings.

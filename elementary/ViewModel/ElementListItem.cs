@@ -21,7 +21,7 @@
   THE SOFTWARE.
 */
 using elementary.Model;
-using elementary.Util;
+using elementary.Utilities;
 
 namespace elementary.ViewModel
 {
@@ -37,14 +37,14 @@ namespace elementary.ViewModel
         {
             get
             {
-                return ElementUtils.GetElementName(Element.Number);
+                return ElementUtilities.GetElementName(Element.Number);
             }
         }
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="el">The Element to represent.</param>
-        public ElementListItem(Element el) : base(el) { }
+        /// <param name="element">The Element to represent.</param>
+        public ElementListItem(Element element) : base(element) { }
     }
 }

@@ -21,7 +21,7 @@
   THE SOFTWARE.
 */
 using elementary.Model;
-using elementary.Util;
+using elementary.Utilities;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -38,7 +38,7 @@ namespace elementary.ViewModel
         /// <summary>
         /// The localized string for unknown values.
         /// </summary>
-        private static readonly string _unknown = ResourceLoader.GetForCurrentView().GetString("Unknown");
+        private readonly string _unknownValue = ResourceLoader.GetForCurrentView().GetString("Unknown");
 
         /// <summary>
         /// The name of the element.
@@ -47,7 +47,7 @@ namespace elementary.ViewModel
         {
             get
             {
-                return ElementUtils.GetElementName(Element.Number);
+                return ElementUtilities.GetElementName(Element.Number);
             }
         }
 
@@ -87,7 +87,7 @@ namespace elementary.ViewModel
             {
                 if (Element.Density == null)
                 {
-                    return _unknown;
+                    return _unknownValue;
                 }
                 return string.Format("{0:0.########} g/cm³", Element.Density);
             }
@@ -102,7 +102,7 @@ namespace elementary.ViewModel
             {
                 if (Element.Melt == null)
                 {
-                    return _unknown;
+                    return _unknownValue;
                 }
                 return GetTemperatureString((double)Element.Melt);
             }
@@ -117,7 +117,7 @@ namespace elementary.ViewModel
             {
                 if (Element.Boil == null)
                 {
-                    return _unknown;
+                    return _unknownValue;
                 }
                 return GetTemperatureString((double)Element.Boil);
             }
@@ -132,7 +132,7 @@ namespace elementary.ViewModel
             {
                 if (Element.Heat == null)
                 {
-                    return _unknown;
+                    return _unknownValue;
                 }
                 return string.Format("{0:0.########} J/g·K", Element.Heat);
             }
@@ -147,7 +147,7 @@ namespace elementary.ViewModel
             {
                 if (Element.Negativity == null)
                 {
-                    return _unknown;
+                    return _unknownValue;
                 }
                 return string.Format("{0:0.########} V", Element.Negativity);
             }
@@ -162,7 +162,7 @@ namespace elementary.ViewModel
             {
                 if (Element.Abundance == null)
                 {
-                    return _unknown;
+                    return _unknownValue;
                 }
                 if (Element.Abundance < 0.001)
                 {
@@ -179,7 +179,7 @@ namespace elementary.ViewModel
         {
             get
             {
-                return ElementUtils.Categories[Element.Category];
+                return ElementUtilities.Categories[Element.Category];
             }
         }
 
@@ -236,7 +236,7 @@ namespace elementary.ViewModel
         {
             get
             {
-                return ElementUtils.GetElementWiki(Element.Number);
+                return ElementUtilities.GetElementWiki(Element.Number);
             }
         }
 
@@ -259,8 +259,8 @@ namespace elementary.ViewModel
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="el">The Element to represent.</param>
-        public ElementDetails(Element el) : base(el)
+        /// <param name="element">The Element to represent.</param>
+        public ElementDetails(Element element) : base(element)
         {
             Settings.SettingChanged += OnSettingChanged;
         }
@@ -270,8 +270,8 @@ namespace elementary.ViewModel
         /// temperature units is changed.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
-        /// <param name="val">The new value for the setting.</param>
-        private void OnSettingChanged(Settings.Key key, object val)
+        /// <param name="value">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object value)
         {
             if (key == Settings.Key.TemperatureUnits)
             {
@@ -284,18 +284,18 @@ namespace elementary.ViewModel
         /// Gets the temperature string converted from Kelvin to the unit set in the application
         /// settings.
         /// </summary>
-        /// <param name="k">The temperature value in Kelvin.</param>
+        /// <param name="kelvinValue">The temperature value in Kelvin.</param>
         /// <returns>The converted temperature as a string with unit.</returns>
-        private static string GetTemperatureString(double k)
+        private static string GetTemperatureString(double kelvinValue)
         {
             switch (Settings.TemperatureUnits)
             {
                 case "C":
-                    return string.Format("{0} °C", UnitUtils.KtoC(k));
+                    return string.Format("{0} °C", UnitUtilities.KelvinToCelsius(kelvinValue));
                 case "F":
-                    return string.Format("{0} °F", UnitUtils.KtoF(k));
+                    return string.Format("{0} °F", UnitUtilities.KelvinToFahrenheit(kelvinValue));
             }
-            return string.Format("{0} K", k);
+            return string.Format("{0} K", kelvinValue);
         }
     }
 }

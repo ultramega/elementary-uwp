@@ -26,17 +26,17 @@ using Windows.ApplicationModel.Resources;
 using Windows.UI;
 using Windows.UI.Xaml.Media;
 
-namespace elementary.Util
+namespace elementary.Utilities
 {
     /// <summary>
     /// Helpers for the periodic table.
     /// </summary>
-    public class ElementUtils
+    public class ElementUtilities
     {
         /// <summary>
         /// The reference to the ResourceLoader for the Elements resources.
         /// </summary>
-        private static readonly ResourceLoader _res = ResourceLoader.GetForCurrentView("Elements");
+        private static readonly ResourceLoader _resources = ResourceLoader.GetForCurrentView("Elements");
 
         /// <summary>
         /// Map of element categories to block backgrounds.
@@ -73,7 +73,7 @@ namespace elementary.Util
             {
                 if (_categories == null)
                 {
-                    _categories = _res.GetString("Categories").Split(';');
+                    _categories = _resources.GetString("Categories").Split(';');
                 }
                 return _categories.Clone() as string[];
             }
@@ -96,37 +96,37 @@ namespace elementary.Util
         /// <summary>
         /// Gets the background Brush for the given Element.
         /// </summary>
-        /// <param name="el">The Element.</param>
+        /// <param name="element">The Element.</param>
         /// <returns>The Brush to use for the block background.</returns>
-        public static Brush GetBlockColor(Element el)
+        public static Brush GetBlockColor(Element element)
         {
             if (Settings.ElementColors == "block")
             {
-                return GetBlockColor(el.Block);
+                return GetBlockColor(element.Block);
             }
-            return GetBlockColor(el.Category);
+            return GetBlockColor(element.Category);
         }
 
         /// <summary>
         /// Gets the name of the element based on the atomic number.
         /// </summary>
-        /// <param name="num">The atomic number of the element.</param>
+        /// <param name="number">The atomic number of the element.</param>
         /// <returns>The name of the element.</returns>
-        public static string GetElementName(long num)
+        public static string GetElementName(long number)
         {
-            return _res.GetString(string.Format("Name/{0:d3}", num));
+            return _resources.GetString(string.Format("Name/{0:d3}", number));
         }
 
         /// <summary>
         /// Gets the URL to the Wikipedia page for the element based on the atomic number.
         /// </summary>
-        /// <param name="num">The atomic number of the element.</param>
+        /// <param name="number">The atomic number of the element.</param>
         /// <returns>The URL to the Wikipedia page for the element.</returns>
-        public static string GetElementWiki(long num)
+        public static string GetElementWiki(long number)
         {
-            var lang = _res.GetString("Wiki/Lang");
-            var page = _res.GetString(string.Format("Wiki/{0:d3}", num));
-            return string.Format("https://{0}.wikipedia.org/wiki/{1}", lang, page);
+            var language = _resources.GetString("Wiki/Language");
+            var page = _resources.GetString(string.Format("Wiki/{0:d3}", number));
+            return string.Format("https://{0}.wikipedia.org/wiki/{1}", language, page);
         }
     }
 }

@@ -20,7 +20,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using elementary.Util;
+using elementary.Utilities;
 using System;
 using Windows.UI;
 using Windows.UI.Xaml;
@@ -50,8 +50,8 @@ namespace elementary.Control
         /// Reloads the legend when the setting for element colors is changed.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
-        /// <param name="val">The new value for the setting.</param>
-        private void OnSettingChanged(Settings.Key key, object val)
+        /// <param name="value">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object value)
         {
             if (key == Settings.Key.ElementColors)
             {
@@ -74,12 +74,12 @@ namespace elementary.Control
         /// </summary>
         private void LoadLegend()
         {
-            var g = Content as Grid;
-            g.Children.Clear();
+            var grid = Content as Grid;
+            grid.Children.Clear();
             string[] names;
             if (Settings.ElementColors == "cat")
             {
-                names = ElementUtils.Categories;
+                names = ElementUtilities.Categories;
             }
             else
             {
@@ -92,7 +92,7 @@ namespace elementary.Control
                 Grid.SetRow(item, i % 4);
                 Grid.SetColumn(item, i / 4);
                 Grid.SetColumnSpan(item, colSpan);
-                g.Children.Add(item);
+                grid.Children.Add(item);
             }
         }
 
@@ -104,7 +104,7 @@ namespace elementary.Control
         /// <returns>The item to place in the table.</returns>
         private FrameworkElement MakeItem(object key, string name)
         {
-            var b = new Binding()
+            var binding = new Binding()
             {
                 Mode = BindingMode.OneWay,
                 Source = FontSize
@@ -112,13 +112,13 @@ namespace elementary.Control
 
             var text = new TextBlock();
             text.Text = name;
-            text.SetBinding(FontSizeProperty, b);
+            text.SetBinding(FontSizeProperty, binding);
             text.VerticalAlignment = VerticalAlignment.Center;
             text.Margin = new Thickness(6, 0, 6, 0);
             text.Foreground = new SolidColorBrush(Colors.Black);
 
             var border = new Border();
-            border.Background = ElementUtils.GetBlockColor(key);
+            border.Background = ElementUtilities.GetBlockColor(key);
             border.Margin = new Thickness(1);
             border.Child = text;
 

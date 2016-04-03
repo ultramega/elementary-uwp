@@ -35,21 +35,21 @@ namespace elementary.Model
         /// <summary>
         /// The SQLite connection, created on demand.
         /// </summary>
-        private static SQLiteConnection _db;
+        private static SQLiteConnection _connection;
 
         /// <summary>
         /// Gets the SQLite connection.
         /// </summary>
-        private static SQLiteConnection DB
+        private static SQLiteConnection Connection
         {
             get
             {
-                if (_db == null)
+                if (_connection == null)
                 {
                     var path = Package.Current.InstalledLocation.Path + "\\Assets\\elements.db";
-                    _db = new SQLiteConnection(path);
+                    _connection = new SQLiteConnection(path);
                 }
-                return _db;
+                return _connection;
             }
         }
 
@@ -60,31 +60,31 @@ namespace elementary.Model
         /// <returns>The ElementDetails ViewModel.</returns>
         public static ElementDetails GetElement(long id)
         {
-            using (var stmt = DB.Prepare("SELECT * FROM elements WHERE _id = ?;"))
+            using (var statement = Connection.Prepare("SELECT * FROM elements WHERE _id = ?;"))
             {
-                stmt.Bind(1, id);
-                if (SQLiteResult.ROW == stmt.Step())
+                statement.Bind(1, id);
+                if (SQLiteResult.ROW == statement.Step())
                 {
-                    Element el = new Element();
-                    el._ID = (long)stmt["_id"];
-                    el.Number = (long)stmt["num"];
-                    el.Symbol = (string)stmt["sym"];
-                    el.Group = (long)stmt["g"];
-                    el.Period = (long)stmt["p"];
-                    el.Block = (string)stmt["b"];
-                    el.Weight = (double)stmt["w"];
-                    el.Density = (double?)stmt["dens"];
-                    el.Melt = (double?)stmt["melt"];
-                    el.Boil = (double?)stmt["boil"];
-                    el.Heat = (double?)stmt["heat"];
-                    el.Negativity = (double?)stmt["neg"];
-                    el.Abundance = (double?)stmt["ab"];
-                    el.Category = (long)stmt["cat"];
-                    el.Configuration = (string)stmt["ec"];
-                    el.Electrons = (string)stmt["eps"];
-                    el.Unstable = (long)stmt["uns"] == 1;
-                    el.Video = (string)stmt["vid"];
-                    return new ElementDetails(el);
+                    Element element = new Element();
+                    element._ID = (long)statement["_id"];
+                    element.Number = (long)statement["num"];
+                    element.Symbol = (string)statement["sym"];
+                    element.Group = (long)statement["g"];
+                    element.Period = (long)statement["p"];
+                    element.Block = (string)statement["b"];
+                    element.Weight = (double)statement["w"];
+                    element.Density = (double?)statement["dens"];
+                    element.Melt = (double?)statement["melt"];
+                    element.Boil = (double?)statement["boil"];
+                    element.Heat = (double?)statement["heat"];
+                    element.Negativity = (double?)statement["neg"];
+                    element.Abundance = (double?)statement["ab"];
+                    element.Category = (long)statement["cat"];
+                    element.Configuration = (string)statement["ec"];
+                    element.Electrons = (string)statement["eps"];
+                    element.Unstable = (long)statement["uns"] == 1;
+                    element.Video = (string)statement["vid"];
+                    return new ElementDetails(element);
                 }
             }
             return null;
@@ -96,21 +96,21 @@ namespace elementary.Model
         /// <returns>An array of ElementListItem ViewModels.</returns>
         public static ElementListItem[] GetElementList()
         {
-            ArrayList ret = new ArrayList();
-            using (var stmt = DB.Prepare("SELECT _id, num, sym, b, cat FROM elements;"))
+            ArrayList result = new ArrayList();
+            using (var statement = Connection.Prepare("SELECT _id, num, sym, b, cat FROM elements;"))
             {
-                while (SQLiteResult.ROW == stmt.Step())
+                while (SQLiteResult.ROW == statement.Step())
                 {
-                    Element el = new Element();
-                    el._ID = (long)stmt["_id"];
-                    el.Number = (long)stmt["num"];
-                    el.Symbol = (string)stmt["sym"];
-                    el.Block = (string)stmt["b"];
-                    el.Category = (long)stmt["cat"];
-                    ret.Add(new ElementListItem(el));
+                    Element element = new Element();
+                    element._ID = (long)statement["_id"];
+                    element.Number = (long)statement["num"];
+                    element.Symbol = (string)statement["sym"];
+                    element.Block = (string)statement["b"];
+                    element.Category = (long)statement["cat"];
+                    result.Add(new ElementListItem(element));
                 }
             }
-            return (ElementListItem[])ret.ToArray(typeof(ElementListItem));
+            return (ElementListItem[])result.ToArray(typeof(ElementListItem));
         }
 
         /// <summary>
@@ -119,25 +119,25 @@ namespace elementary.Model
         /// <returns>An array of ElementBlock ViewModels.</returns>
         public static ElementBlock[] GetElementTable()
         {
-            ArrayList ret = new ArrayList();
-            using (var stmt = DB.Prepare("SELECT _id, num, sym, g, p, b, w, cat, uns FROM elements;"))
+            ArrayList result = new ArrayList();
+            using (var statement = Connection.Prepare("SELECT _id, num, sym, g, p, b, w, cat, uns FROM elements;"))
             {
-                while (SQLiteResult.ROW == stmt.Step())
+                while (SQLiteResult.ROW == statement.Step())
                 {
-                    Element el = new Element();
-                    el._ID = (long)stmt["_id"];
-                    el.Number = (long)stmt["num"];
-                    el.Symbol = (string)stmt["sym"];
-                    el.Group = (long)stmt["g"];
-                    el.Period = (long)stmt["p"];
-                    el.Block = (string)stmt["b"];
-                    el.Weight = (double)stmt["w"];
-                    el.Category = (long)stmt["cat"];
-                    el.Unstable = (long)stmt["uns"] == 1;
-                    ret.Add(new ElementBlock(el));
+                    Element element = new Element();
+                    element._ID = (long)statement["_id"];
+                    element.Number = (long)statement["num"];
+                    element.Symbol = (string)statement["sym"];
+                    element.Group = (long)statement["g"];
+                    element.Period = (long)statement["p"];
+                    element.Block = (string)statement["b"];
+                    element.Weight = (double)statement["w"];
+                    element.Category = (long)statement["cat"];
+                    element.Unstable = (long)statement["uns"] == 1;
+                    result.Add(new ElementBlock(element));
                 }
             }
-            return (ElementBlock[])ret.ToArray(typeof(ElementBlock));
+            return (ElementBlock[])result.ToArray(typeof(ElementBlock));
         }
     }
 }

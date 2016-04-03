@@ -130,8 +130,8 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Settings.cs" />
-    <Compile Include="Util\ElementUtils.cs" />
-    <Compile Include="Util\UnitUtils.cs" />
+    <Compile Include="Utilities\ElementUtilities.cs" />
+    <Compile Include="Utilities\UnitUtilities.cs" />
     <Compile Include="ViewModel\ElementBase.cs" />
     <Compile Include="ViewModel\ElementBlock.cs" />
     <Compile Include="ViewModel\ElementDetails.cs" />

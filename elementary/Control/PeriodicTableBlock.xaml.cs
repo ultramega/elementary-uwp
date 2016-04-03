@@ -53,7 +53,7 @@ namespace elementary.Control
             set { SetValue(ElementProperty, value); }
         }
         public static readonly DependencyProperty ElementProperty =
-            DependencyProperty.Register("Element", typeof(ElementBlock), typeof(PeriodicTableBlock), new PropertyMetadata(0));
+            DependencyProperty.Register("Element", typeof(ElementBlock), typeof(PeriodicTableBlock), null);
 
         /// <summary>
         /// Gets or sets the Margin property of the atomic number.

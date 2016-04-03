@@ -84,12 +84,12 @@ namespace elementary
         /// Updates the theme when the setting for the theme preference is changed.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
-        /// <param name="val">The new value for the setting.</param>
-        private void OnSettingChanged(Settings.Key key, object val)
+        /// <param name="value">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object value)
         {
             if (key == Settings.Key.DarkTheme)
             {
-                RequestedTheme = (bool)val ? ElementTheme.Dark : ElementTheme.Light;
+                RequestedTheme = (bool)value ? ElementTheme.Dark : ElementTheme.Light;
             }
         }
 

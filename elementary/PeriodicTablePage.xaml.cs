@@ -148,12 +148,12 @@ namespace elementary
         /// </summary>
         private void LoadBlocks()
         {
-            foreach (ElementBlock el in DBHelper.GetElementTable())
+            foreach (ElementBlock element in DBHelper.GetElementTable())
             {
-                var block = new PeriodicTableBlock() { Element = el };
+                var block = new PeriodicTableBlock() { Element = element };
                 block.Clicked += BlockClicked; ;
-                Grid.SetRow(block, el.Row);
-                Grid.SetColumn(block, el.Col);
+                Grid.SetRow(block, element.Row);
+                Grid.SetColumn(block, element.Column);
                 PeriodicTable.Children.Add(block);
             }
         }
