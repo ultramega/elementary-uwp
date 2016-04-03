@@ -27,7 +27,6 @@ using System.Linq;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
-using Windows.UI.Xaml.Navigation;
 
 namespace elementary
 {
@@ -85,12 +84,12 @@ namespace elementary
         }
 
         /// <summary>
-        /// Loads the list when the page is navigated to.
+        /// Loads the list when the Page is loaded.
         /// </summary>
+        /// <param name="sender">The Page.</param>
         /// <param name="e">The event arguments.</param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        private void OnPageLoaded(object sender, RoutedEventArgs e)
         {
-            base.OnNavigatedTo(e);
             LoadList();
         }
 
