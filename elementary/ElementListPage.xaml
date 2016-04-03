@@ -36,7 +36,7 @@
             <NavigationThemeTransition />
         </TransitionCollection>
     </Page.Transitions>
-    
+
     <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup
@@ -58,6 +58,10 @@
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
+                        <Setter
+                            Target="ListColumn.Width"
+                            Value="*" />
+
                         <Setter
                             Target="DetailColumn.Width"
                             Value="0" />
@@ -81,7 +85,9 @@
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition />
+            <ColumnDefinition
+                x:Name="ListColumn"
+                Width="360" />
             <ColumnDefinition
                 x:Name="DetailColumn" />
         </Grid.ColumnDefinitions>
