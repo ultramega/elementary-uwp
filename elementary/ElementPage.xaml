@@ -29,49 +29,91 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <Page.Resources>
-        <Style
-            x:Key="EvenRow"
-            TargetType="Border">
-            <Setter
-                Property="Background"
-                Value="#44888888" />
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary
+                    x:Key="Light">
+                    <Style
+                        x:Key="WikiButton"
+                        TargetType="Image">
+                        <Setter
+                            Property="Source"
+                            Value="Assets/WikiButton-black.png" />
+                    </Style>
 
-            <Setter
-                Property="Grid.ColumnSpan"
-                Value="3" />
-        </Style>
+                    <Style
+                        x:Key="VideoButton"
+                        TargetType="Image">
+                        <Setter
+                            Property="Source"
+                            Value="Assets/VideoButton-black.png" />
+                    </Style>
+                </ResourceDictionary>
 
-        <Style
-            x:Key="OddRow"
-            TargetType="Border">
-            <Setter
-                Property="Grid.ColumnSpan"
-                Value="3" />
-        </Style>
+                <ResourceDictionary
+                    x:Key="Dark">
+                    <Style
+                        x:Key="WikiButton"
+                        TargetType="Image">
+                        <Setter
+                            Property="Source"
+                            Value="Assets/WikiButton-white.png" />
+                    </Style>
 
-        <Style
-            x:Key="Label"
-            TargetType="TextBlock">
-            <Setter
-                Property="Margin"
-                Value="4" />
+                    <Style
+                        x:Key="VideoButton"
+                        TargetType="Image">
+                        <Setter
+                            Property="Source"
+                            Value="Assets/VideoButton-white.png" />
+                    </Style>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
 
-            <Setter
-                Property="FontWeight"
-                Value="SemiBold" />
-        </Style>
+            <Style
+                x:Key="EvenRow"
+                TargetType="Border">
+                <Setter
+                    Property="Background"
+                    Value="#44888888" />
 
-        <Style
-            x:Key="Value"
-            TargetType="TextBlock">
-            <Setter
-                Property="Margin"
-                Value="4" />
+                <Setter
+                    Property="Grid.ColumnSpan"
+                    Value="3" />
+            </Style>
 
-            <Setter
-                Property="Grid.Column"
-                Value="1" />
-        </Style>
+            <Style
+                x:Key="OddRow"
+                TargetType="Border">
+                <Setter
+                    Property="Grid.ColumnSpan"
+                    Value="3" />
+            </Style>
+
+            <Style
+                x:Key="Label"
+                TargetType="TextBlock">
+                <Setter
+                    Property="Margin"
+                    Value="4" />
+
+                <Setter
+                    Property="FontWeight"
+                    Value="SemiBold" />
+            </Style>
+
+            <Style
+                x:Key="Value"
+                TargetType="TextBlock">
+                <Setter
+                    Property="Margin"
+                    Value="4" />
+
+                <Setter
+                    Property="Grid.Column"
+                    Value="1" />
+            </Style>
+        </ResourceDictionary>
     </Page.Resources>
 
     <ScrollViewer
@@ -175,7 +217,7 @@
                     Margin="4"
                     Click="OnButtonClick">
                     <Image
-                        Source="Assets/ButtonWiki.png" />
+                        Style="{ThemeResource WikiButton}" />
                 </Button>
 
                 <Button
@@ -187,7 +229,7 @@
                     Margin="4"
                     Click="OnButtonClick">
                     <Image
-                        Source="Assets/ButtonVideo.png" />
+                        Style="{ThemeResource VideoButton}" />
                 </Button>
             </Grid>
 

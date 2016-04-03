@@ -90,8 +90,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <Content Include="Assets\ButtonVideo.png" />
-    <Content Include="Assets\ButtonWiki.png" />
     <Content Include="Assets\elements.db" />
     <None Include="elementary.licenseheader" />
     <None Include="elementary_StoreKey.pfx" />
@@ -147,6 +145,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Assets\VideoButton-black.png" />
+    <Content Include="Assets\VideoButton-white.png" />
+    <Content Include="Assets\WikiButton-black.png" />
+    <Content Include="Assets\WikiButton-white.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
