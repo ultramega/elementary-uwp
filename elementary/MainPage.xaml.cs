@@ -33,11 +33,28 @@ namespace elementary
     public sealed partial class MainPage : Page
     {
         /// <summary>
+        /// Reference to the MainPage singleton instance.
+        /// </summary>
+        public static MainPage Current { get; private set; }
+
+        /// <summary>
+        /// The title to display in the CommandBar.
+        /// </summary>
+        public string PageTitle
+        {
+            get { return (string)GetValue(PageTitleProperty); }
+            set { SetValue(PageTitleProperty, value); }
+        }
+        public static readonly DependencyProperty PageTitleProperty =
+            DependencyProperty.Register("PageTitle", typeof(string), typeof(MainPage), null);
+
+        /// <summary>
         /// Constructor.
         /// </summary>
         public MainPage()
         {
             InitializeComponent();
+            Current = this;
 
             foreach (RadioButton setting in TemperatureUnitsSetting.Children)
             {

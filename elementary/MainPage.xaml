@@ -122,7 +122,7 @@
             <CommandBar.Content>
                 <TextBlock
                     Style="{ThemeResource TitleTextBlockStyle}"
-                    Text="Elementary"
+                    Text="{x:Bind PageTitle, Mode=OneWay, TargetNullValue=Elementary}"
                     Margin="12,8" />
             </CommandBar.Content>
         </CommandBar>

@@ -23,6 +23,7 @@
 using elementary.Model;
 using elementary.ViewModel;
 using System;
+using Windows.ApplicationModel.Resources;
 using Windows.System;
 using Windows.UI.Core;
 using Windows.UI.Xaml;
@@ -66,6 +67,10 @@ namespace elementary
         {
             base.OnNavigatedTo(e);
 
+            var titleFormat = ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
+            var title = string.Format(titleFormat, (e.Parameter as ElementDetails).Name);
+            MainPage.Current.PageTitle = title;
+
             (Content as Frame).Navigate(typeof(ElementPage), e.Parameter);
 
             var systemNavigationManager = SystemNavigationManager.GetForCurrentView();
@@ -80,6 +85,8 @@ namespace elementary
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             base.OnNavigatedFrom(e);
+
+            MainPage.Current.PageTitle = null;
 
             var systemNavigationManager = SystemNavigationManager.GetForCurrentView();
             systemNavigationManager.BackRequested -= OnBackRequested;
