@@ -142,8 +142,8 @@ namespace elementary
         /// Checks the screen width when the Window size changes and navigates to the master/detail
         /// view if the screen is wide enough.
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="sender">The Window.</param>
+        /// <param name="e">The event arguments.</param>
         private void OnSizeChanged(object sender, WindowSizeChangedEventArgs e)
         {
             if (ShouldGoToWideState)
