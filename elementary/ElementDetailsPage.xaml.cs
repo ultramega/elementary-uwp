@@ -148,6 +148,7 @@ namespace elementary
         {
             if (ShouldGoToWideState)
             {
+                Window.Current.SizeChanged -= OnSizeChanged;
                 NavigateToWide(false);
             }
         }
