@@ -116,131 +116,99 @@
         </ResourceDictionary>
     </Page.Resources>
 
-    <ScrollViewer
-        HorizontalScrollBarVisibility="Auto">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState>
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger
-                            MinWindowWidth="720" />
-                    </VisualState.StateTriggers>
-
-                    <VisualState.Setters>
-                        <Setter
-                            Target="pageTitle.(Grid.Row)"
-                            Value="0" />
-
-                        <Setter
-                            Target="pageTitle.(Grid.Column)"
-                            Value="1" />
-
-                        <Setter
-                            Target="pageTitle.(Grid.ColumnSpan)"
-                            Value="1" />
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
+    <Grid
+        Padding="6">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="Auto" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
 
         <Grid
-            Padding="6">
-            <Grid.RowDefinitions>
-                <RowDefinition
-                    Height="Auto" />
-                <RowDefinition
-                    Height="Auto" />
-            </Grid.RowDefinitions>
+            Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="Auto" />
+                <ColumnDefinition />
+                <ColumnDefinition
+                    Width="Auto" />
+                <ColumnDefinition
+                    Width="Auto" />
+            </Grid.ColumnDefinitions>
 
             <Grid
-                Margin="4">
-                <Grid.RowDefinitions>
-                    <RowDefinition />
-                    <RowDefinition />
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition
-                        Width="Auto" />
-                    <ColumnDefinition />
-                    <ColumnDefinition
-                        Width="Auto" />
-                    <ColumnDefinition
-                        Width="Auto" />
-                </Grid.ColumnDefinitions>
-
-                <Grid
-                    MinWidth="90"
-                    Height="90"
-                    Padding="4,0,4,4"
-                    Background="{x:Bind Element.Color, Mode=OneWay}">
-                    <TextBlock
-                        FontSize="20"
-                        Text="{x:Bind Element.Number}"
-                        Foreground="Black" />
-
-                    <TextBlock
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Center"
-                        FontSize="42"
-                        FontWeight="SemiBold"
-                        Text="{x:Bind Element.Symbol}"
-                        Margin="12,0"
-                        Foreground="Black" />
-
-                    <TextBlock
-                        HorizontalAlignment="Center"
-                        VerticalAlignment="Bottom"
-                        FontSize="16"
-                        Text="{x:Bind Element.Weight}"
-                        Foreground="Black" />
-
-                    <TextBlock
-                        HorizontalAlignment="Right"
-                        FontSize="10"
-                        Text="{x:Bind Element.BlockElectrons}"
-                        Foreground="Black"
-                        TextAlignment="Right"
-                        TextLineBounds="TrimToBaseline" />
-                </Grid>
+                MinWidth="90"
+                Height="90"
+                Padding="4,0,4,4"
+                Background="{x:Bind Element.Color, Mode=OneWay}">
+                <TextBlock
+                    FontSize="20"
+                    Text="{x:Bind Element.Number}"
+                    Foreground="Black" />
 
                 <TextBlock
-                    x:Name="pageTitle"
-                    Style="{ThemeResource HeaderTextBlockStyle}"
-                    Grid.Row="1"
-                    Grid.ColumnSpan="4"
-                    Margin="12,0"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
-                    Text="{x:Bind Element.Name}"
-                    TextWrapping="NoWrap"
-                    TextTrimming="CharacterEllipsis" />
+                    FontSize="42"
+                    FontWeight="SemiBold"
+                    Text="{x:Bind Element.Symbol}"
+                    Margin="12,0"
+                    Foreground="Black" />
 
-                <Button
-                    x:Uid="Button/Wiki"
-                    Tag="{x:Bind Element.Wiki}"
-                    Grid.Column="2"
-                    Height="90"
-                    Margin="4"
-                    Click="OnButtonClick">
-                    <Image
-                        Style="{ThemeResource WikiButton}" />
-                </Button>
+                <TextBlock
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Bottom"
+                    FontSize="16"
+                    Text="{x:Bind Element.Weight}"
+                    Foreground="Black" />
 
-                <Button
-                    x:Uid="Button/Video"
-                    Tag="{x:Bind Element.Video}"
-                    Grid.Column="3"
-                    Height="90"
-                    Margin="4"
-                    Click="OnButtonClick">
-                    <Image
-                        Style="{ThemeResource VideoButton}" />
-                </Button>
+                <TextBlock
+                    HorizontalAlignment="Right"
+                    FontSize="10"
+                    Text="{x:Bind Element.BlockElectrons}"
+                    Foreground="Black"
+                    TextAlignment="Right"
+                    TextLineBounds="TrimToBaseline" />
             </Grid>
 
+            <TextBlock
+                Style="{ThemeResource HeaderTextBlockStyle}"
+                Grid.Column="1"
+                Padding="8,0,0,0"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Text="{x:Bind Element.Name}"
+                TextWrapping="NoWrap"
+                TextTrimming="CharacterEllipsis" />
+
+            <Button
+                x:Uid="Button/Wiki"
+                Tag="{x:Bind Element.Wiki}"
+                Grid.Column="2"
+                Height="90"
+                Margin="4"
+                Click="OnButtonClick">
+                <Image
+                    Style="{ThemeResource WikiButton}" />
+            </Button>
+
+            <Button
+                x:Uid="Button/Video"
+                Tag="{x:Bind Element.Video}"
+                Grid.Column="3"
+                Height="90"
+                Margin="4"
+                Click="OnButtonClick">
+                <Image
+                    Style="{ThemeResource VideoButton}" />
+            </Button>
+        </Grid>
+
+        <ScrollViewer
+            Grid.Row="1"
+            HorizontalScrollBarVisibility="Auto">
             <Grid
-                Grid.Row="1">
+                VerticalAlignment="Top">
                 <Grid.RowDefinitions>
                     <RowDefinition />
                     <RowDefinition />
@@ -462,6 +430,6 @@
                     Style="{StaticResource Value}"
                     Text="{x:Bind Element.Abundance}" />
             </Grid>
-        </Grid>
-    </ScrollViewer>
+        </ScrollViewer>
+    </Grid>
 </Page>
