@@ -25,6 +25,7 @@ using elementary.Model;
 using elementary.ViewModel;
 using System;
 using System.ComponentModel;
+using Windows.ApplicationModel.Resources;
 using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -66,6 +67,33 @@ namespace elementary
         /// Gets or sets the Margin around the color legend.
         /// </summary>
         private Thickness LegendMargin { get; set; }
+
+        /// <summary>
+        /// The format string for the title of the element details dialog.
+        /// </summary>
+        private readonly string _titleFormat = ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
+
+        /// <summary>
+        /// The current title of the element details dialog.
+        /// </summary>
+        private string _detailsTitle;
+
+        /// <summary>
+        /// Gets the title of the element details dialog or sets the name of the element to include
+        /// in the title.
+        /// </summary>
+        private string DetailsTitle
+        {
+            get
+            {
+                return _detailsTitle;
+            }
+            set
+            {
+                _detailsTitle = string.Format(_titleFormat, value);
+                PropertyChanged(this, new PropertyChangedEventArgs("DetailsTitle"));
+            }
+        }
 
         /// <summary>
         /// Constructor.
@@ -140,6 +168,7 @@ namespace elementary
             var id = (sender as PeriodicTableBlock).Element.Element._ID;
             var element = DBHelper.GetElement(id);
             DetailsFrame.Navigate(typeof(ElementPage), element);
+            DetailsTitle = element.Name;
             await DetailsDialog.ShowAsync();
         }
     }

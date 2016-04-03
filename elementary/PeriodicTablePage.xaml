@@ -424,6 +424,7 @@
 
         <ContentDialog
             x:Name="DetailsDialog"
+            Title="{x:Bind DetailsTitle, Mode=OneWay}"
             PrimaryButtonText="Close"
             Template="{StaticResource MyContentDialogControlTemplate}">
             <Frame
