@@ -23,6 +23,7 @@
 using Windows.Graphics.Display;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Media.Animation;
 
 namespace elementary
 {
@@ -67,12 +68,12 @@ namespace elementary
         {
             if ((sender as AppBarToggleButton).IsChecked == true)
             {
-                ContentFrame.Navigate(typeof(ElementListPage));
+                ContentFrame.Navigate(typeof(ElementListPage), null, new DrillInNavigationTransitionInfo());
                 DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
             }
             else
             {
-                ContentFrame.Navigate(typeof(PeriodicTablePage));
+                ContentFrame.GoBack();
                 DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
             }
         }
