@@ -106,7 +106,7 @@ namespace elementary
             NavigationCacheMode = NavigationCacheMode.Disabled;
             if (useTransition)
             {
-                Frame.GoBack(new DrillInNavigationTransitionInfo());
+                Frame.GoBack(new EntranceNavigationTransitionInfo());
             }
             else
             {
