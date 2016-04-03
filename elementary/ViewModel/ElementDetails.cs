@@ -219,6 +219,17 @@ namespace elementary.ViewModel
         }
 
         /// <summary>
+        /// The electrons per shell of the element in a vertical line.
+        /// </summary>
+        public string BlockElectrons
+        {
+            get
+            {
+                return Element.Electrons.Replace(",", "\n");
+            }
+        }
+
+        /// <summary>
         /// The URL to the Wikipedia page for the element.
         /// </summary>
         public string Wiki
