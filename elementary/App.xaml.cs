@@ -40,8 +40,9 @@ namespace elementary
         /// </summary>
         public App()
         {
-            this.InitializeComponent();
-            this.Suspending += OnSuspending;
+            InitializeComponent();
+            Suspending += OnSuspending;
+            RequestedTheme = Settings.DarkTheme ? ApplicationTheme.Dark : ApplicationTheme.Light;
         }
 
         /// <summary>

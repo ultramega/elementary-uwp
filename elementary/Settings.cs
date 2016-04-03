@@ -13,6 +13,7 @@ namespace elementary
         /// </summary>
         public enum Key
         {
+            DarkTheme,
             TemperatureUnits,
             ElementColors
         }
@@ -49,8 +50,26 @@ namespace elementary
         /// <param name="args">The event arguments.</param>
         private static void OnDataChanged(ApplicationData sender, object args)
         {
+            SettingChanged(Key.DarkTheme, DarkTheme);
             SettingChanged(Key.TemperatureUnits, TemperatureUnits);
             SettingChanged(Key.ElementColors, ElementColors);
+        }
+
+        /// <summary>
+        /// Gets or sets the value of the setting for whether to use the dark theme.
+        /// </summary>
+        public static bool DarkTheme
+        {
+            get
+            {
+                var ret = _settings["darkTheme"];
+                return ret != null ? (bool)ret : false;
+            }
+            set
+            {
+                _settings["darkTheme"] = value;
+                SettingChanged(Key.DarkTheme, value);
+            }
         }
 
         /// <summary>

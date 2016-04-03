@@ -45,6 +45,7 @@
                 Unchecked="OnListViewToggled" />
 
             <AppBarButton
+                x:Name="SettingsButton"
                 x:Uid="Menu/Settings"
                 Icon="Setting">
                 <AppBarButton.Flyout>
@@ -54,6 +55,19 @@
                                 x:Uid="Title/Settings"
                                 Style="{ThemeResource TitleTextBlockStyle}"
                                 HorizontalAlignment="Center" />
+
+                            <MenuFlyoutSeparator />
+
+                            <StackPanel>
+                                <TextBlock
+                                    x:Uid="Settings/DarkTheme/Header"
+                                    Style="{ThemeResource SubtitleTextBlockStyle}" />
+
+                                <ToggleMenuFlyoutItem
+                                    x:Uid="Settings/DarkTheme/Button"
+                                    x:Name="DarkThemeSetting"
+                                    Click="OnDarkThemeToggled" />
+                            </StackPanel>
 
                             <MenuFlyoutSeparator />
 

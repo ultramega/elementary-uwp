@@ -54,7 +54,10 @@ namespace elementary
         public MainPage()
         {
             InitializeComponent();
+
             Current = this;
+
+            DarkThemeSetting.IsChecked = Settings.DarkTheme;
 
             foreach (RadioButton setting in TemperatureUnitsSetting.Children)
             {
@@ -72,6 +75,21 @@ namespace elementary
                     setting.IsChecked = true;
                     break;
                 }
+            }
+
+            Settings.SettingChanged += OnSettingChanged;
+        }
+
+        /// <summary>
+        /// Updates the theme when the setting for the theme preference is changed.
+        /// </summary>
+        /// <param name="key">The key for the setting that has changed.</param>
+        /// <param name="val">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object val)
+        {
+            if (key == Settings.Key.DarkTheme)
+            {
+                RequestedTheme = (bool)val ? ElementTheme.Dark : ElementTheme.Light;
             }
         }
 
@@ -91,6 +109,17 @@ namespace elementary
                 ContentFrame.Navigate(typeof(PeriodicTablePage), null, new DrillInNavigationTransitionInfo());
             }
             ContentFrame.BackStack.Clear();
+        }
+
+        /// <summary>
+        /// Sets the theme preference when the settings button is clicked.
+        /// </summary>
+        /// <param name="sender">The ToggleMenuFlyoutItem.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnDarkThemeToggled(object sender, RoutedEventArgs e)
+        {
+            SettingsButton.Flyout.Hide();
+            Settings.DarkTheme = DarkThemeSetting.IsChecked;
         }
 
         /// <summary>
