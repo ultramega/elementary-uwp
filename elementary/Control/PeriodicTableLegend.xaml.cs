@@ -22,9 +22,11 @@
 */
 using elementary.Util;
 using System;
+using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
+using Windows.UI.Xaml.Media;
 
 namespace elementary.Control
 {
@@ -113,6 +115,7 @@ namespace elementary.Control
             text.SetBinding(FontSizeProperty, b);
             text.VerticalAlignment = VerticalAlignment.Center;
             text.Margin = new Thickness(6, 0, 6, 0);
+            text.Foreground = new SolidColorBrush(Colors.Black);
 
             var border = new Border();
             border.Background = ElementUtils.GetBlockColor(key);

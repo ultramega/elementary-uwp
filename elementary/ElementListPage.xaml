@@ -140,7 +140,7 @@
                     TargetType="ListViewItem">
                     <Setter
                         Property="BorderBrush"
-                        Value="LightGray" />
+                        Value="#66666666" />
 
                     <Setter
                         Property="BorderThickness"
@@ -160,14 +160,16 @@
                             Background="{x:Bind Color, Mode=OneWay}">
                             <TextBlock
                                 FontSize="16"
-                                Text="{x:Bind Number}" />
+                                Text="{x:Bind Number}"
+                                Foreground="Black" />
 
                             <TextBlock
                                 HorizontalAlignment="Center"
                                 FontSize="36"
                                 FontWeight="SemiBold"
                                 Text="{x:Bind Symbol}"
-                                Margin="0,8,0,0" />
+                                Margin="0,8,0,0"
+                                Foreground="Black" />
                         </Grid>
 
                         <TextBlock

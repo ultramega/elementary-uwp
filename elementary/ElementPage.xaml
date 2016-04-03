@@ -134,7 +134,8 @@
                     Background="{x:Bind Element.Color, Mode=OneWay}">
                     <TextBlock
                         FontSize="20"
-                        Text="{x:Bind Element.Number}" />
+                        Text="{x:Bind Element.Number}"
+                        Foreground="Black" />
 
                     <TextBlock
                         HorizontalAlignment="Center"
@@ -142,13 +143,15 @@
                         FontSize="42"
                         FontWeight="SemiBold"
                         Text="{x:Bind Element.Symbol}"
-                        Margin="4,0" />
+                        Margin="4,0"
+                        Foreground="Black" />
 
                     <TextBlock
                         HorizontalAlignment="Center"
                         VerticalAlignment="Bottom"
                         FontSize="16"
-                        Text="{x:Bind Element.Weight}" />
+                        Text="{x:Bind Element.Weight}"
+                        Foreground="Black" />
                 </Grid>
 
                 <TextBlock

@@ -61,7 +61,8 @@
         <TextBlock
             Margin="{x:Bind NumberMargin, Mode=OneWay}"
             FontSize="{x:Bind NumberFontSize, Mode=OneWay}"
-            Text="{x:Bind Element.Number}" />
+            Text="{x:Bind Element.Number}"
+            Foreground="Black" />
 
         <TextBlock
             HorizontalAlignment="Center"
@@ -69,13 +70,15 @@
             Margin="{x:Bind SymbolMargin, Mode=OneWay}"
             FontSize="{x:Bind SymbolFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Symbol}"
-            FontWeight="SemiBold" />
+            FontWeight="SemiBold"
+            Foreground="Black" />
 
         <TextBlock
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom"
             Margin="{x:Bind SubtextMargin, Mode=OneWay}"
             FontSize="{x:Bind SubtextFontSize, Mode=OneWay}"
-            Text="{x:Bind Element.Subtext}" />
+            Text="{x:Bind Element.Subtext}"
+            Foreground="Black" />
     </Grid>
 </UserControl>
