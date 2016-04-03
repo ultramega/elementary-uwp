@@ -73,7 +73,7 @@ namespace elementary.Util
             {
                 if (_categories == null)
                 {
-                    _categories = ResourceLoader.GetForCurrentView().GetString("PeriodicTable/Categories").Split(';');
+                    _categories = _res.GetString("Categories").Split(';');
                 }
                 return _categories.Clone() as string[];
             }

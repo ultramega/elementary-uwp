@@ -71,7 +71,7 @@ namespace elementary
         /// <summary>
         /// The format string for the title of the element details dialog.
         /// </summary>
-        private readonly string _titleFormat = ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
+        private readonly string _detailsTitleFormat = ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
 
         /// <summary>
         /// The current title of the element details dialog.
@@ -90,7 +90,7 @@ namespace elementary
             }
             set
             {
-                _detailsTitle = string.Format(_titleFormat, value);
+                _detailsTitle = string.Format(_detailsTitleFormat, value);
                 PropertyChanged(this, new PropertyChangedEventArgs("DetailsTitle"));
             }
         }

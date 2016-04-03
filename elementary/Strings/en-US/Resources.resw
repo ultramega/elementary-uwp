@@ -148,6 +148,9 @@
   <data name="Button.Wiki.ToolTipService.ToolTip" xml:space="preserve">
     <value>Wikipedia</value>
   </data>
+  <data name="Dialog.Details.PrimaryButtonText" xml:space="preserve">
+    <value>Close</value>
+  </data>
   <data name="Input.Filter.PlaceholderText" xml:space="preserve">
     <value>Filter by Name or Symbol</value>
   </data>
@@ -198,12 +201,6 @@
   </data>
   <data name="Menu.Settings.Label" xml:space="preserve">
     <value>Options</value>
-  </data>
-  <data name="PeriodicTable.Categories" xml:space="preserve">
-    <value>Non-metal;Noble gas;Alkali metal;Alkaline earth metal;Metalloid;Halogen;Metal;Transition metal;Lanthanide;Actinide</value>
-  </data>
-  <data name="PeriodicTable.DetailsDialog.PrimaryButtonText" xml:space="preserve">
-    <value>Close</value>
   </data>
   <data name="Settings.DarkTheme.Button.Text" xml:space="preserve">
     <value>Use the dark theme</value>
