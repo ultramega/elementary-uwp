@@ -71,8 +71,9 @@ namespace elementary
             }
             else
             {
-                ContentFrame.GoBack();
+                ContentFrame.Navigate(typeof(PeriodicTablePage), null, new DrillInNavigationTransitionInfo());
             }
+            ContentFrame.BackStack.Clear();
         }
 
         /// <summary>
