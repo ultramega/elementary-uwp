@@ -423,7 +423,7 @@
         </Grid>
 
         <ContentDialog
-            x:Uid="PT/DetailsDialog"
+            x:Uid="PeriodicTable/DetailsDialog"
             x:Name="DetailsDialog"
             Title="{x:Bind DetailsTitle, Mode=OneWay}"
             Template="{StaticResource MyContentDialogControlTemplate}">
