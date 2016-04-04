@@ -213,6 +213,9 @@
   <data name="Title.ElementDetails" xml:space="preserve">
     <value>Informazioni sull'elemento - {0}</value>
   </data>
+  <data name="Title.ElementList" xml:space="preserve">
+    <value>Lista degli elementi</value>
+  </data>
   <data name="Title.PeriodicTable.Text" xml:space="preserve">
     <value>Tavola periodica degli elementi</value>
   </data>

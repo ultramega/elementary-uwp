@@ -24,9 +24,11 @@ using elementary.Model;
 using elementary.ViewModel;
 using System.Collections.ObjectModel;
 using System.Linq;
+using Windows.ApplicationModel.Resources;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
+using Windows.UI.Xaml.Navigation;
 
 namespace elementary
 {
@@ -43,6 +45,11 @@ namespace elementary
             Number,
             Name
         }
+
+        /// <summary>
+        /// The title to display in the CommandBar.
+        /// </summary>
+        private readonly string _pageTitle = ResourceLoader.GetForCurrentView().GetString("Title/ElementList");
 
         /// <summary>
         /// The full unsorted list of elements.
@@ -81,6 +88,26 @@ namespace elementary
         {
             InitializeComponent();
             _rawList = DBHelper.GetElementList();
+        }
+
+        /// <summary>
+        /// Sets the title in the CommandBar when the Page is navigated to.
+        /// </summary>
+        /// <param name="e">The event arguments.</param>
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            MainPage.Current.PageTitle = _pageTitle;
+        }
+
+        /// <summary>
+        /// Unsets the title in the CommandBar when the Page is navigated away from.
+        /// </summary>
+        /// <param name="e">The event arguments.</param>
+        protected override void OnNavigatedFrom(NavigationEventArgs e)
+        {
+            base.OnNavigatedFrom(e);
+            MainPage.Current.PageTitle = null;
         }
 
         /// <summary>
