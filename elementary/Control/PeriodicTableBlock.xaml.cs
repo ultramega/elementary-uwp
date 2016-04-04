@@ -25,7 +25,6 @@ using System;
 using System.ComponentModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Input;
 
 namespace elementary.Control
 {
@@ -56,29 +55,14 @@ namespace elementary.Control
             DependencyProperty.Register("Element", typeof(ElementBlock), typeof(PeriodicTableBlock), null);
 
         /// <summary>
-        /// Gets or sets the Margin property of the atomic number.
-        /// </summary>
-        private Thickness NumberMargin { get; set; }
-
-        /// <summary>
         /// Gets or sets the FontSize of the atomic number.
         /// </summary>
         private double NumberFontSize { get; set; } = 1.0;
 
         /// <summary>
-        /// Gets or sets the Margin property of the element symbol.
-        /// </summary>
-        private Thickness SymbolMargin { get; set; }
-
-        /// <summary>
         /// Gets or sets the FontSize of the element symbol.
         /// </summary>
         private double SymbolFontSize { get; set; } = 1.0;
-
-        /// <summary>
-        /// Gets or sets the Margin property of the block subtext.
-        /// </summary>
-        private Thickness SubtextMargin { get; set; }
 
         /// <summary>
         /// Gets or sets the FontSize of the block subtext.
@@ -92,7 +76,6 @@ namespace elementary.Control
         {
             InitializeComponent();
             SizeChanged += OnSizeChanged;
-            PointerPressed += OnDown;
         }
 
         /// <summary>
@@ -104,53 +87,21 @@ namespace elementary.Control
         {
             var blockSize = Math.Min(e.NewSize.Width, e.NewSize.Height);
 
-            NumberFontSize = blockSize / 4;
-            NumberMargin = new Thickness(blockSize / 20, 0, 0, 0);
-
-            SymbolFontSize = blockSize / 2;
-            SymbolMargin = new Thickness(0, 0, 0, blockSize / 12);
-
-            SubtextFontSize = blockSize / 5;
-            SubtextMargin = new Thickness(0, 0, 0, blockSize / 20);
+            NumberFontSize = blockSize / 4.5;
+            SymbolFontSize = blockSize / 2.2;
+            SubtextFontSize = blockSize / 6;
 
             PropertyChanged(this, new PropertyChangedEventArgs(null));
         }
 
         /// <summary>
-        /// Activates the selection indicator when the pointer is pressed.
-        /// </summary>
-        /// <param name="sender">This PeriodicTableBlock.</param>
-        /// <param name="e">The event arguments.</param>
-        private void OnDown(object sender, PointerRoutedEventArgs e)
-        {
-            VisualStateManager.GoToState(this, "PressedState", true);
-            PointerReleased += OnUp;
-            PointerReleased += OnClicked;
-            PointerExited += OnUp;
-        }
-
-        /// <summary>
-        /// Deactivates the selection indicator when the pointer is released or moved out of the
-        /// block.
-        /// </summary>
-        /// <param name="sender">This PeriodicTableBlock.</param>
-        /// <param name="e">The event arguments.</param>
-        private void OnUp(object sender, PointerRoutedEventArgs e)
-        {
-            VisualStateManager.GoToState(this, "NormalState", true);
-            PointerReleased -= OnUp;
-            PointerReleased -= OnClicked;
-            PointerExited -= OnUp;
-        }
-
-        /// <summary>
         /// Handler for the Clicked event.
         /// </summary>
-        /// <param name="sender">The object where the event handler is attached.</param>
+        /// <param name="sender">The Button.</param>
         /// <param name="e">The event data.</param>
-        private void OnClicked(object sender, PointerRoutedEventArgs e)
+        private void OnClicked(object sender, RoutedEventArgs e)
         {
-            Clicked(sender, new RoutedEventArgs());
+            Clicked(this, new RoutedEventArgs());
         }
     }
 }

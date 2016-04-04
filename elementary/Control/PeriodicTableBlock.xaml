@@ -30,55 +30,34 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400">
-    <Grid
+    <Button
         Margin="1"
-        Background="{x:Bind Element.Color, Mode=OneWay}">
-        <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup>
-                <VisualState
-                    x:Name="NormalState" />
+        Padding="0"
+        HorizontalAlignment="Stretch"
+        VerticalAlignment="Stretch"
+        HorizontalContentAlignment="Stretch"
+        VerticalContentAlignment="Stretch"
+        Foreground="Black"
+        Background="{x:Bind Element.Color, Mode=OneWay}"
+        Click="OnClicked">
+        <Grid>
+            <TextBlock
+                FontSize="{x:Bind NumberFontSize, Mode=OneWay}"
+                Text="{x:Bind Element.Number}" />
 
-                <VisualState
-                    x:Name="PressedState">
-                    <Storyboard>
-                        <DoubleAnimation
-                            Storyboard.TargetName="BlockBorder"
-                            Storyboard.TargetProperty="Opacity"
-                            To="1"
-                            Duration="0:0:0.2" />
-                    </Storyboard>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                Padding="0,0,0,4"
+                FontSize="{x:Bind SymbolFontSize, Mode=OneWay}"
+                Text="{x:Bind Element.Symbol}"
+                FontWeight="SemiBold" />
 
-        <Border
-            x:Name="BlockBorder"
-            BorderBrush="DodgerBlue"
-            BorderThickness="2"
-            CornerRadius="2"
-            Opacity="0" />
-
-        <TextBlock
-            Margin="{x:Bind NumberMargin, Mode=OneWay}"
-            FontSize="{x:Bind NumberFontSize, Mode=OneWay}"
-            Text="{x:Bind Element.Number}"
-            Foreground="Black" />
-
-        <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"
-            Margin="{x:Bind SymbolMargin, Mode=OneWay}"
-            FontSize="{x:Bind SymbolFontSize, Mode=OneWay}"
-            Text="{x:Bind Element.Symbol}"
-            FontWeight="SemiBold"
-            Foreground="Black" />
-
-        <TextBlock
-            HorizontalAlignment="Center"
-            VerticalAlignment="Bottom"
-            Margin="{x:Bind SubtextMargin, Mode=OneWay}"
-            FontSize="{x:Bind SubtextFontSize, Mode=OneWay}"
-            Text="{x:Bind Element.Subtext}"
-            Foreground="Black" />
-    </Grid>
+            <TextBlock
+                HorizontalAlignment="Center"
+                VerticalAlignment="Bottom"
+                FontSize="{x:Bind SubtextFontSize, Mode=OneWay}"
+                Text="{x:Bind Element.Subtext}" />
+        </Grid>
+    </Button>
 </UserControl>
