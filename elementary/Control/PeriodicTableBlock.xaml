@@ -35,11 +35,56 @@
         Padding="0"
         HorizontalAlignment="Stretch"
         VerticalAlignment="Stretch"
-        HorizontalContentAlignment="Stretch"
-        VerticalContentAlignment="Stretch"
         Foreground="Black"
         Background="{x:Bind Element.Color, Mode=OneWay}"
         Click="OnClicked">
+        <Button.Template>
+            <ControlTemplate
+                TargetType="Button">
+                <Grid
+                    x:Name="RootGrid"
+                    Background="{TemplateBinding Background}">
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup
+                            x:Name="CommonStates">
+                            <VisualState
+                                x:Name="Normal" />
+
+                            <VisualState
+                                x:Name="Pressed">
+                                <VisualState.Setters>
+                                    <Setter
+                                        Target="RootGrid.CornerRadius"
+                                        Value="2" />
+                                </VisualState.Setters>
+
+                                <Storyboard>
+                                    <DoubleAnimation
+                                        Storyboard.TargetName="ContentBorder"
+                                        Storyboard.TargetProperty="Opacity"
+                                        To="1"
+                                        Duration="0:0:0.2" />
+                                </Storyboard>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+
+                    <Border
+                        x:Name="ContentBorder"
+                        BorderBrush="DodgerBlue"
+                        BorderThickness="2"
+                        CornerRadius="2"
+                        Opacity="0" />
+
+                    <ContentPresenter
+                        x:Name="ContentPresenter"
+                        Margin="2"
+                        Content="{TemplateBinding Content}"
+                        AutomationProperties.AccessibilityView="Raw" />
+                </Grid>
+            </ControlTemplate>
+        </Button.Template>
+
         <Grid>
             <TextBlock
                 FontSize="{x:Bind NumberFontSize, Mode=OneWay}"
