@@ -22,12 +22,10 @@
 */
 using elementary.Control;
 using elementary.Model;
-using elementary.ViewModel;
 using System;
 using System.ComponentModel;
 using Windows.ApplicationModel.Resources;
 using Windows.Graphics.Display;
-using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -42,31 +40,6 @@ namespace elementary
         /// Occurs when a property changes.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
-
-        /// <summary>
-        /// Gets or sets the FontSize of the row and column headers.
-        /// </summary>
-        private double HeaderSize { get; set; } = 1.0;
-
-        /// <summary>
-        /// Gets or sets the FontSize of the title.
-        /// </summary>
-        private double TitleSize { get; set; } = 1.0;
-
-        /// <summary>
-        /// Gets or sets the distance between the table and the Lantha/Actinides.
-        /// </summary>
-        private double SpacerWidth { get; set; } = 1.0;
-
-        /// <summary>
-        /// Gets or sets the Margin around the row and column headers.
-        /// </summary>
-        private Thickness HeaderMargin { get; set; }
-
-        /// <summary>
-        /// Gets or sets the Margin around the color legend.
-        /// </summary>
-        private Thickness LegendMargin { get; set; }
 
         /// <summary>
         /// The format string for the title of the element details dialog.
@@ -101,8 +74,6 @@ namespace elementary
         public PeriodicTablePage()
         {
             InitializeComponent();
-            SizeChanged += OnSizeChanged;
-            LoadBlocks();
         }
 
         /// <summary>
@@ -126,47 +97,13 @@ namespace elementary
         }
 
         /// <summary>
-        /// Calculates and sets the properties when the size of the Page changes.
-        /// </summary>
-        /// <param name="sender">The Page.</param>
-        /// <param name="e">The event arguments.</param>
-        private void OnSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            var blockSize = Math.Min(ActualWidth / 18, ActualHeight / 9);
-
-            HeaderSize = blockSize / 4;
-            TitleSize = blockSize / 2;
-            SpacerWidth = blockSize / 4;
-            HeaderMargin = new Thickness(0, 0, blockSize / 5, blockSize / 5);
-            LegendMargin = new Thickness(blockSize / 3, blockSize * 0.75, blockSize / 3, blockSize / 4);
-
-            PropertyChanged(this, new PropertyChangedEventArgs(null));
-        }
-
-        /// <summary>
-        /// Loads the ElementBlocks into the Grid.
-        /// </summary>
-        private void LoadBlocks()
-        {
-            foreach (ElementBlock element in DBHelper.GetElementTable())
-            {
-                var block = new PeriodicTableBlock() { Element = element };
-                block.Clicked += BlockClicked; ;
-                Grid.SetRow(block, element.Row);
-                Grid.SetColumn(block, element.Column);
-                PeriodicTable.Children.Add(block);
-            }
-        }
-
-        /// <summary>
         /// Opens the ContentDialog to display the details of an element when it is selected.
         /// </summary>
-        /// <param name="sender">The clicked PeriodicTableBlock.</param>
+        /// <param name="sender">The PeriodicTableControl.</param>
         /// <param name="e">The event arguments.</param>
-        private async void BlockClicked(object sender, RoutedEventArgs e)
+        private async void OnBlockClick(object sender, BlockClickEventArgs e)
         {
-            var id = (sender as PeriodicTableBlock).Element.Element._ID;
-            var element = DBHelper.GetElement(id);
+            var element = DBHelper.GetElement(e.ClickedElement._ID);
             DetailsFrame.Navigate(typeof(ElementPage), element);
             DetailsTitle = element.Name;
             await DetailsDialog.ShowAsync();

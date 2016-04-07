@@ -123,8 +123,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Control\PeriodicTableBlock.xaml.cs">
-      <DependentUpon>PeriodicTableBlock.xaml</DependentUpon>
+    <Compile Include="Control\BlockClickEventArgs.cs" />
+    <Compile Include="Control\PeriodicTableBlockControl.xaml.cs">
+      <DependentUpon>PeriodicTableBlockControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Control\PeriodicTableControl.xaml.cs">
+      <DependentUpon>PeriodicTableControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Control\PeriodicTableLegend.xaml.cs">
       <DependentUpon>PeriodicTableLegend.xaml</DependentUpon>
@@ -242,7 +246,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Control\PeriodicTableBlock.xaml">
+    <Page Include="Control\PeriodicTableBlockControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Control\PeriodicTableControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -29,22 +29,17 @@ using Windows.UI.Xaml.Controls;
 namespace elementary.Control
 {
     /// <summary>
-    /// Displays a clickable block in the periodic table.
+    /// Control for displaying an element block in the PeriodicTableControl.
     /// </summary>
-    public sealed partial class PeriodicTableBlock : UserControl, INotifyPropertyChanged
+    public sealed partial class PeriodicTableBlockControl : Button, INotifyPropertyChanged
     {
-        /// <summary>
-        /// Occurs when a click event is detected on this block.
-        /// </summary>
-        public event RoutedEventHandler Clicked;
-
         /// <summary>
         /// Occurs when a property changes.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         /// <summary>
-        /// Gets or sets the ElementBlock represented by this block.
+        /// Gets or sets the element data.
         /// </summary>
         public ElementBlock Element
         {
@@ -52,7 +47,7 @@ namespace elementary.Control
             set { SetValue(ElementProperty, value); }
         }
         public static readonly DependencyProperty ElementProperty =
-            DependencyProperty.Register("Element", typeof(ElementBlock), typeof(PeriodicTableBlock), null);
+            DependencyProperty.Register("Element", typeof(ElementBlock), typeof(PeriodicTableBlockControl), null);
 
         /// <summary>
         /// Gets or sets the FontSize of the atomic number.
@@ -72,10 +67,9 @@ namespace elementary.Control
         /// <summary>
         /// Constructor.
         /// </summary>
-        public PeriodicTableBlock()
+        public PeriodicTableBlockControl()
         {
             InitializeComponent();
-            SizeChanged += OnSizeChanged;
         }
 
         /// <summary>
@@ -89,19 +83,9 @@ namespace elementary.Control
 
             NumberFontSize = blockSize / 4.5;
             SymbolFontSize = blockSize / 2.2;
-            SubtextFontSize = blockSize / 6;
+            SubtextFontSize = blockSize / 5;
 
             PropertyChanged(this, new PropertyChangedEventArgs(null));
-        }
-
-        /// <summary>
-        /// Handler for the Clicked event.
-        /// </summary>
-        /// <param name="sender">The Button.</param>
-        /// <param name="e">The event data.</param>
-        private void OnClicked(object sender, RoutedEventArgs e)
-        {
-            Clicked(this, new RoutedEventArgs());
         }
     }
 }
