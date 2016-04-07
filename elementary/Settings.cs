@@ -21,7 +21,7 @@ namespace elementary
         /// <summary>
         /// Occurs when an application setting changes.
         /// </summary>
-        public static event OnSettingChangedHandler SettingChanged;
+        public static event OnSettingChangedHandler SettingChanged = delegate { };
 
         /// <summary>
         /// Event handler for when an application setting changes.
