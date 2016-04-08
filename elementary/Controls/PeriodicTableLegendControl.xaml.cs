@@ -21,12 +21,12 @@
   THE SOFTWARE.
 */
 using elementary.Utilities;
-using elementary.ViewModel;
+using elementary.ViewModels;
 using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace elementary.Control
+namespace elementary.Controls
 {
     /// <summary>
     /// Control for displaying the legend for the element block colors.

@@ -26,7 +26,7 @@ using System;
 using System.ComponentModel;
 using Windows.UI.Xaml.Media;
 
-namespace elementary.ViewModel
+namespace elementary.ViewModels
 {
     /// <summary>
     /// Base for all Element ViewModels.

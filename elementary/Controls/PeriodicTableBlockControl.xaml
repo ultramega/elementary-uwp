@@ -21,10 +21,10 @@
   THE SOFTWARE.
 -->
 <Button
-    x:Class="elementary.Control.PeriodicTableBlockControl"
+    x:Class="elementary.Controls.PeriodicTableBlockControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:elementary.Control"
+    xmlns:local="using:elementary.Controls"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"

@@ -27,7 +27,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Data;
 
-namespace elementary.Control
+namespace elementary.Controls
 {
     /// <summary>
     /// Control for displaying the Periodic Table.

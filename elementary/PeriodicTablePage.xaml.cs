@@ -20,7 +20,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using elementary.Control;
+using elementary.Controls;
 using elementary.Model;
 using System;
 using System.ComponentModel;

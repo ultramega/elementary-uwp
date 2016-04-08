@@ -21,11 +21,11 @@
   THE SOFTWARE.
 -->
 <UserControl
-    x:Class="elementary.Control.PeriodicTableLegendControl"
+    x:Class="elementary.Controls.PeriodicTableLegendControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="using:elementary.Control"
-    xmlns:vm="using:elementary.ViewModel"
+    xmlns:local="using:elementary.Controls"
+    xmlns:vm="using:elementary.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"

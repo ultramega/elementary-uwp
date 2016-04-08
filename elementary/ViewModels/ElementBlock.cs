@@ -22,7 +22,7 @@
 */
 using elementary.Model;
 
-namespace elementary.ViewModel
+namespace elementary.ViewModels
 {
     /// <summary>
     /// Represents a block on the periodic table.

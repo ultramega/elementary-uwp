@@ -21,30 +21,31 @@
   THE SOFTWARE.
 */
 using elementary.Model;
-using elementary.Utilities;
 
-namespace elementary.ViewModel
+namespace elementary.Controls
 {
     /// <summary>
-    /// Contains the data backing an item in the element list.
+    /// Provides event data for the BlockClick event.
     /// </summary>
-    public class ElementListItem : ElementBase
+    public class BlockClickEventArgs
     {
         /// <summary>
-        /// The element name.
+        /// Gets a reference to the clicked block.
         /// </summary>
-        public string Name
-        {
-            get
-            {
-                return ElementUtilities.GetElementName(Element.Number);
-            }
-        }
+        public Element ClickedElement { get; }
 
         /// <summary>
         /// Constructor.
         /// </summary>
-        /// <param name="element">The Element to represent.</param>
-        public ElementListItem(Element element) : base(element) { }
+        public BlockClickEventArgs() { }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="element">The element from the clicked block.</param>
+        internal BlockClickEventArgs(Element element)
+        {
+            ClickedElement = element;
+        }
     }
 }

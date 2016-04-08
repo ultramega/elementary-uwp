@@ -28,7 +28,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using Windows.ApplicationModel.Resources;
 
-namespace elementary.ViewModel
+namespace elementary.ViewModels
 {
     /// <summary>
     /// The ViewModel containing the full details of an element.

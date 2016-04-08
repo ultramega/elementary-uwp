@@ -123,14 +123,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Control\BlockClickEventArgs.cs" />
-    <Compile Include="Control\PeriodicTableBlockControl.xaml.cs">
+    <Compile Include="Controls\BlockClickEventArgs.cs" />
+    <Compile Include="Controls\PeriodicTableBlockControl.xaml.cs">
       <DependentUpon>PeriodicTableBlockControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Control\PeriodicTableControl.xaml.cs">
+    <Compile Include="Controls\PeriodicTableControl.xaml.cs">
       <DependentUpon>PeriodicTableControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Control\PeriodicTableLegendControl.xaml.cs">
+    <Compile Include="Controls\PeriodicTableLegendControl.xaml.cs">
       <DependentUpon>PeriodicTableLegendControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ElementDetailsPage.xaml.cs">
@@ -154,11 +154,11 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Utilities\ElementUtilities.cs" />
     <Compile Include="Utilities\UnitUtilities.cs" />
-    <Compile Include="ViewModel\ElementBase.cs" />
-    <Compile Include="ViewModel\ElementBlock.cs" />
-    <Compile Include="ViewModel\ElementDetails.cs" />
-    <Compile Include="ViewModel\ElementListItem.cs" />
-    <Compile Include="ViewModel\LegendItem.cs" />
+    <Compile Include="ViewModels\ElementBase.cs" />
+    <Compile Include="ViewModels\ElementBlock.cs" />
+    <Compile Include="ViewModels\ElementDetails.cs" />
+    <Compile Include="ViewModels\ElementListItem.cs" />
+    <Compile Include="ViewModels\LegendItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -247,15 +247,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Control\PeriodicTableBlockControl.xaml">
+    <Page Include="Controls\PeriodicTableBlockControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Control\PeriodicTableControl.xaml">
+    <Page Include="Controls\PeriodicTableControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Control\PeriodicTableLegendControl.xaml">
+    <Page Include="Controls\PeriodicTableLegendControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

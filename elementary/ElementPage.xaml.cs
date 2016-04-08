@@ -20,7 +20,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using elementary.ViewModel;
+using elementary.ViewModels;
 using System;
 using Windows.System;
 using Windows.UI.Xaml;

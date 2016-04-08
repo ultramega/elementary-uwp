@@ -20,11 +20,11 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using elementary.ViewModel;
+using elementary.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace elementary.Control
+namespace elementary.Controls
 {
     /// <summary>
     /// Control for displaying an element block in the PeriodicTableControl.

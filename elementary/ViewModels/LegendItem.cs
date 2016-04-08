@@ -27,7 +27,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.UI.Xaml.Media;
 
-namespace elementary.ViewModel
+namespace elementary.ViewModels
 {
     /// <summary>
     /// Contains the data backing a legend item.

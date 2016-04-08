@@ -21,7 +21,7 @@
   THE SOFTWARE.
 */
 using elementary.Model;
-using elementary.ViewModel;
+using elementary.ViewModels;
 using System.Collections.ObjectModel;
 using System.Linq;
 using Windows.ApplicationModel.Resources;
