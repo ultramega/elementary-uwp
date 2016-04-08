@@ -1,2 +1,2 @@
-﻿- v.0.1.0 (TBD):
+﻿- v.0.1.0 (4/8/16):
    * Initial release
