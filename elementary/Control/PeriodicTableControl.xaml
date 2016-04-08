@@ -127,7 +127,7 @@
             FontSize="{x:Bind TitleFontSize, Mode=OneWay}"
             FontWeight="SemiBold" />
 
-        <local:PeriodicTableLegend
+        <local:PeriodicTableLegendControl
             Grid.Row="1"
             Grid.Column="4"
             Grid.RowSpan="3"

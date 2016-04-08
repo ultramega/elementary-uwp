@@ -31,12 +31,12 @@ namespace elementary.Control
     /// <summary>
     /// Control for displaying the legend for the element block colors.
     /// </summary>
-    public sealed partial class PeriodicTableLegend : UserControl
+    public sealed partial class PeriodicTableLegendControl : UserControl
     {
         /// <summary>
         /// Constructor.
         /// </summary>
-        public PeriodicTableLegend()
+        public PeriodicTableLegendControl()
         {
             InitializeComponent();
         }

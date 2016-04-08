@@ -130,8 +130,8 @@
     <Compile Include="Control\PeriodicTableControl.xaml.cs">
       <DependentUpon>PeriodicTableControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Control\PeriodicTableLegend.xaml.cs">
-      <DependentUpon>PeriodicTableLegend.xaml</DependentUpon>
+    <Compile Include="Control\PeriodicTableLegendControl.xaml.cs">
+      <DependentUpon>PeriodicTableLegendControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ElementDetailsPage.xaml.cs">
       <DependentUpon>ElementDetailsPage.xaml</DependentUpon>
@@ -255,7 +255,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Control\PeriodicTableLegend.xaml">
+    <Page Include="Control\PeriodicTableLegendControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
