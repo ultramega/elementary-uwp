@@ -36,6 +36,11 @@ namespace elementary.ViewModel
     public class ElementDetails : ElementBase, INotifyPropertyChanged
     {
         /// <summary>
+        /// Occurs when a mutable property changes.
+        /// </summary>
+        public new event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+        /// <summary>
         /// The localized string for unknown values.
         /// </summary>
         private readonly string _unknownValue = ResourceLoader.GetForCurrentView().GetString("Unknown");
@@ -250,11 +255,6 @@ namespace elementary.ViewModel
                 return string.Format("https://www.youtube.com/watch?v={0}", Element.Video);
             }
         }
-
-        /// <summary>
-        /// Occurs when a mutable property changes.
-        /// </summary>
-        public new event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         /// <summary>
         /// Constructor.

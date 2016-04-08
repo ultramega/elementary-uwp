@@ -36,7 +36,7 @@ namespace elementary.Control
         /// <summary>
         /// Occurs when an element block in the table is clicked.
         /// </summary>
-        public event BlockClickEventHandler BlockClick;
+        public event BlockClickEventHandler BlockClick = delegate { };
 
         /// <summary>
         /// Handler for the BlockClick event.
