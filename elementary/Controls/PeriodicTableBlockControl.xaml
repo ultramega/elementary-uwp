@@ -96,7 +96,7 @@
         <TextBlock
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Padding="0,0,0,4"
+            Padding="0,0,0,2"
             FontSize="{x:Bind SymbolFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Symbol}"
             FontWeight="SemiBold" />
