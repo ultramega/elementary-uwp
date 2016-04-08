@@ -25,6 +25,7 @@ using System;
 using System.ComponentModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Data;
 
 namespace elementary.Control
 {
@@ -81,6 +82,26 @@ namespace elementary.Control
         private Thickness LegendMargin { get; set; }
 
         /// <summary>
+        /// Gets or sets the FontSize of the legend.
+        /// </summary>
+        private double LegendFontSize { get; set; } = 1.0;
+
+        /// <summary>
+        /// Gets or sets the FontSize of the atomic number.
+        /// </summary>
+        private double NumberFontSize { get; set; } = 1.0;
+
+        /// <summary>
+        /// Gets or sets the FontSize of the element symbol.
+        /// </summary>
+        private double SymbolFontSize { get; set; } = 1.0;
+
+        /// <summary>
+        /// Gets or sets the FontSize of the block subtext.
+        /// </summary>
+        private double SubtextFontSize { get; set; } = 1.0;
+
+        /// <summary>
         /// Constructor.
         /// </summary>
         public PeriodicTableControl()
@@ -95,11 +116,18 @@ namespace elementary.Control
         /// <param name="e">The event arguments.</param>
         private void OnLoaded(object sender, RoutedEventArgs e)
         {
+            CalculateSizes();
             var children = (Content as Panel).Children;
+            var numberBinding = new Binding() { Source = NumberFontSize };
+            var symbolBinding = new Binding() { Source = SymbolFontSize };
+            var subtextBinding = new Binding() { Source = SubtextFontSize };
             foreach (var block in DBHelper.GetElementTable())
             {
                 var element = BlockTemplate.LoadContent() as PeriodicTableBlockControl;
                 element.Element = block;
+                element.SetBinding(PeriodicTableBlockControl.NumberFontSizeProperty, numberBinding);
+                element.SetBinding(PeriodicTableBlockControl.SymbolFontSizeProperty, symbolBinding);
+                element.SetBinding(PeriodicTableBlockControl.SubtextFontSizeProperty, subtextBinding);
                 children.Add(element);
             }
         }
@@ -107,11 +135,9 @@ namespace elementary.Control
         /// <summary>
         /// Calculates and sets the properties of the Control when the size changes.
         /// </summary>
-        /// <param name="sender">This PeriodicTableBlock.</param>
-        /// <param name="e">The event arguments.</param>
-        private void OnSizeChanged(object sender, SizeChangedEventArgs e)
+        private void CalculateSizes()
         {
-            var blockSize = Math.Min(e.NewSize.Width / 18.3, e.NewSize.Height / 9.9);
+            var blockSize = Math.Min(ActualWidth / 18.3, ActualHeight / 9.9);
 
             HeaderFontSize = blockSize / 4;
             TitleFontSize = blockSize / 2;
@@ -119,6 +145,11 @@ namespace elementary.Control
             HeaderWidth = new GridLength(blockSize / 3);
             SpacerWidth = new GridLength(blockSize / 4);
             LegendMargin = new Thickness(blockSize / 3, blockSize * 0.90, blockSize / 3, blockSize / 4);
+
+            NumberFontSize = blockSize / 4.5;
+            SymbolFontSize = blockSize / 2.2;
+            SubtextFontSize = blockSize / 5;
+            LegendFontSize = blockSize / 4;
 
             PropertyChanged(this, new PropertyChangedEventArgs(null));
         }

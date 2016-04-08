@@ -21,6 +21,7 @@
   THE SOFTWARE.
 -->
 <UserControl
+    x:Name="Root"
     x:Class="elementary.Control.PeriodicTableControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -30,7 +31,6 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400"
-    SizeChanged="OnSizeChanged"
     Loaded="OnLoaded">
     <UserControl.Resources>
         <DataTemplate
@@ -132,6 +132,7 @@
             Grid.Column="4"
             Grid.RowSpan="3"
             Grid.ColumnSpan="9"
+            FontSize="{x:Bind LegendFontSize, Mode=OneWay}"
             Margin="{x:Bind LegendMargin, Mode=OneWay}" />
 
         <TextBlock

@@ -31,7 +31,6 @@
     mc:Ignorable="d"
     d:DesignHeight="300"
     d:DesignWidth="400"
-    SizeChanged="OnSizeChanged"
     Loaded="OnLoaded">
     <UserControl.Resources>
         <DataTemplate

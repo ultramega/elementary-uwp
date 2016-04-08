@@ -38,8 +38,7 @@
     HorizontalAlignment="Stretch"
     VerticalAlignment="Stretch"
     Foreground="Black"
-    Background="{x:Bind Element.Color, Mode=OneWay}"
-    SizeChanged="OnSizeChanged">
+    Background="{x:Bind Element.Color, Mode=OneWay}">
     <Button.Template>
         <ControlTemplate
             TargetType="Button">

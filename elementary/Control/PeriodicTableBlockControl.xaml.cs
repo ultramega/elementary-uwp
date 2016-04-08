@@ -21,8 +21,6 @@
   THE SOFTWARE.
 */
 using elementary.ViewModel;
-using System;
-using System.ComponentModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
@@ -31,13 +29,8 @@ namespace elementary.Control
     /// <summary>
     /// Control for displaying an element block in the PeriodicTableControl.
     /// </summary>
-    public sealed partial class PeriodicTableBlockControl : Button, INotifyPropertyChanged
+    public sealed partial class PeriodicTableBlockControl : Button
     {
-        /// <summary>
-        /// Occurs when a property changes.
-        /// </summary>
-        public event PropertyChangedEventHandler PropertyChanged = delegate { };
-
         /// <summary>
         /// Gets or sets the element data.
         /// </summary>
@@ -52,17 +45,35 @@ namespace elementary.Control
         /// <summary>
         /// Gets or sets the FontSize of the atomic number.
         /// </summary>
-        private double NumberFontSize { get; set; } = 1.0;
+        public double NumberFontSize
+        {
+            get { return (double)GetValue(NumberFontSizeProperty); }
+            set { SetValue(NumberFontSizeProperty, value); }
+        }
+        public static readonly DependencyProperty NumberFontSizeProperty =
+            DependencyProperty.Register("NumberFontSize", typeof(double), typeof(PeriodicTableBlockControl), new PropertyMetadata(13.0));
 
         /// <summary>
         /// Gets or sets the FontSize of the element symbol.
         /// </summary>
-        private double SymbolFontSize { get; set; } = 1.0;
+        public double SymbolFontSize
+        {
+            get { return (double)GetValue(SymbolFontSizeProperty); }
+            set { SetValue(SymbolFontSizeProperty, value); }
+        }
+        public static readonly DependencyProperty SymbolFontSizeProperty =
+            DependencyProperty.Register("SymbolFontSize", typeof(double), typeof(PeriodicTableBlockControl), new PropertyMetadata(27.0));
 
         /// <summary>
         /// Gets or sets the FontSize of the block subtext.
         /// </summary>
-        private double SubtextFontSize { get; set; } = 1.0;
+        public double SubtextFontSize
+        {
+            get { return (double)GetValue(SubtextFontSizeProperty); }
+            set { SetValue(SubtextFontSizeProperty, value); }
+        }
+        public static readonly DependencyProperty SubtextFontSizeProperty =
+            DependencyProperty.Register("SubtextFontSize", typeof(double), typeof(PeriodicTableBlockControl), new PropertyMetadata(12.0));
 
         /// <summary>
         /// Constructor.
@@ -70,22 +81,6 @@ namespace elementary.Control
         public PeriodicTableBlockControl()
         {
             InitializeComponent();
-        }
-
-        /// <summary>
-        /// Calculates and sets the properties of the Control when the size changes.
-        /// </summary>
-        /// <param name="sender">This PeriodicTableBlock.</param>
-        /// <param name="e">The event arguments.</param>
-        private void OnSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            var blockSize = Math.Min(e.NewSize.Width, e.NewSize.Height);
-
-            NumberFontSize = blockSize / 4.5;
-            SymbolFontSize = blockSize / 2.2;
-            SubtextFontSize = blockSize / 5;
-
-            PropertyChanged(this, new PropertyChangedEventArgs(null));
         }
     }
 }

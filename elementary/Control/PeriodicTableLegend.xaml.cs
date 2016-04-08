@@ -53,16 +53,6 @@ namespace elementary.Control
         }
 
         /// <summary>
-        /// Calculates and sets the FontSize when the size of the Control changes.
-        /// </summary>
-        /// <param name="sender">The object where the event handler is attached.</param>
-        /// <param name="e">The event data.</param>
-        private void OnSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            FontSize = e.NewSize.Height / 9;
-        }
-
-        /// <summary>
         /// Reloads the legend when the setting for element colors is changed.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
