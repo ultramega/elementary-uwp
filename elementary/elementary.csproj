@@ -158,6 +158,7 @@
     <Compile Include="ViewModel\ElementBlock.cs" />
     <Compile Include="ViewModel\ElementDetails.cs" />
     <Compile Include="ViewModel\ElementListItem.cs" />
+    <Compile Include="ViewModel\LegendItem.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">

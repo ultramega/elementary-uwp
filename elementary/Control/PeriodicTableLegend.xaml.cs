@@ -21,12 +21,10 @@
   THE SOFTWARE.
 */
 using elementary.Utilities;
+using elementary.ViewModel;
 using System;
-using Windows.UI;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Media;
 
 namespace elementary.Control
 {
@@ -41,9 +39,27 @@ namespace elementary.Control
         public PeriodicTableLegend()
         {
             InitializeComponent();
+        }
+
+        /// <summary>
+        /// Loads the legend items when the Control is loaded.
+        /// </summary>
+        /// <param name="sender">This Control.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnLoaded(object sender, RoutedEventArgs e)
+        {
             LoadLegend();
-            SizeChanged += OnSizeChanged;
             Settings.SettingChanged += OnSettingChanged;
+        }
+
+        /// <summary>
+        /// Calculates and sets the FontSize when the size of the Control changes.
+        /// </summary>
+        /// <param name="sender">The object where the event handler is attached.</param>
+        /// <param name="e">The event data.</param>
+        private void OnSizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            FontSize = e.NewSize.Height / 9;
         }
 
         /// <summary>
@@ -60,16 +76,6 @@ namespace elementary.Control
         }
 
         /// <summary>
-        /// Calculates and sets the FontSize when the size of the Control changes.
-        /// </summary>
-        /// <param name="sender">The object where the event handler is attached.</param>
-        /// <param name="e">The event data.</param>
-        private void OnSizeChanged(object sender, SizeChangedEventArgs e)
-        {
-            FontSize = e.NewSize.Height / 9;
-        }
-
-        /// <summary>
         /// Loads the legend data.
         /// </summary>
         private void LoadLegend()
@@ -77,7 +83,8 @@ namespace elementary.Control
             var grid = Content as Grid;
             grid.Children.Clear();
             string[] names;
-            if (Settings.ElementColors == "cat")
+            var useCategory = Settings.ElementColors == "cat";
+            if (useCategory)
             {
                 names = ElementUtilities.Categories;
             }
@@ -88,41 +95,29 @@ namespace elementary.Control
             var colSpan = 4 - (int)Math.Ceiling(names.Length / 4d);
             for (var i = 0; i < names.Length; i++)
             {
-                var item = MakeItem((long)i, names[i]);
-                Grid.SetRow(item, i % 4);
-                Grid.SetColumn(item, i / 4);
-                Grid.SetColumnSpan(item, colSpan);
-                grid.Children.Add(item);
+                var key = useCategory ? (long)i : names[i] as object;
+                var item = new LegendItem()
+                {
+                    Text = names[i],
+                    Background = ElementUtilities.GetBlockColor(key),
+                    Row = i % 4,
+                    Column = i / 4,
+                    ColumnSpan = colSpan
+                };
+                grid.Children.Add(MakeItem(item));
             }
         }
 
         /// <summary>
         /// Creates an item for the legend.
         /// </summary>
-        /// <param name="key">The key for the color.</param>
-        /// <param name="name">The name assigned to the color.</param>
-        /// <returns>The item to place in the table.</returns>
-        private FrameworkElement MakeItem(object key, string name)
+        /// <param name="item">The data source for the item.</param>
+        /// <returns>The element to place in the table.</returns>
+        private FrameworkElement MakeItem(LegendItem item)
         {
-            var binding = new Binding()
-            {
-                Mode = BindingMode.OneWay,
-                Source = FontSize
-            };
-
-            var text = new TextBlock();
-            text.Text = name;
-            text.SetBinding(FontSizeProperty, binding);
-            text.VerticalAlignment = VerticalAlignment.Center;
-            text.Margin = new Thickness(6, 0, 6, 0);
-            text.Foreground = new SolidColorBrush(Colors.Black);
-
-            var border = new Border();
-            border.Background = ElementUtilities.GetBlockColor(key);
-            border.Margin = new Thickness(1);
-            border.Child = text;
-
-            return border;
+            var element = LegendEntryTemplate.LoadContent() as FrameworkElement;
+            element.DataContext = item;
+            return element;
         }
     }
 }

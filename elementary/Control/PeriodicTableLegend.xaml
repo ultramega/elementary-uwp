@@ -25,11 +25,34 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:elementary.Control"
+    xmlns:vm="using:elementary.ViewModel"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     d:DesignHeight="300"
-    d:DesignWidth="400">
+    d:DesignWidth="400"
+    SizeChanged="OnSizeChanged"
+    Loaded="OnLoaded">
+    <UserControl.Resources>
+        <DataTemplate
+            x:Name="LegendEntryTemplate"
+            x:DataType="vm:LegendItem">
+            <Border
+                Grid.Row="{x:Bind Row}"
+                Grid.Column="{x:Bind Column}"
+                Grid.ColumnSpan="{x:Bind ColumnSpan}"
+                Margin="1"
+                Background="{x:Bind Background}">
+                <TextBlock
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Center"
+                    Margin="6,0"
+                    Foreground="Black"
+                    Text="{x:Bind Text}" />
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition />
