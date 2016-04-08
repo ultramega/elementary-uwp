@@ -25,7 +25,6 @@ using System;
 using System.ComponentModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Data;
 
 namespace elementary.Controls
 {
@@ -118,16 +117,13 @@ namespace elementary.Controls
         {
             CalculateSizes();
             var children = (Content as Panel).Children;
-            var numberBinding = new Binding() { Source = NumberFontSize };
-            var symbolBinding = new Binding() { Source = SymbolFontSize };
-            var subtextBinding = new Binding() { Source = SubtextFontSize };
             foreach (var block in DBHelper.GetElementTable())
             {
                 var element = BlockTemplate.LoadContent() as PeriodicTableBlockControl;
                 element.Element = block;
-                element.SetBinding(PeriodicTableBlockControl.NumberFontSizeProperty, numberBinding);
-                element.SetBinding(PeriodicTableBlockControl.SymbolFontSizeProperty, symbolBinding);
-                element.SetBinding(PeriodicTableBlockControl.SubtextFontSizeProperty, subtextBinding);
+                element.NumberFontSize = NumberFontSize;
+                element.SymbolFontSize = SymbolFontSize;
+                element.SubtextFontSize = SubtextFontSize;
                 children.Add(element);
             }
         }
