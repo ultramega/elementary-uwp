@@ -21,6 +21,7 @@
   THE SOFTWARE.
 */
 using Elementary.Model;
+using Elementary.ViewModels;
 using System;
 using System.ComponentModel;
 using Windows.UI.Xaml;
@@ -117,10 +118,10 @@ namespace Elementary.Controls
         {
             CalculateSizes();
             var children = (Content as Panel).Children;
-            foreach (var block in DBHelper.GetElementTable())
+            foreach (var item in Elements.List)
             {
                 var element = BlockTemplate.LoadContent() as PeriodicTableBlockControl;
-                element.Element = block;
+                element.Element = new ElementBlock(item);
                 element.NumberFontSize = NumberFontSize;
                 element.SymbolFontSize = SymbolFontSize;
                 element.SubtextFontSize = SubtextFontSize;

@@ -23,98 +23,93 @@
 namespace Elementary.Model
 {
     /// <summary>
-    /// Represents an Element record from the database.
+    /// Represents an Element.
     /// </summary>
     public class Element
     {
         /// <summary>
-        /// The row ID of the database record.
-        /// </summary>
-        public long _ID { get; set; }
-
-        /// <summary>
         /// The element number.
         /// </summary>
-        public long Number { get; set; }
+        public long Number { get; internal set; }
 
         /// <summary>
         /// The element symbol.
         /// </summary>
-        public string Symbol { get; set; }
+        public string Symbol { get; internal set; }
 
         /// <summary>
         /// The element group.
         /// </summary>
-        public long Group { get; set; }
+        public long Group { get; internal set; }
 
         /// <summary>
         /// The element period.
         /// </summary>
-        public long Period { get; set; }
+        public long Period { get; internal set; }
 
         /// <summary>
         /// The element block.
         /// </summary>
-        public string Block { get; set; }
+        public string Block { get; internal set; }
 
         /// <summary>
         /// The atomic weight of the element.
         /// </summary>
-        public double Weight { get; set; }
+        public double Weight { get; internal set; }
 
         /// <summary>
         /// The density of the element in g/cm³.
         /// </summary>
-        public double? Density { get; set; }
+        public double? Density { get; internal set; }
 
         /// <summary>
         /// The melting point of the element in K.
         /// </summary>
-        public double? Melt { get; set; }
+        public double? Melt { get; internal set; }
 
         /// <summary>
         /// The boiling point of the element in K.
         /// </summary>
-        public double? Boil { get; set; }
+        public double? Boil { get; internal set; }
 
         /// <summary>
         /// The heat of the element in J/g·K.
         /// </summary>
-        public double? Heat { get; set; }
+        public double? Heat { get; internal set; }
 
         /// <summary>
         /// The electronegativity of the element in V.
         /// </summary>
-        public double? Negativity { get; set; }
+        public double? Negativity { get; internal set; }
 
         /// <summary>
         /// The abundance of the element in mg/kg.
         /// </summary>
-        public double? Abundance { get; set; }
+        public double? Abundance { get; internal set; }
 
         /// <summary>
         /// The element category.
         /// </summary>
-        public long Category { get; set; }
+        public long Category { get; internal set; }
 
         /// <summary>
         /// The electron configuration of the element.
         /// </summary>
-        public string Configuration { get; set; }
+        public string Configuration { get; internal set; }
 
         /// <summary>
         /// The electrons per shell of the element.
         /// </summary>
-        public string Electrons { get; set; }
+        public string Electrons { get; internal set; }
 
         /// <summary>
         /// Whether the element is unstable.
         /// </summary>
-        public bool Unstable { get; set; }
+        public bool Unstable { get; internal set; }
 
         /// <summary>
         /// The YouTube ID for the video associated with the element.
         /// </summary>
-        public string Video { get; set; }
+        public string Video { get; internal set; }
     }
 }

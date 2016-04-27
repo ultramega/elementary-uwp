@@ -21,7 +21,7 @@
   THE SOFTWARE.
 */
 using Elementary.Controls;
-using Elementary.Model;
+using Elementary.ViewModels;
 using System;
 using System.ComponentModel;
 using Windows.ApplicationModel.Resources;
@@ -103,7 +103,7 @@ namespace Elementary
         /// <param name="e">The event arguments.</param>
         private async void OnBlockClick(object sender, BlockClickEventArgs e)
         {
-            var element = DBHelper.GetElement(e.ClickedElement._ID);
+            var element = new ElementDetails(e.ClickedElement);
             DetailsFrame.Navigate(typeof(ElementPage), element);
             DetailsTitle = element.Name;
             await DetailsDialog.ShowAsync();

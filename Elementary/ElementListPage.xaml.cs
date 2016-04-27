@@ -87,7 +87,11 @@ namespace Elementary
         public ElementListPage()
         {
             InitializeComponent();
-            _rawList = DBHelper.GetElementList();
+            _rawList = new ElementListItem[Elements.List.Length];
+            for (var i = 0; i < _rawList.Length; i++)
+            {
+                _rawList[i] = new ElementListItem(Elements.List[i]);
+            }
         }
 
         /// <summary>
@@ -165,8 +169,7 @@ namespace Elementary
             }
             else if (_selection != null)
             {
-                var element = DBHelper.GetElement(_selection.Element._ID);
-                Frame.Navigate(typeof(ElementDetailsPage), element, new SuppressNavigationTransitionInfo());
+                Frame.Navigate(typeof(ElementDetailsPage), new ElementDetails(_selection.Element), new SuppressNavigationTransitionInfo());
             }
         }
 
@@ -194,8 +197,7 @@ namespace Elementary
             if (MasterList.SelectedItem != null)
             {
                 _selection = MasterList.SelectedItem as ElementListItem;
-                var element = DBHelper.GetElement(_selection.Element._ID);
-                DetailsFrame.Navigate(typeof(ElementPage), element);
+                DetailsFrame.Navigate(typeof(ElementPage), new ElementDetails(_selection.Element));
             }
         }
 
@@ -208,8 +210,7 @@ namespace Elementary
         private void OnItemClick(object sender, ItemClickEventArgs e)
         {
             _selection = e.ClickedItem as ElementListItem;
-            var element = DBHelper.GetElement(_selection.Element._ID);
-            Frame.Navigate(typeof(ElementDetailsPage), element, new DrillInNavigationTransitionInfo());
+            Frame.Navigate(typeof(ElementDetailsPage), new ElementDetails(_selection.Element), new DrillInNavigationTransitionInfo());
         }
 
         /// <summary>
