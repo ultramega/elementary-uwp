@@ -20,43 +20,39 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using Elementary.ViewModels;
 using System;
+using System.Windows.Input;
 using Windows.System;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
 
-namespace Elementary
+namespace Elementary.Commands
 {
     /// <summary>
-    /// Page for displaying the full details of an element.
+    /// Command for launching an external Uri.
     /// </summary>
-    public sealed partial class ElementPage : Page
+    public class LaunchUri : ICommand
     {
         /// <summary>
-        /// The data source for the Page.
+        /// Occurs when changes occur that affect whether or not the command should execute.
         /// </summary>
-        private ElementDetails Element { get; set; }
+        public event EventHandler CanExecuteChanged;
 
         /// <summary>
-        /// Constructor.
+        /// Checks whether the parameter is a Uri.
         /// </summary>
-        public ElementPage()
+        /// <param name="parameter">The command parameter.</param>
+        /// <returns>Whether the command can execute.</returns>
+        public bool CanExecute(object parameter)
         {
-            InitializeComponent();
+            return parameter is Uri;
         }
 
         /// <summary>
-        /// Loads the requested element when the Page is navigated to.
+        /// Launches the specified Uri.
         /// </summary>
-        /// <param name="e">
-        /// The event arguments which contains the ElementDetails as the Parameter.
-        /// </param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+        /// <param name="parameter">The Uri to launch.</param>
+        public async void Execute(object parameter)
         {
-            base.OnNavigatedTo(e);
-            Element = e.Parameter as ElementDetails;
+            await Launcher.LaunchUriAsync(parameter as Uri);
         }
     }
 }

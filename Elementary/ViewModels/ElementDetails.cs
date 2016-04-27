@@ -20,8 +20,10 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
+using Elementary.Commands;
 using Elementary.Model;
 using Elementary.Utilities;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Text;
@@ -44,6 +46,11 @@ namespace Elementary.ViewModels
         /// The localized string for unknown values.
         /// </summary>
         private readonly string _unknownValue = ResourceLoader.GetForCurrentView().GetString("Unknown");
+
+        /// <summary>
+        /// The Command to launch a Uri.
+        /// </summary>
+        public LaunchUri LaunchUri { get; } = new LaunchUri();
 
         /// <summary>
         /// The name of the element.
@@ -237,22 +244,22 @@ namespace Elementary.ViewModels
         /// <summary>
         /// The URL to the Wikipedia page for the element.
         /// </summary>
-        public string Wiki
+        public Uri Wiki
         {
             get
             {
-                return ElementUtilities.GetElementWiki(Element.Number);
+                return new Uri(ElementUtilities.GetElementWiki(Element.Number));
             }
         }
 
         /// <summary>
         /// The URL to the YouTube video associated with the element.
         /// </summary>
-        public string Video
+        public Uri Video
         {
             get
             {
-                return string.Format("https://www.youtube.com/watch?v={0}", Element.Video);
+                return new Uri(string.Format("https://www.youtube.com/watch?v={0}", Element.Video));
             }
         }
 

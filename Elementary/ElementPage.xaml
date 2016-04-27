@@ -183,22 +183,22 @@
 
             <Button
                 x:Uid="Button/Wiki"
-                Tag="{x:Bind Element.Wiki}"
                 Grid.Column="2"
                 Height="90"
                 Margin="4"
-                Click="OnButtonClick">
+                Command="{x:Bind Element.LaunchUri}"
+                CommandParameter="{x:Bind Element.Wiki}">
                 <Image
                     Style="{ThemeResource WikiButton}" />
             </Button>
 
             <Button
                 x:Uid="Button/Video"
-                Tag="{x:Bind Element.Video}"
                 Grid.Column="3"
                 Height="90"
                 Margin="4"
-                Click="OnButtonClick">
+                Command="{x:Bind Element.LaunchUri}"
+                CommandParameter="{x:Bind Element.Video}">
                 <Image
                     Style="{ThemeResource VideoButton}" />
             </Button>
