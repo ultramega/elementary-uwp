@@ -36,5 +36,7 @@
         </TransitionCollection>
     </Page.Transitions>
 
-    <Frame />
+    <ContentPresenter
+        x:Name="Root"
+        ContentTemplate="{StaticResource ElementDetailsTemplate}" />
 </Page>

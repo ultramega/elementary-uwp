@@ -197,7 +197,7 @@ namespace Elementary
             if (MasterList.SelectedItem != null)
             {
                 _selection = MasterList.SelectedItem as ElementListItem;
-                DetailsFrame.Navigate(typeof(ElementPage), new ElementDetails(_selection.Element));
+                DetailsFrame.DataContext = new ElementDetails(_selection.Element);
             }
         }
 

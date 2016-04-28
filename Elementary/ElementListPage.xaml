@@ -181,9 +181,10 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <Frame
+        <ContentPresenter
             x:Name="DetailsFrame"
             Grid.Column="1"
-            Grid.RowSpan="2" />
+            Grid.RowSpan="2"
+            ContentTemplate="{StaticResource ElementDetailsTemplate}" />
     </Grid>
 </Page>

@@ -68,7 +68,7 @@ namespace Elementary
             var title = string.Format(titleFormat, (e.Parameter as ElementDetails).Name);
             MainPage.Current.PageTitle = title;
 
-            (Content as Frame).Navigate(typeof(ElementPage), e.Parameter);
+            DataContext = e.Parameter;
 
             var systemNavigationManager = SystemNavigationManager.GetForCurrentView();
             systemNavigationManager.BackRequested += OnBackRequested;
@@ -130,6 +130,7 @@ namespace Elementary
                 NavigateToWide(true);
             }
             Window.Current.SizeChanged += OnSizeChanged;
+            Root.DataContext = DataContext;
         }
 
         /// <summary>

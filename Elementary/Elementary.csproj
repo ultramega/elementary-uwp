@@ -136,14 +136,14 @@
     <Compile Include="Controls\PeriodicTableLegendControl.xaml.cs">
       <DependentUpon>PeriodicTableLegendControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ElementDetailsTemplate.xaml.cs">
+      <DependentUpon>ElementDetailsTemplate.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ElementDetailsPage.xaml.cs">
       <DependentUpon>ElementDetailsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="ElementListPage.xaml.cs">
       <DependentUpon>ElementListPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ElementPage.xaml.cs">
-      <DependentUpon>ElementPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -262,15 +262,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ElementDetailsTemplate.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ElementDetailsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ElementListPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ElementPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

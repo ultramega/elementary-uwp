@@ -1,0 +1,436 @@
+﻿<!--
+  The MIT License (MIT)
+  Copyright © 2016 Steve Guidetti
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the “Software”), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+<ResourceDictionary
+    x:Class="Elementary.ElementDetailsTemplate"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Elementary"
+    xmlns:vm="using:Elementary.ViewModels">
+    <ResourceDictionary.ThemeDictionaries>
+        <ResourceDictionary
+            x:Key="Light">
+            <Style
+                x:Key="WikiButton"
+                TargetType="Image">
+                <Setter
+                    Property="Source"
+                    Value="Assets/WikiButton-black.png" />
+            </Style>
+
+            <Style
+                x:Key="VideoButton"
+                TargetType="Image">
+                <Setter
+                    Property="Source"
+                    Value="Assets/VideoButton-black.png" />
+            </Style>
+        </ResourceDictionary>
+
+        <ResourceDictionary
+            x:Key="Dark">
+            <Style
+                x:Key="WikiButton"
+                TargetType="Image">
+                <Setter
+                    Property="Source"
+                    Value="Assets/WikiButton-white.png" />
+            </Style>
+
+            <Style
+                x:Key="VideoButton"
+                TargetType="Image">
+                <Setter
+                    Property="Source"
+                    Value="Assets/VideoButton-white.png" />
+            </Style>
+        </ResourceDictionary>
+    </ResourceDictionary.ThemeDictionaries>
+
+    <Style
+        x:Key="EvenRow"
+        TargetType="Border">
+        <Setter
+            Property="Background"
+            Value="#44888888" />
+
+        <Setter
+            Property="Grid.ColumnSpan"
+            Value="3" />
+    </Style>
+
+    <Style
+        x:Key="OddRow"
+        TargetType="Border">
+        <Setter
+            Property="Grid.ColumnSpan"
+            Value="3" />
+    </Style>
+
+    <Style
+        x:Key="Label"
+        TargetType="TextBlock">
+        <Setter
+            Property="Margin"
+            Value="4" />
+
+        <Setter
+            Property="FontWeight"
+            Value="SemiBold" />
+    </Style>
+
+    <Style
+        x:Key="Value"
+        TargetType="TextBlock">
+        <Setter
+            Property="Margin"
+            Value="4" />
+
+        <Setter
+            Property="Grid.Column"
+            Value="1" />
+    </Style>
+
+    <DataTemplate
+        x:Key="ElementDetailsTemplate"
+        x:DataType="vm:ElementDetails">
+        <Grid
+            Padding="6">
+            <Grid.Resources>
+            </Grid.Resources>
+
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="Auto" />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Grid
+                Margin="4">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition />
+                    <ColumnDefinition
+                        Width="Auto" />
+                    <ColumnDefinition
+                        Width="Auto" />
+                </Grid.ColumnDefinitions>
+
+                <Grid
+                    MinWidth="90"
+                    Height="90"
+                    Padding="4,0,4,4"
+                    Background="{x:Bind Color, Mode=OneWay}">
+                    <TextBlock
+                        FontSize="20"
+                        Text="{x:Bind Number}"
+                        Foreground="Black" />
+
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="42"
+                        FontWeight="SemiBold"
+                        Text="{x:Bind Symbol}"
+                        Margin="12,0"
+                        Foreground="Black" />
+
+                    <TextBlock
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Bottom"
+                        FontSize="16"
+                        Text="{x:Bind Weight}"
+                        Foreground="Black" />
+
+                    <TextBlock
+                        HorizontalAlignment="Right"
+                        FontSize="10"
+                        Text="{x:Bind BlockElectrons}"
+                        Foreground="Black"
+                        TextAlignment="Right"
+                        TextLineBounds="TrimToBaseline" />
+                </Grid>
+
+                <TextBlock
+                    Style="{ThemeResource HeaderTextBlockStyle}"
+                    Grid.Column="1"
+                    Padding="8,0,0,0"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    Text="{x:Bind Name}"
+                    TextWrapping="NoWrap"
+                    TextTrimming="CharacterEllipsis" />
+
+                <Button
+                    x:Uid="Button/Wiki"
+                    Grid.Column="2"
+                    Height="90"
+                    Margin="4"
+                    Command="{x:Bind LaunchUri}"
+                    CommandParameter="{x:Bind Wiki}">
+                    <Image
+                        Style="{ThemeResource WikiButton}" />
+                </Button>
+
+                <Button
+                    x:Uid="Button/Video"
+                    Grid.Column="3"
+                    Height="90"
+                    Margin="4"
+                    Command="{x:Bind LaunchUri}"
+                    CommandParameter="{x:Bind Video}">
+                    <Image
+                        Style="{ThemeResource VideoButton}" />
+                </Button>
+            </Grid>
+
+            <ScrollViewer
+                Grid.Row="1"
+                HorizontalScrollBarVisibility="Auto">
+                <Grid
+                    VerticalAlignment="Top">
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                        <RowDefinition />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition
+                            Width="Auto" />
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        Grid.Row="0"
+                        Style="{StaticResource OddRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Number"
+                        Grid.Row="0"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="0"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Number}" />
+
+                    <Border
+                        Grid.Row="1"
+                        Style="{StaticResource EvenRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Symbol"
+                        Grid.Row="1"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="1"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Symbol}" />
+
+                    <Border
+                        Grid.Row="2"
+                        Style="{StaticResource OddRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Name"
+                        Grid.Row="2"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="2"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Name}" />
+
+                    <Border
+                        Grid.Row="3"
+                        Style="{StaticResource EvenRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Weight"
+                        Grid.Row="3"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="3"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Weight}" />
+
+                    <Border
+                        Grid.Row="4"
+                        Style="{StaticResource OddRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Category"
+                        Grid.Row="4"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="4"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Category}" />
+
+                    <Border
+                        Grid.Row="5"
+                        Style="{StaticResource EvenRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/GPB"
+                        Grid.Row="5"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="5"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind GPB}" />
+
+                    <Border
+                        Grid.Row="6"
+                        Style="{StaticResource OddRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Configuration"
+                        Grid.Row="6"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="6"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Configuration}" />
+
+                    <Border
+                        Grid.Row="7"
+                        Style="{StaticResource EvenRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Electrons"
+                        Grid.Row="7"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="7"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Electrons}" />
+
+                    <Border
+                        Grid.Row="8"
+                        Style="{StaticResource OddRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Density"
+                        Grid.Row="8"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="8"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Density}" />
+
+                    <Border
+                        Grid.Row="9"
+                        Style="{StaticResource EvenRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Melt"
+                        Grid.Row="9"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="9"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Melt, Mode=OneWay}" />
+
+                    <Border
+                        Grid.Row="10"
+                        Style="{StaticResource OddRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Boil"
+                        Grid.Row="10"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="10"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Boil, Mode=OneWay}" />
+
+                    <Border
+                        Grid.Row="11"
+                        Style="{StaticResource EvenRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Heat"
+                        Grid.Row="11"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="11"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Heat}" />
+
+                    <Border
+                        Grid.Row="12"
+                        Style="{StaticResource OddRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Negativity"
+                        Grid.Row="12"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="12"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Negativity}" />
+
+                    <Border
+                        Grid.Row="13"
+                        Style="{StaticResource EvenRow}" />
+
+                    <TextBlock
+                        x:Uid="Label/Abundance"
+                        Grid.Row="13"
+                        Style="{StaticResource Label}" />
+
+                    <TextBlock
+                        Grid.Row="13"
+                        Style="{StaticResource Value}"
+                        Text="{x:Bind Abundance}" />
+                </Grid>
+            </ScrollViewer>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

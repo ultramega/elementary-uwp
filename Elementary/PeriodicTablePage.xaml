@@ -181,9 +181,7 @@
             x:Uid="Dialog/Details"
             x:Name="DetailsDialog"
             Title="{x:Bind DetailsTitle, Mode=OneWay}"
-            Template="{StaticResource MyContentDialogControlTemplate}">
-            <Frame
-                x:Name="DetailsFrame" />
-        </ContentDialog>
+            Template="{StaticResource MyContentDialogControlTemplate}"
+            ContentTemplate="{StaticResource ElementDetailsTemplate}" />
     </Grid>
 </Page>

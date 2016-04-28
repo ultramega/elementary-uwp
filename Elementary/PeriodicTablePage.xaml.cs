@@ -104,8 +104,8 @@ namespace Elementary
         private async void OnBlockClick(object sender, BlockClickEventArgs e)
         {
             var element = new ElementDetails(e.ClickedElement);
-            DetailsFrame.Navigate(typeof(ElementPage), element);
             DetailsTitle = element.Name;
+            DetailsDialog.DataContext = element;
             await DetailsDialog.ShowAsync();
         }
     }

@@ -20,43 +20,20 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using Elementary.ViewModels;
-using System;
-using Windows.System;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Navigation;
 
 namespace Elementary
 {
     /// <summary>
-    /// Page for displaying the full details of an element.
+    /// ResourceDictionary for the Element details DataTemplate.
     /// </summary>
-    public sealed partial class ElementPage : Page
+    public partial class ElementDetailsTemplate
     {
-        /// <summary>
-        /// The data source for the Page.
-        /// </summary>
-        private ElementDetails Element { get; set; }
-
         /// <summary>
         /// Constructor.
         /// </summary>
-        public ElementPage()
+        public ElementDetailsTemplate()
         {
             InitializeComponent();
-        }
-
-        /// <summary>
-        /// Loads the requested element when the Page is navigated to.
-        /// </summary>
-        /// <param name="e">
-        /// The event arguments which contains the ElementDetails as the Parameter.
-        /// </param>
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            base.OnNavigatedTo(e);
-            Element = e.Parameter as ElementDetails;
         }
     }
 }
