@@ -92,6 +92,7 @@ namespace Elementary
             {
                 _rawList[i] = new ElementListItem(Elements.List[i]);
             }
+            _selection = _rawList[0];
         }
 
         /// <summary>
