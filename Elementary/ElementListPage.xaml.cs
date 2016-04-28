@@ -87,10 +87,10 @@ namespace Elementary
         public ElementListPage()
         {
             InitializeComponent();
-            _rawList = new ElementListItemViewModel[Elements.List.Length];
+            _rawList = new ElementListItemViewModel[Element.List.Length];
             for (var i = 0; i < _rawList.Length; i++)
             {
-                _rawList[i] = new ElementListItemViewModel(Elements.List[i]);
+                _rawList[i] = new ElementListItemViewModel(Element.List[i]);
             }
             _selection = _rawList[0];
         }

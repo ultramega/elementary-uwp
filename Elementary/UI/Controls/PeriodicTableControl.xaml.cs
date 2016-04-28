@@ -118,7 +118,7 @@ namespace Elementary.UI.Controls
         {
             CalculateSizes();
             var children = (Content as Panel).Children;
-            foreach (var item in Elements.List)
+            foreach (var item in Element.List)
             {
                 var element = BlockTemplate.LoadContent() as PeriodicTableBlockControl;
                 element.Element = new ElementBlockViewModel(item);

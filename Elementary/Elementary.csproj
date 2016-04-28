@@ -149,7 +149,6 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Model\Element.cs" />
-    <Compile Include="Model\Elements.cs" />
     <Compile Include="PeriodicTablePage.xaml.cs">
       <DependentUpon>PeriodicTablePage.xaml</DependentUpon>
     </Compile>
