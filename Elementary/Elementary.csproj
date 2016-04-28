@@ -125,15 +125,15 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Commands\LaunchUri.cs" />
-    <Compile Include="Controls\BlockClickEventArgs.cs" />
-    <Compile Include="Controls\PeriodicTableBlockControl.xaml.cs">
+    <Compile Include="UI\Commands\LaunchUri.cs" />
+    <Compile Include="UI\BlockClickEventArgs.cs" />
+    <Compile Include="UI\Controls\PeriodicTableBlockControl.xaml.cs">
       <DependentUpon>PeriodicTableBlockControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PeriodicTableControl.xaml.cs">
+    <Compile Include="UI\Controls\PeriodicTableControl.xaml.cs">
       <DependentUpon>PeriodicTableControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\PeriodicTableLegendControl.xaml.cs">
+    <Compile Include="UI\Controls\PeriodicTableLegendControl.xaml.cs">
       <DependentUpon>PeriodicTableLegendControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ElementDetailsTemplate.xaml.cs">
@@ -250,15 +250,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Controls\PeriodicTableBlockControl.xaml">
+    <Page Include="UI\Controls\PeriodicTableBlockControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PeriodicTableControl.xaml">
+    <Page Include="UI\Controls\PeriodicTableControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Controls\PeriodicTableLegendControl.xaml">
+    <Page Include="UI\Controls\PeriodicTableLegendControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

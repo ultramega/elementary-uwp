@@ -22,7 +22,7 @@
 */
 using Elementary.Model;
 
-namespace Elementary.Controls
+namespace Elementary.UI
 {
     /// <summary>
     /// Provides event data for the BlockClick event.

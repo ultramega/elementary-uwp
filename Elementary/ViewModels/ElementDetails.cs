@@ -20,8 +20,8 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using Elementary.Commands;
 using Elementary.Model;
+using Elementary.UI.Commands;
 using Elementary.Utilities;
 using System;
 using System.Collections.Generic;

@@ -24,7 +24,7 @@ using System;
 using System.Windows.Input;
 using Windows.System;
 
-namespace Elementary.Commands
+namespace Elementary.UI.Commands
 {
     /// <summary>
     /// Command for launching an external Uri.

@@ -26,7 +26,7 @@ using System;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Elementary.Controls
+namespace Elementary.UI.Controls
 {
     /// <summary>
     /// Control for displaying the legend for the element block colors.

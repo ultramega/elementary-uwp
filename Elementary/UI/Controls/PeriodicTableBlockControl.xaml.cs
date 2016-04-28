@@ -24,7 +24,7 @@ using Elementary.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 
-namespace Elementary.Controls
+namespace Elementary.UI.Controls
 {
     /// <summary>
     /// Control for displaying an element block in the PeriodicTableControl.
