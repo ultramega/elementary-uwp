@@ -39,12 +39,12 @@ namespace Elementary.ViewModels
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
 
         /// <summary>
-        /// The Element being represented by this ViewModel.
+        /// Gets the Element being represented by this ViewModel.
         /// </summary>
         public Element Element { get; private set; }
 
         /// <summary>
-        /// The element number as a string.
+        /// Gets the element number as a string.
         /// </summary>
         public string Number
         {
@@ -55,7 +55,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The element symbol.
+        /// Gets the element symbol.
         /// </summary>
         public string Symbol
         {
@@ -66,7 +66,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The background color of the block.
+        /// Gets the background color of the block.
         /// </summary>
         public Brush Color
         {

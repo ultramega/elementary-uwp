@@ -30,9 +30,9 @@ namespace Elementary.ViewModels
     public class ElementBlockViewModel : ElementBaseViewModel
     {
         /// <summary>
-        /// The string to display under the element symbol. For stable elements, this is the atomic
-        /// weight with up to 4 decimal places. For unstable elements, this is the atomic weight as
-        /// a whole number surrounded by square braces.
+        /// Gets the string to display under the element symbol. For stable elements, this is the
+        /// atomic weight with up to 4 decimal places. For unstable elements, this is the atomic
+        /// weight as a whole number surrounded by square braces.
         /// </summary>
         public string Subtext
         {
@@ -47,12 +47,12 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The row number of the periodic table to place the block.
+        /// Gets the row number of the periodic table to place the block.
         /// </summary>
         public int Row { get; private set; }
 
         /// <summary>
-        /// The column number of the periodic table to place the block.
+        /// Gets the column number of the periodic table to place the block.
         /// </summary>
         public int Column { get; private set; }
 

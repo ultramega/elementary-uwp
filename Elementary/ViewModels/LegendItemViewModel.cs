@@ -30,27 +30,27 @@ namespace Elementary.ViewModels
     public class LegendItemViewModel
     {
         /// <summary>
-        /// The text to display.
+        /// Gets or sets the text to display.
         /// </summary>
         public string Text { get; set; }
 
         /// <summary>
-        /// The background Brush to use.
+        /// Gets or sets the background Brush to use.
         /// </summary>
         public Brush Background { get; set; }
 
         /// <summary>
-        /// The row of the legend in which to place the item.
+        /// Gets or sets the row of the legend in which to place the item.
         /// </summary>
         public int Row { get; set; }
 
         /// <summary>
-        /// The column of the legend in which to place the item.
+        /// Gets or sets the column of the legend in which to place the item.
         /// </summary>
         public int Column { get; set; }
 
         /// <summary>
-        /// The number of columns the item occupies in the legend.
+        /// Gets or sets the number of columns the item occupies in the legend.
         /// </summary>
         public int ColumnSpan { get; set; }
     }

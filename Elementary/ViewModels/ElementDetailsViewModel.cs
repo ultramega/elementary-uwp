@@ -48,12 +48,12 @@ namespace Elementary.ViewModels
         private readonly string _unknownValue = ResourceLoader.GetForCurrentView().GetString("Unknown");
 
         /// <summary>
-        /// The Command to launch a Uri.
+        /// Gets the Command to launch a Uri.
         /// </summary>
         public LaunchUriCommand LaunchUri { get; } = new LaunchUriCommand();
 
         /// <summary>
-        /// The name of the element.
+        /// Gets the name of the element.
         /// </summary>
         public string Name
         {
@@ -64,7 +64,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The element group, period, and block.
+        /// Gets the element group, period, and block.
         /// </summary>
         public string GPB
         {
@@ -76,7 +76,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The atomic weight of the element as a string.
+        /// Gets the atomic weight of the element as a string.
         /// </summary>
         public string Weight
         {
@@ -91,7 +91,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The density of the element as a string.
+        /// Gets the density of the element as a string.
         /// </summary>
         public string Density
         {
@@ -106,7 +106,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The melting point of the element as a string.
+        /// Gets the melting point of the element as a string.
         /// </summary>
         public string Melt
         {
@@ -121,7 +121,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The boiling point of the element as a string.
+        /// Gets the boiling point of the element as a string.
         /// </summary>
         public string Boil
         {
@@ -136,7 +136,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The heat of the element as a string.
+        /// Gets the heat of the element as a string.
         /// </summary>
         public string Heat
         {
@@ -151,7 +151,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The electronegativity of the element as a string.
+        /// Gets the electronegativity of the element as a string.
         /// </summary>
         public string Negativity
         {
@@ -166,7 +166,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The abundance of the element as a string.
+        /// Gets the abundance of the element as a string.
         /// </summary>
         public string Abundance
         {
@@ -185,7 +185,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The element category.
+        /// Gets the element category.
         /// </summary>
         public string Category
         {
@@ -196,7 +196,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The electron configuration of the element.
+        /// Gets the electron configuration of the element.
         /// </summary>
         public string Configuration
         {
@@ -220,7 +220,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The electrons per shell of the element.
+        /// Gets the electrons per shell of the element.
         /// </summary>
         public string Electrons
         {
@@ -231,7 +231,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The electrons per shell of the element in a vertical line.
+        /// Gets the electrons per shell of the element in a vertical line.
         /// </summary>
         public string BlockElectrons
         {
@@ -242,7 +242,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The URL to the Wikipedia page for the element.
+        /// Gets the Uri to the Wikipedia page for the element.
         /// </summary>
         public Uri Wiki
         {
@@ -253,7 +253,7 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
-        /// The URL to the YouTube video associated with the element.
+        /// Gets the Uri to the YouTube video associated with the element.
         /// </summary>
         public Uri Video
         {

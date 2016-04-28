@@ -57,7 +57,7 @@ namespace Elementary
         private readonly ElementListItemViewModel[] _rawList;
 
         /// <summary>
-        /// The data source for the ListView.
+        /// Gets the data source for the ListView.
         /// </summary>
         private ObservableCollection<ElementListItemViewModel> ListItems { get; } = new ObservableCollection<ElementListItemViewModel>();
 

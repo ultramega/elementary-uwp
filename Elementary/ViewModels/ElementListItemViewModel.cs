@@ -31,7 +31,7 @@ namespace Elementary.ViewModels
     public class ElementListItemViewModel : ElementBaseViewModel
     {
         /// <summary>
-        /// The element name.
+        /// Gets the element name.
         /// </summary>
         public string Name
         {

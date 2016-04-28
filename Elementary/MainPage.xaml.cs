@@ -38,7 +38,7 @@ namespace Elementary
         public static MainPage Current { get; private set; }
 
         /// <summary>
-        /// The title to display in the CommandBar.
+        /// Gets or sets the title to display in the CommandBar.
         /// </summary>
         public string PageTitle
         {
