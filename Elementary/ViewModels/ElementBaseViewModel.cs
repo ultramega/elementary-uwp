@@ -31,7 +31,7 @@ namespace Elementary.ViewModels
     /// <summary>
     /// Base for all Element ViewModels.
     /// </summary>
-    public abstract class ElementBase : INotifyPropertyChanged
+    public abstract class ElementBaseViewModel : INotifyPropertyChanged
     {
         /// <summary>
         /// Occurs when a mutable property changes.
@@ -80,7 +80,7 @@ namespace Elementary.ViewModels
         /// Constructor.
         /// </summary>
         /// <param name="element">The Element to represent.</param>
-        public ElementBase(Element element)
+        public ElementBaseViewModel(Element element)
         {
             if (element == null)
             {

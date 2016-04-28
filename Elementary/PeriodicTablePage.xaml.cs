@@ -103,7 +103,7 @@ namespace Elementary
         /// <param name="e">The event arguments.</param>
         private async void OnBlockClick(object sender, BlockClickEventArgs e)
         {
-            var element = new ElementDetails(e.ClickedElement);
+            var element = new ElementDetailsViewModel(e.ClickedElement);
             DetailsTitle = element.Name;
             DetailsDialog.DataContext = element;
             await DetailsDialog.ShowAsync();

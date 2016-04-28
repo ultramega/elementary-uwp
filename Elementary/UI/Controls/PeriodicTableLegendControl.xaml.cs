@@ -86,7 +86,7 @@ namespace Elementary.UI.Controls
             for (var i = 0; i < names.Length; i++)
             {
                 var key = useCategory ? (long)i : names[i] as object;
-                var item = new LegendItem()
+                var item = new LegendItemViewModel()
                 {
                     Text = names[i],
                     Background = ElementUtilities.GetBlockColor(key),
@@ -103,7 +103,7 @@ namespace Elementary.UI.Controls
         /// </summary>
         /// <param name="item">The data source for the item.</param>
         /// <returns>The element to place in the table.</returns>
-        private FrameworkElement MakeItem(LegendItem item)
+        private FrameworkElement MakeItem(LegendItemViewModel item)
         {
             var element = LegendEntryTemplate.LoadContent() as FrameworkElement;
             element.DataContext = item;

@@ -54,12 +54,12 @@ namespace Elementary
         /// <summary>
         /// The full unsorted list of elements.
         /// </summary>
-        private readonly ElementListItem[] _rawList;
+        private readonly ElementListItemViewModel[] _rawList;
 
         /// <summary>
         /// The data source for the ListView.
         /// </summary>
-        private ObservableCollection<ElementListItem> ListItems { get; } = new ObservableCollection<ElementListItem>();
+        private ObservableCollection<ElementListItemViewModel> ListItems { get; } = new ObservableCollection<ElementListItemViewModel>();
 
         /// <summary>
         /// The field being used for sorting.
@@ -79,7 +79,7 @@ namespace Elementary
         /// <summary>
         /// The currently selected item in the list.
         /// </summary>
-        private ElementListItem _selection;
+        private ElementListItemViewModel _selection;
 
         /// <summary>
         /// Constructor.
@@ -87,10 +87,10 @@ namespace Elementary
         public ElementListPage()
         {
             InitializeComponent();
-            _rawList = new ElementListItem[Elements.List.Length];
+            _rawList = new ElementListItemViewModel[Elements.List.Length];
             for (var i = 0; i < _rawList.Length; i++)
             {
-                _rawList[i] = new ElementListItem(Elements.List[i]);
+                _rawList[i] = new ElementListItemViewModel(Elements.List[i]);
             }
             _selection = _rawList[0];
         }
@@ -170,7 +170,7 @@ namespace Elementary
             }
             else if (_selection != null)
             {
-                Frame.Navigate(typeof(ElementDetailsPage), new ElementDetails(_selection.Element), new SuppressNavigationTransitionInfo());
+                Frame.Navigate(typeof(ElementDetailsPage), new ElementDetailsViewModel(_selection.Element), new SuppressNavigationTransitionInfo());
             }
         }
 
@@ -180,7 +180,7 @@ namespace Elementary
         /// </summary>
         /// <param name="e">The ElementListItem to test.</param>
         /// <returns>Whether the element matches the filter.</returns>
-        private bool Matches(ElementListItem e)
+        private bool Matches(ElementListItemViewModel e)
         {
             var symbolMatches = e.Symbol.ToLower().StartsWith(_filter);
             var nameMatches = e.Name.ToLower().StartsWith(_filter);
@@ -197,8 +197,8 @@ namespace Elementary
         {
             if (MasterList.SelectedItem != null)
             {
-                _selection = MasterList.SelectedItem as ElementListItem;
-                DetailsFrame.DataContext = new ElementDetails(_selection.Element);
+                _selection = MasterList.SelectedItem as ElementListItemViewModel;
+                DetailsFrame.DataContext = new ElementDetailsViewModel(_selection.Element);
             }
         }
 
@@ -210,8 +210,8 @@ namespace Elementary
         /// <param name="e"></param>
         private void OnItemClick(object sender, ItemClickEventArgs e)
         {
-            _selection = e.ClickedItem as ElementListItem;
-            Frame.Navigate(typeof(ElementDetailsPage), new ElementDetails(_selection.Element), new DrillInNavigationTransitionInfo());
+            _selection = e.ClickedItem as ElementListItemViewModel;
+            Frame.Navigate(typeof(ElementDetailsPage), new ElementDetailsViewModel(_selection.Element), new DrillInNavigationTransitionInfo());
         }
 
         /// <summary>

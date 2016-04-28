@@ -150,7 +150,7 @@
 
             <ListView.ItemTemplate>
                 <DataTemplate
-                    x:DataType="vm:ElementListItem">
+                    x:DataType="vm:ElementListItemViewModel">
                     <StackPanel
                         Orientation="Horizontal"
                         Padding="0,2">

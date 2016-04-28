@@ -112,7 +112,7 @@
 
     <DataTemplate
         x:Key="ElementDetailsTemplate"
-        x:DataType="vm:ElementDetails">
+        x:DataType="vm:ElementDetailsViewModel">
         <ScrollViewer>
             <Grid
                 Padding="6">

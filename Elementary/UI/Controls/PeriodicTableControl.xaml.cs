@@ -121,7 +121,7 @@ namespace Elementary.UI.Controls
             foreach (var item in Elements.List)
             {
                 var element = BlockTemplate.LoadContent() as PeriodicTableBlockControl;
-                element.Element = new ElementBlock(item);
+                element.Element = new ElementBlockViewModel(item);
                 element.NumberFontSize = NumberFontSize;
                 element.SymbolFontSize = SymbolFontSize;
                 element.SubtextFontSize = SubtextFontSize;

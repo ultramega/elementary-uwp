@@ -27,7 +27,7 @@ namespace Elementary.ViewModels
     /// <summary>
     /// Represents a block on the periodic table.
     /// </summary>
-    public class ElementBlock : ElementBase
+    public class ElementBlockViewModel : ElementBaseViewModel
     {
         /// <summary>
         /// The string to display under the element symbol. For stable elements, this is the atomic
@@ -60,7 +60,7 @@ namespace Elementary.ViewModels
         /// Constructor.
         /// </summary>
         /// <param name="element">The Element to represent.</param>
-        public ElementBlock(Element element) : base(element)
+        public ElementBlockViewModel(Element element) : base(element)
         {
             CalcPosition(element);
         }

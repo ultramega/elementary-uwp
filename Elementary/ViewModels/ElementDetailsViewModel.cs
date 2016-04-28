@@ -35,7 +35,7 @@ namespace Elementary.ViewModels
     /// <summary>
     /// The ViewModel containing the full details of an element.
     /// </summary>
-    public class ElementDetails : ElementBase, INotifyPropertyChanged
+    public class ElementDetailsViewModel : ElementBaseViewModel, INotifyPropertyChanged
     {
         /// <summary>
         /// Occurs when a mutable property changes.
@@ -267,7 +267,7 @@ namespace Elementary.ViewModels
         /// Constructor.
         /// </summary>
         /// <param name="element">The Element to represent.</param>
-        public ElementDetails(Element element) : base(element)
+        public ElementDetailsViewModel(Element element) : base(element)
         {
             Settings.SettingChanged += OnSettingChanged;
         }

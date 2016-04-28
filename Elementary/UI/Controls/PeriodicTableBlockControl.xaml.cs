@@ -34,13 +34,13 @@ namespace Elementary.UI.Controls
         /// <summary>
         /// Gets or sets the element data.
         /// </summary>
-        public ElementBlock Element
+        public ElementBlockViewModel Element
         {
-            get { return (ElementBlock)GetValue(ElementProperty); }
+            get { return (ElementBlockViewModel)GetValue(ElementProperty); }
             set { SetValue(ElementProperty, value); }
         }
         public static readonly DependencyProperty ElementProperty =
-            DependencyProperty.Register("Element", typeof(ElementBlock), typeof(PeriodicTableBlockControl), null);
+            DependencyProperty.Register("Element", typeof(ElementBlockViewModel), typeof(PeriodicTableBlockControl), null);
 
         /// <summary>
         /// Gets or sets the FontSize of the atomic number.

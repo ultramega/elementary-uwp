@@ -65,7 +65,7 @@ namespace Elementary
             base.OnNavigatedTo(e);
 
             var titleFormat = ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
-            var title = string.Format(titleFormat, (e.Parameter as ElementDetails).Name);
+            var title = string.Format(titleFormat, (e.Parameter as ElementDetailsViewModel).Name);
             MainPage.Current.PageTitle = title;
 
             DataContext = e.Parameter;

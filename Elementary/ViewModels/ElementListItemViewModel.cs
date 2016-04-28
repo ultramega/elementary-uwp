@@ -20,38 +20,31 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using Windows.UI.Xaml.Media;
+using Elementary.Model;
+using Elementary.Utilities;
 
 namespace Elementary.ViewModels
 {
     /// <summary>
-    /// Contains the data backing a legend item.
+    /// Contains the data backing an item in the element list.
     /// </summary>
-    public class LegendItem
+    public class ElementListItemViewModel : ElementBaseViewModel
     {
         /// <summary>
-        /// The text to display.
+        /// The element name.
         /// </summary>
-        public string Text { get; set; }
+        public string Name
+        {
+            get
+            {
+                return ElementUtilities.GetElementName(Element.Number);
+            }
+        }
 
         /// <summary>
-        /// The background Brush to use.
+        /// Constructor.
         /// </summary>
-        public Brush Background { get; set; }
-
-        /// <summary>
-        /// The row of the legend in which to place the item.
-        /// </summary>
-        public int Row { get; set; }
-
-        /// <summary>
-        /// The column of the legend in which to place the item.
-        /// </summary>
-        public int Column { get; set; }
-
-        /// <summary>
-        /// The number of columns the item occupies in the legend.
-        /// </summary>
-        public int ColumnSpan { get; set; }
+        /// <param name="element">The Element to represent.</param>
+        public ElementListItemViewModel(Element element) : base(element) { }
     }
 }

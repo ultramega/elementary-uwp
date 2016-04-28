@@ -35,7 +35,7 @@
     <UserControl.Resources>
         <DataTemplate
             x:Name="LegendEntryTemplate"
-            x:DataType="vm:LegendItem">
+            x:DataType="vm:LegendItemViewModel">
             <Border
                 Grid.Row="{x:Bind Row}"
                 Grid.Column="{x:Bind Column}"
