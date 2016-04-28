@@ -24,12 +24,12 @@ using System;
 using System.Windows.Input;
 using Windows.System;
 
-namespace Elementary.UI.Commands
+namespace Elementary.UI
 {
     /// <summary>
     /// Command for launching an external Uri.
     /// </summary>
-    public class LaunchUri : ICommand
+    public class LaunchUriCommand : ICommand
     {
         /// <summary>
         /// Occurs when changes occur that affect whether or not the command should execute.

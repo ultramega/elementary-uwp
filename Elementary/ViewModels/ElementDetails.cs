@@ -21,7 +21,7 @@
   THE SOFTWARE.
 */
 using Elementary.Model;
-using Elementary.UI.Commands;
+using Elementary.UI;
 using Elementary.Utilities;
 using System;
 using System.Collections.Generic;
@@ -50,7 +50,7 @@ namespace Elementary.ViewModels
         /// <summary>
         /// The Command to launch a Uri.
         /// </summary>
-        public LaunchUri LaunchUri { get; } = new LaunchUri();
+        public LaunchUriCommand LaunchUri { get; } = new LaunchUriCommand();
 
         /// <summary>
         /// The name of the element.
