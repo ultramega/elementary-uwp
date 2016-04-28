@@ -49,27 +49,18 @@ namespace Elementary.ViewModels
         /// <summary>
         /// Gets the row number of the periodic table to place the block.
         /// </summary>
-        public int Row { get; private set; }
+        public int Row { get; }
 
         /// <summary>
         /// Gets the column number of the periodic table to place the block.
         /// </summary>
-        public int Column { get; private set; }
+        public int Column { get; }
 
         /// <summary>
         /// Constructor.
         /// </summary>
         /// <param name="element">The Element to represent.</param>
         public ElementBlockViewModel(Element element) : base(element)
-        {
-            CalcPosition(element);
-        }
-
-        /// <summary>
-        /// Determines and sets the row and column of the element block.
-        /// </summary>
-        /// <param name="element">The Element represented by this block.</param>
-        private void CalcPosition(Element element)
         {
             if (element.Group == 0)
             {
