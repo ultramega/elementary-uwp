@@ -21,13 +21,14 @@
   THE SOFTWARE.
 */
 using Elementary.Model;
+using System;
 
 namespace Elementary.UI
 {
     /// <summary>
     /// Provides event data for the BlockClick event.
     /// </summary>
-    public class BlockClickEventArgs
+    public class BlockClickEventArgs : EventArgs
     {
         /// <summary>
         /// Gets a reference to the clicked block.
