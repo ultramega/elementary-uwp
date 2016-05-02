@@ -92,7 +92,6 @@ namespace Elementary
             {
                 _rawList[i] = new ElementListItemViewModel(Element.List[i]);
             }
-            _selection = _rawList[0];
         }
 
         /// <summary>
@@ -198,7 +197,7 @@ namespace Elementary
             if (MasterList.SelectedItem != null)
             {
                 _selection = MasterList.SelectedItem as ElementListItemViewModel;
-                DetailsFrame.DataContext = new ElementDetailsViewModel(_selection.Element);
+                (FindName("DetailsFrame") as FrameworkElement).DataContext = new ElementDetailsViewModel(_selection.Element);
             }
         }
 
@@ -247,6 +246,16 @@ namespace Elementary
         {
             _filter = (sender as TextBox).Text.ToLower();
             LoadList();
+        }
+
+        /// <summary>
+        /// Load the selected Element when the details frame loads.
+        /// </summary>
+        /// <param name="sender">The DetailsFrame.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnDetailsLoaded(object sender, RoutedEventArgs e)
+        {
+            DetailsFrame.DataContext = new ElementDetailsViewModel(_selection.Element);
         }
     }
 }

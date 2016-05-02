@@ -183,8 +183,10 @@
 
         <ContentPresenter
             x:Name="DetailsFrame"
+            x:DeferLoadStrategy="Lazy"
             Grid.Column="1"
             Grid.RowSpan="2"
-            ContentTemplate="{StaticResource ElementDetailsTemplate}" />
+            ContentTemplate="{StaticResource ElementDetailsTemplate}"
+            Loaded="OnDetailsLoaded" />
     </Grid>
 </Page>
