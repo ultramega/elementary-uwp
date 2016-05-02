@@ -2,7 +2,7 @@
 
 Elementary is a simple Periodic Table and element reference application for Windows 10.
 
-[![Windows Store](https://raw.githubusercontent.com/ultramega/elementary-uwp/master/art/store/English_Get_it_Win_10_InvariantCulture_Default.png)](https://www.microsoft.com/store/apps/9NBLGGH4LWNB?ocid=badge)
+[![Windows Store](https://raw.githubusercontent.com/ultramega/elementary-uwp/master/store/English_Get_it_Win_10_InvariantCulture_Default.png)](https://www.microsoft.com/store/apps/9NBLGGH4LWNB?ocid=badge)
 
 [Also available for Android](https://github.com/ultramega/elementary)
 
@@ -15,7 +15,7 @@ Elementary is a simple Periodic Table and element reference application for Wind
 
 ## Notes
 
-Videos provided by Periodic Table of Videos (http://www.periodicvideos.com/)
+Videos provided by Periodic Videos (http://www.periodicvideos.com/)
 
 ## Credits
 
