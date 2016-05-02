@@ -139,9 +139,15 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <!--
+    Names of the element categories separated by semicolons.
+  -->
   <data name="Categories" xml:space="preserve">
     <value>Non-metal;Noble gas;Alkali metal;Alkaline earth metal;Metalloid;Halogen;Metal;Transition metal;Lanthanide;Actinide</value>
   </data>
+  <!--
+    List of element names identified by their atomic number.
+  -->
   <data name="Name.001" xml:space="preserve">
     <value>Hydrogen</value>
   </data>
@@ -496,6 +502,12 @@
   <data name="Name.118" xml:space="preserve">
     <value>Ununoctium</value>
   </data>
+  <!--
+    List of Wikipedia pages for each element identified by their atomic number.
+
+    These are usually just the name of the element, but there may be exceptions in cases of
+    ambiguity.
+  -->
   <data name="Wiki.001" xml:space="preserve">
     <value>Hydrogen</value>
   </data>
@@ -850,6 +862,9 @@
   <data name="Wiki.118" xml:space="preserve">
     <value>Ununoctium</value>
   </data>
+  <!--
+    The language code subdomain of Wikipedia.
+  -->
   <data name="Wiki.Language" xml:space="preserve">
     <value>en</value>
   </data>
