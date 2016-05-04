@@ -7,6 +7,9 @@ Química
 Elementos
 Tabla periódica
 
+[short-description]
+De código abierto Tabla Periódica de los Elementos y referencia del elemento.
+
 [description]
 Primaria es una aplicación de referencia Tabla Periódica y un elemento simple.
 

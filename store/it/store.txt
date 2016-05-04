@@ -7,6 +7,9 @@ Chimica
 Elementi
 Tavola periodica
 
+[short-description]
+Open-source Tavola Periodica degli Elementi e app elemento di riferimento.
+
 [description]
 Elementare è una semplice applicazione di riferimento Tabella ed elementi periodica.
 
