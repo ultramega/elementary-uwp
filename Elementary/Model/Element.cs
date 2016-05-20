@@ -172,7 +172,7 @@ namespace Elementary.Model
                 Configuration = "1s2 2s1",
                 Electrons = "2,1",
                 Unstable = false,
-                Video = "wY0afMI4Jgc"
+                Video = "LfS10ArXTBA"
             },
             new Element {
                 Number = 4,
