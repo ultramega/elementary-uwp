@@ -108,11 +108,6 @@ namespace Elementary.Model
         public bool Unstable { get; internal set; }
 
         /// <summary>
-        /// The YouTube ID for the video associated with the element.
-        /// </summary>
-        public string Video { get; internal set; }
-
-        /// <summary>
         /// List of all of the elements.
         /// </summary>
         public static Element[] List { get; } = new Element[]
@@ -134,7 +129,6 @@ namespace Elementary.Model
                 Configuration = "1s1",
                 Electrons = "1",
                 Unstable = false,
-                Video = "6rdmpx39PRk"
             },
             new Element {
                 Number = 2,
@@ -153,7 +147,6 @@ namespace Elementary.Model
                 Configuration = "1s2",
                 Electrons = "2",
                 Unstable = false,
-                Video = "a8FJEiI5e6Q"
             },
             new Element {
                 Number = 3,
@@ -172,7 +165,6 @@ namespace Elementary.Model
                 Configuration = "1s2 2s1",
                 Electrons = "2,1",
                 Unstable = false,
-                Video = "LfS10ArXTBA"
             },
             new Element {
                 Number = 4,
@@ -191,7 +183,6 @@ namespace Elementary.Model
                 Configuration = "1s2 2s2",
                 Electrons = "2,2",
                 Unstable = false,
-                Video = "qy8JyQShZRA"
             },
             new Element {
                 Number = 5,
@@ -210,7 +201,6 @@ namespace Elementary.Model
                 Configuration = "1s2 2s2 2p1",
                 Electrons = "2,3",
                 Unstable = false,
-                Video = "JzqdHkpXuy4"
             },
             new Element {
                 Number = 6,
@@ -229,7 +219,6 @@ namespace Elementary.Model
                 Configuration = "1s2 2s2 2p2",
                 Electrons = "2,4",
                 Unstable = false,
-                Video = "QuW4_bRHbUk"
             },
             new Element {
                 Number = 7,
@@ -248,7 +237,6 @@ namespace Elementary.Model
                 Configuration = "1s2 2s2 2p3",
                 Electrons = "2,5",
                 Unstable = false,
-                Video = "zmvJ54kRpjg"
             },
             new Element {
                 Number = 8,
@@ -267,7 +255,6 @@ namespace Elementary.Model
                 Configuration = "1s2 2s2 2p4",
                 Electrons = "2,6",
                 Unstable = false,
-                Video = "WuG5WTId-IY"
             },
             new Element {
                 Number = 9,
@@ -286,7 +273,6 @@ namespace Elementary.Model
                 Configuration = "1s2 2s2 2p5",
                 Electrons = "2,7",
                 Unstable = false,
-                Video = "vtWp45Eewtw"
             },
             new Element {
                 Number = 10,
@@ -305,7 +291,6 @@ namespace Elementary.Model
                 Configuration = "1s2 2s2 2p6",
                 Electrons = "2,8",
                 Unstable = false,
-                Video = "wzv0pb7mzaw"
             },
             new Element {
                 Number = 11,
@@ -324,7 +309,6 @@ namespace Elementary.Model
                 Configuration = "[Ne] 3s1",
                 Electrons = "2,8,1",
                 Unstable = false,
-                Video = "7IT2I3LtlNE"
             },
             new Element {
                 Number = 12,
@@ -343,7 +327,6 @@ namespace Elementary.Model
                 Configuration = "[Ne] 3s2",
                 Electrons = "2,8,2",
                 Unstable = false,
-                Video = "FKkWdizutxI"
             },
             new Element {
                 Number = 13,
@@ -362,7 +345,6 @@ namespace Elementary.Model
                 Configuration = "[Ne] 3s2 3p1",
                 Electrons = "2,8,3",
                 Unstable = false,
-                Video = "4AhZ8503WPs"
             },
             new Element {
                 Number = 14,
@@ -381,7 +363,6 @@ namespace Elementary.Model
                 Configuration = "[Ne] 3s2 3p2",
                 Electrons = "2,8,4",
                 Unstable = false,
-                Video = "a2aWO5cL410"
             },
             new Element {
                 Number = 15,
@@ -400,7 +381,6 @@ namespace Elementary.Model
                 Configuration = "[Ne] 3s2 3p3",
                 Electrons = "2,8,5",
                 Unstable = false,
-                Video = "LSYLUat03A4"
             },
             new Element {
                 Number = 16,
@@ -419,7 +399,6 @@ namespace Elementary.Model
                 Configuration = "[Ne] 3s2 3p4",
                 Electrons = "2,8,6",
                 Unstable = false,
-                Video = "mGMR72X8V-U"
             },
             new Element {
                 Number = 17,
@@ -438,7 +417,6 @@ namespace Elementary.Model
                 Configuration = "[Ne] 3s2 3p5",
                 Electrons = "2,8,7",
                 Unstable = false,
-                Video = "BXCfBl4rmh0"
             },
             new Element {
                 Number = 18,
@@ -457,7 +435,6 @@ namespace Elementary.Model
                 Configuration = "[Ne] 3s2 3p6",
                 Electrons = "2,8,8",
                 Unstable = false,
-                Video = "nrHVOFG2V-c"
             },
             new Element {
                 Number = 19,
@@ -476,7 +453,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 4s1",
                 Electrons = "2,8,8,1",
                 Unstable = false,
-                Video = "pPdevJTGAYY"
             },
             new Element {
                 Number = 20,
@@ -495,7 +471,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 4s2",
                 Electrons = "2,8,8,2",
                 Unstable = false,
-                Video = "V9fuY8_ffFg"
             },
             new Element {
                 Number = 21,
@@ -514,7 +489,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d1 4s2",
                 Electrons = "2,8,9,2",
                 Unstable = false,
-                Video = "KkKv5ilmRjY"
             },
             new Element {
                 Number = 22,
@@ -533,7 +507,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d2 4s2",
                 Electrons = "2,8,10,2",
                 Unstable = false,
-                Video = "MpFTQYynrc4"
             },
             new Element {
                 Number = 23,
@@ -552,7 +525,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d3 4s2",
                 Electrons = "2,8,11,2",
                 Unstable = false,
-                Video = "MbCmaQzrZoc"
             },
             new Element {
                 Number = 24,
@@ -571,7 +543,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d5 4s1",
                 Electrons = "2,8,13,1",
                 Unstable = false,
-                Video = "lzRb4zmGvNU"
             },
             new Element {
                 Number = 25,
@@ -590,7 +561,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d5 4s2",
                 Electrons = "2,8,13,2",
                 Unstable = false,
-                Video = "uTVtBuY9Q-0"
             },
             new Element {
                 Number = 26,
@@ -609,7 +579,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d6 4s2",
                 Electrons = "2,8,14,2",
                 Unstable = false,
-                Video = "euQUgp5AY-Y"
             },
             new Element {
                 Number = 27,
@@ -628,7 +597,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d7 4s2",
                 Electrons = "2,8,15,2",
                 Unstable = false,
-                Video = "V6ljxByu9ng"
             },
             new Element {
                 Number = 28,
@@ -647,7 +615,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d8 4s2",
                 Electrons = "2,8,16,2",
                 Unstable = false,
-                Video = "t4kRHoj0W1Y"
             },
             new Element {
                 Number = 29,
@@ -666,7 +633,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d10 4s1",
                 Electrons = "2,8,18,1",
                 Unstable = false,
-                Video = "kop1sWzTK-I"
             },
             new Element {
                 Number = 30,
@@ -685,7 +651,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d10 4s2",
                 Electrons = "2,8,18,2",
                 Unstable = false,
-                Video = "99wPiMb-k0o"
             },
             new Element {
                 Number = 31,
@@ -704,7 +669,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d10 4s2 4p1",
                 Electrons = "2,8,18,3",
                 Unstable = false,
-                Video = "N6ccRvKKwZQ"
             },
             new Element {
                 Number = 32,
@@ -723,7 +687,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d10 4s2 4p2",
                 Electrons = "2,8,18,4",
                 Unstable = false,
-                Video = "osrKWVknkgs"
             },
             new Element {
                 Number = 33,
@@ -742,7 +705,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d10 4s2 4p3",
                 Electrons = "2,8,18,5",
                 Unstable = false,
-                Video = "a2AbKwAvyos"
             },
             new Element {
                 Number = 34,
@@ -761,7 +723,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d10 4s2 4p4",
                 Electrons = "2,8,18,6",
                 Unstable = false,
-                Video = "IHrUtKjcAFE"
             },
             new Element {
                 Number = 35,
@@ -780,7 +741,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d10 4s2 4p5",
                 Electrons = "2,8,18,7",
                 Unstable = false,
-                Video = "Slt3_5upuSs"
             },
             new Element {
                 Number = 36,
@@ -799,7 +759,6 @@ namespace Elementary.Model
                 Configuration = "[Ar] 3d10 4s2 4p6",
                 Electrons = "2,8,18,8",
                 Unstable = false,
-                Video = "il4OOY7Zseg"
             },
             new Element {
                 Number = 37,
@@ -818,7 +777,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 5s1",
                 Electrons = "2,8,18,8,1",
                 Unstable = false,
-                Video = "0XLGopBovoI"
             },
             new Element {
                 Number = 38,
@@ -837,7 +795,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 5s2",
                 Electrons = "2,8,18,8,2",
                 Unstable = false,
-                Video = "d5ztPGrsgNQ"
             },
             new Element {
                 Number = 39,
@@ -856,7 +813,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d1 5s2",
                 Electrons = "2,8,18,9,2",
                 Unstable = false,
-                Video = "tTXjnQlAHAQ"
             },
             new Element {
                 Number = 40,
@@ -875,7 +831,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d2 5s2",
                 Electrons = "2,8,18,10,2",
                 Unstable = false,
-                Video = "gNJE2MPktvg"
             },
             new Element {
                 Number = 41,
@@ -894,7 +849,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d4 5s1",
                 Electrons = "2,8,18,12,1",
                 Unstable = false,
-                Video = "Mr2hnIheDxQ"
             },
             new Element {
                 Number = 42,
@@ -913,7 +867,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d5 5s1",
                 Electrons = "2,8,18,13,1",
                 Unstable = false,
-                Video = "ZRQ3vBGskds"
             },
             new Element {
                 Number = 43,
@@ -932,7 +885,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d5 5s2",
                 Electrons = "2,8,18,13,2",
                 Unstable = true,
-                Video = "0QBlrGva5YQ"
             },
             new Element {
                 Number = 44,
@@ -951,7 +903,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d7 5s1",
                 Electrons = "2,8,18,15,1",
                 Unstable = false,
-                Video = "wl5ZYb0hDTc"
             },
             new Element {
                 Number = 45,
@@ -970,7 +921,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d8 5s1",
                 Electrons = "2,8,18,16,1",
                 Unstable = false,
-                Video = "PPSO5798k2I"
             },
             new Element {
                 Number = 46,
@@ -989,7 +939,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10",
                 Electrons = "2,8,18,18",
                 Unstable = false,
-                Video = "4ALTGeqmNFM"
             },
             new Element {
                 Number = 47,
@@ -1008,7 +957,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10 5s1",
                 Electrons = "2,8,18,18,1",
                 Unstable = false,
-                Video = "pPd5qAb4J50"
             },
             new Element {
                 Number = 48,
@@ -1027,7 +975,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10 5s2",
                 Electrons = "2,8,18,18,2",
                 Unstable = false,
-                Video = "boRius1DYdQ"
             },
             new Element {
                 Number = 49,
@@ -1046,7 +993,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10 5s2 5p1",
                 Electrons = "2,8,18,18,3",
                 Unstable = false,
-                Video = "4opHafNmgCw"
             },
             new Element {
                 Number = 50,
@@ -1065,7 +1011,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10 5s2 5p2",
                 Electrons = "2,8,18,18,4",
                 Unstable = false,
-                Video = "qEwCPJOP0Mg"
             },
             new Element {
                 Number = 51,
@@ -1084,7 +1029,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10 5s2 5p3",
                 Electrons = "2,8,18,18,5",
                 Unstable = false,
-                Video = "kcc6qNT3BoU"
             },
             new Element {
                 Number = 52,
@@ -1103,7 +1047,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10 5s2 5p4",
                 Electrons = "2,8,18,18,6",
                 Unstable = false,
-                Video = "5ChFbVu4Mpk"
             },
             new Element {
                 Number = 53,
@@ -1122,7 +1065,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10 5s2 5p5",
                 Electrons = "2,8,18,18,7",
                 Unstable = false,
-                Video = "JUBsJLRSM64"
             },
             new Element {
                 Number = 54,
@@ -1141,7 +1083,6 @@ namespace Elementary.Model
                 Configuration = "[Kr] 4d10 5s2 5p6",
                 Electrons = "2,8,18,18,8",
                 Unstable = false,
-                Video = "Ejoct_6pQ74"
             },
             new Element {
                 Number = 55,
@@ -1160,7 +1101,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 6s1",
                 Electrons = "2,8,18,18,8,1",
                 Unstable = false,
-                Video = "5aD6HwUE2c0"
             },
             new Element {
                 Number = 56,
@@ -1179,7 +1119,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 6s2",
                 Electrons = "2,8,18,18,8,2",
                 Unstable = false,
-                Video = "9srJdQU3NOo"
             },
             new Element {
                 Number = 57,
@@ -1198,7 +1137,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 5d1 6s2",
                 Electrons = "2,8,18,18,9,2",
                 Unstable = false,
-                Video = "Q21clW0s0B8"
             },
             new Element {
                 Number = 58,
@@ -1217,7 +1155,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f1 5d1 6s2",
                 Electrons = "2,8,18,19,9,2",
                 Unstable = false,
-                Video = "frD3126ry8o"
             },
             new Element {
                 Number = 59,
@@ -1236,7 +1173,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f3 6s2",
                 Electrons = "2,8,18,21,8,2",
                 Unstable = false,
-                Video = "IL06CzXF3ns"
             },
             new Element {
                 Number = 60,
@@ -1255,7 +1191,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f4 6s2",
                 Electrons = "2,8,18,22,8,2",
                 Unstable = false,
-                Video = "PBbl-3_R3mk"
             },
             new Element {
                 Number = 61,
@@ -1274,7 +1209,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f5 6s2",
                 Electrons = "2,8,18,23,8,2",
                 Unstable = true,
-                Video = "px52fxITTrw"
             },
             new Element {
                 Number = 62,
@@ -1293,7 +1227,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f6 6s2",
                 Electrons = "2,8,18,24,8,2",
                 Unstable = false,
-                Video = "LpTkBg8HpvY"
             },
             new Element {
                 Number = 63,
@@ -1312,7 +1245,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f7 6s2",
                 Electrons = "2,8,18,25,8,2",
                 Unstable = false,
-                Video = "88YOmg_FUVo"
             },
             new Element {
                 Number = 64,
@@ -1331,7 +1263,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f7 5d1 6s2",
                 Electrons = "2,8,18,25,9,2",
                 Unstable = false,
-                Video = "uUo7pY38fGY"
             },
             new Element {
                 Number = 65,
@@ -1350,7 +1281,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f9 6s2",
                 Electrons = "2,8,18,27,8,2",
                 Unstable = false,
-                Video = "On5LjH9TQxY"
             },
             new Element {
                 Number = 66,
@@ -1369,7 +1299,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f10 6s2",
                 Electrons = "2,8,18,28,8,2",
                 Unstable = false,
-                Video = "hFfR_qOSa-8"
             },
             new Element {
                 Number = 67,
@@ -1388,7 +1317,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f11 6s2",
                 Electrons = "2,8,18,29,8,2",
                 Unstable = false,
-                Video = "HQahtzCU0BU"
             },
             new Element {
                 Number = 68,
@@ -1407,7 +1335,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f12 6s2",
                 Electrons = "2,8,18,30,8,2",
                 Unstable = false,
-                Video = "E-DY_RT4fJ4"
             },
             new Element {
                 Number = 69,
@@ -1426,7 +1353,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f13 6s2",
                 Electrons = "2,8,18,31,8,2",
                 Unstable = false,
-                Video = "CQFDIZfMPVQ"
             },
             new Element {
                 Number = 70,
@@ -1445,7 +1371,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 6s2",
                 Electrons = "2,8,18,32,8,2",
                 Unstable = false,
-                Video = "Rp7-yNvOV4I"
             },
             new Element {
                 Number = 71,
@@ -1464,7 +1389,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d1 6s2",
                 Electrons = "2,8,18,32,9,2",
                 Unstable = false,
-                Video = "a5T1xXoR8XI"
             },
             new Element {
                 Number = 72,
@@ -1483,7 +1407,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d2 6s2",
                 Electrons = "2,8,18,32,10,2",
                 Unstable = false,
-                Video = "egw79BA_0PA"
             },
             new Element {
                 Number = 73,
@@ -1502,7 +1425,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d3 6s2",
                 Electrons = "2,8,18,32,11,2",
                 Unstable = false,
-                Video = "51xFP1Yn3g0"
             },
             new Element {
                 Number = 74,
@@ -1521,7 +1443,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d4 6s2",
                 Electrons = "2,8,18,32,12,2",
                 Unstable = false,
-                Video = "_PccntqMOoI"
             },
             new Element {
                 Number = 75,
@@ -1540,7 +1461,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d5 6s2",
                 Electrons = "2,8,18,32,13,2",
                 Unstable = false,
-                Video = "VRccwkEmOYg"
             },
             new Element {
                 Number = 76,
@@ -1559,7 +1479,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d6 6s2",
                 Electrons = "2,8,18,32,14,2",
                 Unstable = false,
-                Video = "AdX-T2Vv68Y"
             },
             new Element {
                 Number = 77,
@@ -1578,7 +1497,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d7 6s2",
                 Electrons = "2,8,18,32,15,2",
                 Unstable = false,
-                Video = "cuovE4OQi2g"
             },
             new Element {
                 Number = 78,
@@ -1597,7 +1515,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d9 6s1",
                 Electrons = "2,8,18,32,17,1",
                 Unstable = false,
-                Video = "byzaoji_9kk"
             },
             new Element {
                 Number = 79,
@@ -1616,7 +1533,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d10 6s1",
                 Electrons = "2,8,18,32,18,1",
                 Unstable = false,
-                Video = "7dF0QTzcuac"
             },
             new Element {
                 Number = 80,
@@ -1635,7 +1551,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d10 6s2",
                 Electrons = "2,8,18,32,18,2",
                 Unstable = false,
-                Video = "oL0M_6bfzkU"
             },
             new Element {
                 Number = 81,
@@ -1654,7 +1569,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d10 6s2 6p1",
                 Electrons = "2,8,18,32,18,3",
                 Unstable = false,
-                Video = "bK6nnyibhdk"
             },
             new Element {
                 Number = 82,
@@ -1673,7 +1587,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d10 6s2 6p2",
                 Electrons = "2,8,18,32,18,4",
                 Unstable = false,
-                Video = "2ERfPN5JLX8"
             },
             new Element {
                 Number = 83,
@@ -1692,7 +1605,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d10 6s2 6p3",
                 Electrons = "2,8,18,32,18,5",
                 Unstable = false,
-                Video = "vyIo-c7VmIM"
             },
             new Element {
                 Number = 84,
@@ -1711,7 +1623,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d10 6s2 6p4",
                 Electrons = "2,8,18,32,18,6",
                 Unstable = true,
-                Video = "bbr5yWwsI1o"
             },
             new Element {
                 Number = 85,
@@ -1730,7 +1641,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d10 6s2 6p5",
                 Electrons = "2,8,18,32,18,7",
                 Unstable = true,
-                Video = "sSL7EwdlLlE"
             },
             new Element {
                 Number = 86,
@@ -1749,7 +1659,6 @@ namespace Elementary.Model
                 Configuration = "[Xe] 4f14 5d10 6s2 6p6",
                 Electrons = "2,8,18,32,18,8",
                 Unstable = true,
-                Video = "mTuC_LrEfbU"
             },
             new Element {
                 Number = 87,
@@ -1768,7 +1677,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 7s1",
                 Electrons = "2,8,18,32,18,8,1",
                 Unstable = true,
-                Video = "PyFLvSg6ZDw"
             },
             new Element {
                 Number = 88,
@@ -1787,7 +1695,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 7s2",
                 Electrons = "2,8,18,32,18,8,2",
                 Unstable = true,
-                Video = "5_I6vj-lXNM"
             },
             new Element {
                 Number = 89,
@@ -1806,7 +1713,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 6d1 7s2",
                 Electrons = "2,8,18,32,18,9,2",
                 Unstable = true,
-                Video = "0BlpjWBYW0k"
             },
             new Element {
                 Number = 90,
@@ -1825,7 +1731,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 6d2 7s2",
                 Electrons = "2,8,18,32,18,10,2",
                 Unstable = false,
-                Video = "2yZGcr0mpw0"
             },
             new Element {
                 Number = 91,
@@ -1844,7 +1749,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f2 6d1 7s2",
                 Electrons = "2,8,18,32,20,9,2",
                 Unstable = false,
-                Video = "bsIMMa7iEKU"
             },
             new Element {
                 Number = 92,
@@ -1863,7 +1767,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f3 6d1 7s2",
                 Electrons = "2,8,18,32,21,9,2",
                 Unstable = false,
-                Video = "B8vVZTvJNGk"
             },
             new Element {
                 Number = 93,
@@ -1882,7 +1785,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f4 6d1 7s2",
                 Electrons = "2,8,18,32,22,9,2",
                 Unstable = true,
-                Video = "1D75B0_URbE"
             },
             new Element {
                 Number = 94,
@@ -1901,7 +1803,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f6 7s2",
                 Electrons = "2,8,18,32,24,8,2",
                 Unstable = true,
-                Video = "89UNPdNtOoE"
             },
             new Element {
                 Number = 95,
@@ -1920,7 +1821,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f7 7s2",
                 Electrons = "2,8,18,32,25,8,2",
                 Unstable = true,
-                Video = "PB38NyjmneE"
             },
             new Element {
                 Number = 96,
@@ -1939,7 +1839,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f7 6d1 7s2",
                 Electrons = "2,8,18,32,25,9,2",
                 Unstable = true,
-                Video = "sZobqPFNcwg"
             },
             new Element {
                 Number = 97,
@@ -1958,7 +1857,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f9 7s2",
                 Electrons = "2,8,18,32,27,8,2",
                 Unstable = true,
-                Video = "imXT9QwRzks"
             },
             new Element {
                 Number = 98,
@@ -1977,7 +1875,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f10 7s2",
                 Electrons = "2,8,18,32,28,8,2",
                 Unstable = true,
-                Video = "eG6HyPrTccI"
             },
             new Element {
                 Number = 99,
@@ -1996,7 +1893,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f11 7s2",
                 Electrons = "2,8,18,32,29,8,2",
                 Unstable = true,
-                Video = "-G_4nJLNXA0"
             },
             new Element {
                 Number = 100,
@@ -2015,7 +1911,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f12 7s2",
                 Electrons = "2,8,18,32,30,8,2",
                 Unstable = true,
-                Video = "SQhI52sqanA"
             },
             new Element {
                 Number = 101,
@@ -2034,7 +1929,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f13 7s2",
                 Electrons = "2,8,18,32,31,8,2",
                 Unstable = true,
-                Video = "0JlshAo8DuE"
             },
             new Element {
                 Number = 102,
@@ -2053,7 +1947,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 7s2",
                 Electrons = "2,8,18,32,32,8,2",
                 Unstable = true,
-                Video = "t_ZpauMxapY"
             },
             new Element {
                 Number = 103,
@@ -2072,7 +1965,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 7s2 7p1",
                 Electrons = "2,8,18,32,32,8,3",
                 Unstable = true,
-                Video = "_zBsnnJOkyA"
             },
             new Element {
                 Number = 104,
@@ -2091,7 +1983,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d2 7s2",
                 Electrons = "2,8,18,32,32,10,2",
                 Unstable = true,
-                Video = "dOj9ZjKnJcY"
             },
             new Element {
                 Number = 105,
@@ -2110,7 +2001,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d3 7s2",
                 Electrons = "2,8,18,32,32,11,2",
                 Unstable = true,
-                Video = "eeczRrDoL_M"
             },
             new Element {
                 Number = 106,
@@ -2129,7 +2019,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 7s2 5f14 6d4",
                 Electrons = "2,8,18,32,32,12,2",
                 Unstable = true,
-                Video = "UWq0djr790E"
             },
             new Element {
                 Number = 107,
@@ -2148,7 +2037,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d5 7s2",
                 Electrons = "2,8,18,32,32,13,2",
                 Unstable = true,
-                Video = "okJnQIjELY4"
             },
             new Element {
                 Number = 108,
@@ -2167,7 +2055,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d6 7s2",
                 Electrons = "2,8,18,32,32,14,2",
                 Unstable = true,
-                Video = "u4GEVxbLego"
             },
             new Element {
                 Number = 109,
@@ -2186,7 +2073,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 7s2 5f14 6d7",
                 Electrons = "2,8,18,32,32,15,2",
                 Unstable = true,
-                Video = "N8VR7Qscq4k"
             },
             new Element {
                 Number = 110,
@@ -2205,7 +2091,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 7s2 5f14 6d8",
                 Electrons = "2,8,18,32,32,17,1",
                 Unstable = true,
-                Video = "lhvMqva3-7M"
             },
             new Element {
                 Number = 111,
@@ -2224,7 +2109,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d9 7s2",
                 Electrons = "2,8,18,32,32,18,1",
                 Unstable = true,
-                Video = "MTq1hzhCF0g"
             },
             new Element {
                 Number = 112,
@@ -2243,7 +2127,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d10 7s2",
                 Electrons = "2,8,18,32,32,18,2",
                 Unstable = true,
-                Video = "QHcbQfcwegY"
             },
             new Element {
                 Number = 113,
@@ -2262,7 +2145,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d10 7s2 7p1",
                 Electrons = "2,8,18,32,32,18,3",
                 Unstable = true,
-                Video = "Ac7iFepG2CY"
             },
             new Element {
                 Number = 114,
@@ -2281,7 +2163,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d10 7s2 7p2",
                 Electrons = "2,8,18,32,32,18,4",
                 Unstable = true,
-                Video = "5L-NNFPiRog"
             },
             new Element {
                 Number = 115,
@@ -2300,7 +2181,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d10 7s2 7p3",
                 Electrons = "2,8,18,32,32,18,5",
                 Unstable = true,
-                Video = "gCt5WK2OVp0"
             },
             new Element {
                 Number = 116,
@@ -2319,7 +2199,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d10 7s2 7p4",
                 Electrons = "2,8,18,32,32,18,6",
                 Unstable = true,
-                Video = "WdbF4L_ruyM"
             },
             new Element {
                 Number = 117,
@@ -2338,7 +2217,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d10 7s2 7p5",
                 Electrons = "2,8,18,32,32,18,7",
                 Unstable = true,
-                Video = "5kVyOd-F5q0"
             },
             new Element {
                 Number = 118,
@@ -2357,7 +2235,6 @@ namespace Elementary.Model
                 Configuration = "[Rn] 5f14 6d10 7s2 7p6",
                 Electrons = "2,8,18,32,32,18,8",
                 Unstable = true,
-                Video = "Stxor9L00BU"
             },
         };
     }
