@@ -37,101 +37,104 @@
         </Grid.RowDefinitions>
 
         <CommandBar>
-            <AppBarToggleButton
-                x:Uid="Menu/ListView"
-                x:Name="ListViewButton"
-                Icon="List"
-                Checked="OnListViewToggled"
-                Unchecked="OnListViewToggled" />
+            <CommandBar.PrimaryCommands>
+                <AppBarToggleButton
+                    x:Uid="Menu/ListView"
+                    x:Name="ListViewButton"
+                    Icon="List"
+                    Checked="OnListViewToggled"
+                    Unchecked="OnListViewToggled" />
+            </CommandBar.PrimaryCommands>
 
-            <AppBarButton
-                x:Name="SettingsButton"
-                x:Uid="Menu/Settings"
-                Icon="Setting">
-                <AppBarButton.Flyout>
-                    <Flyout>
-                        <StackPanel>
-                            <TextBlock
-                                x:Uid="Title/Settings"
-                                Style="{ThemeResource TitleTextBlockStyle}"
-                                HorizontalAlignment="Center" />
-
-                            <MenuFlyoutSeparator />
-
+            <CommandBar.SecondaryCommands>
+                <AppBarButton
+                    x:Name="SettingsButton"
+                    x:Uid="Menu/Settings">
+                    <AppBarButton.Flyout>
+                        <Flyout>
                             <StackPanel>
                                 <TextBlock
-                                    x:Uid="Settings/DarkTheme/Header"
-                                    Style="{ThemeResource SubtitleTextBlockStyle}" />
+                                    x:Uid="Title/Settings"
+                                    Style="{ThemeResource TitleTextBlockStyle}"
+                                    HorizontalAlignment="Center" />
 
-                                <ToggleMenuFlyoutItem
-                                    x:Uid="Settings/DarkTheme/Button"
-                                    x:Name="DarkThemeSetting"
-                                    Click="OnDarkThemeToggled" />
-                            </StackPanel>
+                                <MenuFlyoutSeparator />
 
-                            <MenuFlyoutSeparator />
+                                <StackPanel>
+                                    <TextBlock
+                                        x:Uid="Settings/DarkTheme/Header"
+                                        Style="{ThemeResource SubtitleTextBlockStyle}" />
 
-                            <StackPanel>
-                                <TextBlock
-                                    x:Uid="Settings/TemperatureUnits/Header"
-                                    Style="{ThemeResource SubtitleTextBlockStyle}" />
+                                    <ToggleMenuFlyoutItem
+                                        x:Uid="Settings/DarkTheme/Button"
+                                        x:Name="DarkThemeSetting"
+                                        Click="OnDarkThemeToggled" />
+                                </StackPanel>
 
-                                <TextBlock
-                                    x:Uid="Settings/TemperatureUnits/Description"
-                                    TextWrapping="Wrap" />
+                                <MenuFlyoutSeparator />
 
-                                <StackPanel
-                                    x:Name="TemperatureUnitsSetting">
-                                    <RadioButton
-                                        Content="Kelvin (K)"
-                                        Tag="K"
-                                        Checked="OnTemperatureUnitsChecked"
-                                        GroupName="TemperatureUnits" />
+                                <StackPanel>
+                                    <TextBlock
+                                        x:Uid="Settings/TemperatureUnits/Header"
+                                        Style="{ThemeResource SubtitleTextBlockStyle}" />
 
-                                    <RadioButton
-                                        Content="Celsius (°C)"
-                                        Tag="C"
-                                        Checked="OnTemperatureUnitsChecked"
-                                        GroupName="TemperatureUnits" />
+                                    <TextBlock
+                                        x:Uid="Settings/TemperatureUnits/Description"
+                                        TextWrapping="Wrap" />
 
-                                    <RadioButton
-                                        Content="Fahrenheit (°F)"
-                                        Tag="F"
-                                        Checked="OnTemperatureUnitsChecked"
-                                        GroupName="TemperatureUnits" />
+                                    <StackPanel
+                                        x:Name="TemperatureUnitsSetting">
+                                        <RadioButton
+                                            Content="Kelvin (K)"
+                                            Tag="K"
+                                            Checked="OnTemperatureUnitsChecked"
+                                            GroupName="TemperatureUnits" />
+
+                                        <RadioButton
+                                            Content="Celsius (°C)"
+                                            Tag="C"
+                                            Checked="OnTemperatureUnitsChecked"
+                                            GroupName="TemperatureUnits" />
+
+                                        <RadioButton
+                                            Content="Fahrenheit (°F)"
+                                            Tag="F"
+                                            Checked="OnTemperatureUnitsChecked"
+                                            GroupName="TemperatureUnits" />
+                                    </StackPanel>
+                                </StackPanel>
+
+                                <MenuFlyoutSeparator />
+
+                                <StackPanel>
+                                    <TextBlock
+                                        x:Uid="Settings/ElementColors/Header"
+                                        Style="{ThemeResource SubtitleTextBlockStyle}" />
+
+                                    <TextBlock
+                                        x:Uid="Settings/ElementColors/Description"
+                                        TextWrapping="Wrap" />
+
+                                    <StackPanel
+                                        x:Name="ElementColorsSetting">
+                                        <RadioButton
+                                            x:Uid="Settings/ElementColors/Category"
+                                            Tag="cat"
+                                            Checked="OnElementColorsChecked"
+                                            GroupName="ElementColors" />
+
+                                        <RadioButton
+                                            x:Uid="Settings/ElementColors/Block"
+                                            Tag="block"
+                                            Checked="OnElementColorsChecked"
+                                            GroupName="ElementColors" />
+                                    </StackPanel>
                                 </StackPanel>
                             </StackPanel>
-
-                            <MenuFlyoutSeparator />
-
-                            <StackPanel>
-                                <TextBlock
-                                    x:Uid="Settings/ElementColors/Header"
-                                    Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                <TextBlock
-                                    x:Uid="Settings/ElementColors/Description"
-                                    TextWrapping="Wrap" />
-
-                                <StackPanel
-                                    x:Name="ElementColorsSetting">
-                                    <RadioButton
-                                        x:Uid="Settings/ElementColors/Category"
-                                        Tag="cat"
-                                        Checked="OnElementColorsChecked"
-                                        GroupName="ElementColors" />
-
-                                    <RadioButton
-                                        x:Uid="Settings/ElementColors/Block"
-                                        Tag="block"
-                                        Checked="OnElementColorsChecked"
-                                        GroupName="ElementColors" />
-                                </StackPanel>
-                            </StackPanel>
-                        </StackPanel>
-                    </Flyout>
-                </AppBarButton.Flyout>
-            </AppBarButton>
+                        </Flyout>
+                    </AppBarButton.Flyout>
+                </AppBarButton>
+            </CommandBar.SecondaryCommands>
 
             <CommandBar.Content>
                 <TextBlock
