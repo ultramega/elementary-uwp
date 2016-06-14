@@ -37,7 +37,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Elementary.App">
-      <uap:VisualElements DisplayName="Elementary (Periodic Table)" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Elementary is a Periodic Table and element reference application." BackgroundColor="transparent">
+      <uap:VisualElements DisplayName="ms-resource:///Resources/AppName" Square150x150Logo="Assets\Square150x150Logo.png" Square44x44Logo="Assets\Square44x44Logo.png" Description="Elementary is a Periodic Table and element reference application." BackgroundColor="transparent">
         <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square310x310Logo="Assets\Square310x310Logo.png" Square71x71Logo="Assets\Square71x71Logo.png" ShortName="Elementary">
           <uap:ShowNameOnTiles>
             <uap:ShowOn Tile="square150x150Logo" />
