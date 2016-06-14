@@ -1,5 +1,6 @@
 ﻿- v.1.1.4.0 (6/14/16):
    * Added French translation ([Poussinou](https://github.com/Poussinou))
+   * Localized app name and description
    * Fixed text wrapping in the command bar
 - v.1.1.3.0 (5/21/16):
    * Updated the video for Lithium
