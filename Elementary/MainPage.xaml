@@ -137,7 +137,8 @@
                 <TextBlock
                     Style="{ThemeResource TitleTextBlockStyle}"
                     Text="{x:Bind PageTitle, Mode=OneWay, TargetNullValue=Elementary}"
-                    Margin="12,8" />
+                    Margin="12,8"
+                    TextWrapping="NoWrap" />
             </CommandBar.Content>
         </CommandBar>
 
