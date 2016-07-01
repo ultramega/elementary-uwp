@@ -1,4 +1,6 @@
-﻿- v.1.1.4.0 (6/14/16):
+﻿- v.1.1.5.0 (7/1/16):
+   * Added Brazilian Portuguese translation ([amalvarenga](https://github.com/amalvarenga))
+- v.1.1.4.0 (6/14/16):
    * Added French translation ([Poussinou](https://github.com/Poussinou))
    * Localized app name and description
    * Fixed text wrapping in the command bar

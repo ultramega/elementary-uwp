@@ -1,0 +1,856 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The MIT License (MIT)
+  Copyright © 2016 Steve Guidetti
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the “Software”), to deal
+  in the Software without restriction, including without limitation the rights
+  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+  THE SOFTWARE.
+-->
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Categories" xml:space="preserve">
+    <value>Não-metais;Gases nobres;Metais alcalinos;Metais alcalino-terrosos;Semimetais;Halogênios;Metais;Metais de transição;Lantanídeos;Actinídeos</value>
+  </data>
+  <data name="Name.001" xml:space="preserve">
+    <value>Hidrogênio</value>
+  </data>
+  <data name="Name.002" xml:space="preserve">
+    <value>Hélio</value>
+  </data>
+  <data name="Name.003" xml:space="preserve">
+    <value>Lítio</value>
+  </data>
+  <data name="Name.004" xml:space="preserve">
+    <value>Berílio</value>
+  </data>
+  <data name="Name.005" xml:space="preserve">
+    <value>Boro</value>
+  </data>
+  <data name="Name.006" xml:space="preserve">
+    <value>Carbono</value>
+  </data>
+  <data name="Name.007" xml:space="preserve">
+    <value>Nitrogênio</value>
+  </data>
+  <data name="Name.008" xml:space="preserve">
+    <value>Oxigênio</value>
+  </data>
+  <data name="Name.009" xml:space="preserve">
+    <value>Flúor</value>
+  </data>
+  <data name="Name.010" xml:space="preserve">
+    <value>Neônio</value>
+  </data>
+  <data name="Name.011" xml:space="preserve">
+    <value>Sódio</value>
+  </data>
+  <data name="Name.012" xml:space="preserve">
+    <value>Magnésio</value>
+  </data>
+  <data name="Name.013" xml:space="preserve">
+    <value>Alumínio</value>
+  </data>
+  <data name="Name.014" xml:space="preserve">
+    <value>Silício</value>
+  </data>
+  <data name="Name.015" xml:space="preserve">
+    <value>Fósforo</value>
+  </data>
+  <data name="Name.016" xml:space="preserve">
+    <value>Enxofre</value>
+  </data>
+  <data name="Name.017" xml:space="preserve">
+    <value>Cloro</value>
+  </data>
+  <data name="Name.018" xml:space="preserve">
+    <value>Argônio</value>
+  </data>
+  <data name="Name.019" xml:space="preserve">
+    <value>Potássio</value>
+  </data>
+  <data name="Name.020" xml:space="preserve">
+    <value>Cálcio</value>
+  </data>
+  <data name="Name.021" xml:space="preserve">
+    <value>Escândio</value>
+  </data>
+  <data name="Name.022" xml:space="preserve">
+    <value>Titânio</value>
+  </data>
+  <data name="Name.023" xml:space="preserve">
+    <value>Vanádio</value>
+  </data>
+  <data name="Name.024" xml:space="preserve">
+    <value>Crômio</value>
+  </data>
+  <data name="Name.025" xml:space="preserve">
+    <value>Manganês</value>
+  </data>
+  <data name="Name.026" xml:space="preserve">
+    <value>Ferro</value>
+  </data>
+  <data name="Name.027" xml:space="preserve">
+    <value>Cobalto</value>
+  </data>
+  <data name="Name.028" xml:space="preserve">
+    <value>Níquel</value>
+  </data>
+  <data name="Name.029" xml:space="preserve">
+    <value>Cobre</value>
+  </data>
+  <data name="Name.030" xml:space="preserve">
+    <value>Zinco</value>
+  </data>
+  <data name="Name.031" xml:space="preserve">
+    <value>Gálio</value>
+  </data>
+  <data name="Name.032" xml:space="preserve">
+    <value>Germânio</value>
+  </data>
+  <data name="Name.033" xml:space="preserve">
+    <value>Arsênio</value>
+  </data>
+  <data name="Name.034" xml:space="preserve">
+    <value>Selênio</value>
+  </data>
+  <data name="Name.035" xml:space="preserve">
+    <value>Bromo</value>
+  </data>
+  <data name="Name.036" xml:space="preserve">
+    <value>Criptônio</value>
+  </data>
+  <data name="Name.037" xml:space="preserve">
+    <value>Rubídio</value>
+  </data>
+  <data name="Name.038" xml:space="preserve">
+    <value>Estrôncio</value>
+  </data>
+  <data name="Name.039" xml:space="preserve">
+    <value>Ítrio</value>
+  </data>
+  <data name="Name.040" xml:space="preserve">
+    <value>Zircônio</value>
+  </data>
+  <data name="Name.041" xml:space="preserve">
+    <value>Nióbio</value>
+  </data>
+  <data name="Name.042" xml:space="preserve">
+    <value>Molibdênio</value>
+  </data>
+  <data name="Name.043" xml:space="preserve">
+    <value>Tecnécio</value>
+  </data>
+  <data name="Name.044" xml:space="preserve">
+    <value>Rutênio</value>
+  </data>
+  <data name="Name.045" xml:space="preserve">
+    <value>Ródio</value>
+  </data>
+  <data name="Name.046" xml:space="preserve">
+    <value>Paládio</value>
+  </data>
+  <data name="Name.047" xml:space="preserve">
+    <value>Prata</value>
+  </data>
+  <data name="Name.048" xml:space="preserve">
+    <value>Cádmio</value>
+  </data>
+  <data name="Name.049" xml:space="preserve">
+    <value>Índio</value>
+  </data>
+  <data name="Name.050" xml:space="preserve">
+    <value>Estanho</value>
+  </data>
+  <data name="Name.051" xml:space="preserve">
+    <value>Antimônio</value>
+  </data>
+  <data name="Name.052" xml:space="preserve">
+    <value>Telúrio</value>
+  </data>
+  <data name="Name.053" xml:space="preserve">
+    <value>Iodo</value>
+  </data>
+  <data name="Name.054" xml:space="preserve">
+    <value>Xenônio</value>
+  </data>
+  <data name="Name.055" xml:space="preserve">
+    <value>Césio</value>
+  </data>
+  <data name="Name.056" xml:space="preserve">
+    <value>Bário</value>
+  </data>
+  <data name="Name.057" xml:space="preserve">
+    <value>Lantânio</value>
+  </data>
+  <data name="Name.058" xml:space="preserve">
+    <value>Cério</value>
+  </data>
+  <data name="Name.059" xml:space="preserve">
+    <value>Praseodímio</value>
+  </data>
+  <data name="Name.060" xml:space="preserve">
+    <value>Neodímio</value>
+  </data>
+  <data name="Name.061" xml:space="preserve">
+    <value>Promécio</value>
+  </data>
+  <data name="Name.062" xml:space="preserve">
+    <value>Samário</value>
+  </data>
+  <data name="Name.063" xml:space="preserve">
+    <value>Európio</value>
+  </data>
+  <data name="Name.064" xml:space="preserve">
+    <value>Gadolínio</value>
+  </data>
+  <data name="Name.065" xml:space="preserve">
+    <value>Térbio</value>
+  </data>
+  <data name="Name.066" xml:space="preserve">
+    <value>Disprósio</value>
+  </data>
+  <data name="Name.067" xml:space="preserve">
+    <value>Hôlmio</value>
+  </data>
+  <data name="Name.068" xml:space="preserve">
+    <value>Érbio</value>
+  </data>
+  <data name="Name.069" xml:space="preserve">
+    <value>Túlio</value>
+  </data>
+  <data name="Name.070" xml:space="preserve">
+    <value>Itérbio</value>
+  </data>
+  <data name="Name.071" xml:space="preserve">
+    <value>Lutécio</value>
+  </data>
+  <data name="Name.072" xml:space="preserve">
+    <value>Háfnio</value>
+  </data>
+  <data name="Name.073" xml:space="preserve">
+    <value>Tântalo</value>
+  </data>
+  <data name="Name.074" xml:space="preserve">
+    <value>Tungstênio</value>
+  </data>
+  <data name="Name.075" xml:space="preserve">
+    <value>Rênio</value>
+  </data>
+  <data name="Name.076" xml:space="preserve">
+    <value>Ósmio</value>
+  </data>
+  <data name="Name.077" xml:space="preserve">
+    <value>Irídio</value>
+  </data>
+  <data name="Name.078" xml:space="preserve">
+    <value>Platina</value>
+  </data>
+  <data name="Name.079" xml:space="preserve">
+    <value>Ouro</value>
+  </data>
+  <data name="Name.080" xml:space="preserve">
+    <value>Mercúrio</value>
+  </data>
+  <data name="Name.081" xml:space="preserve">
+    <value>Tálio</value>
+  </data>
+  <data name="Name.082" xml:space="preserve">
+    <value>Chumbo</value>
+  </data>
+  <data name="Name.083" xml:space="preserve">
+    <value>Bismuto</value>
+  </data>
+  <data name="Name.084" xml:space="preserve">
+    <value>Polônio</value>
+  </data>
+  <data name="Name.085" xml:space="preserve">
+    <value>Astato</value>
+  </data>
+  <data name="Name.086" xml:space="preserve">
+    <value>Radônio</value>
+  </data>
+  <data name="Name.087" xml:space="preserve">
+    <value>Frâncio</value>
+  </data>
+  <data name="Name.088" xml:space="preserve">
+    <value>Rádio</value>
+  </data>
+  <data name="Name.089" xml:space="preserve">
+    <value>Actínio</value>
+  </data>
+  <data name="Name.090" xml:space="preserve">
+    <value>Tório</value>
+  </data>
+  <data name="Name.091" xml:space="preserve">
+    <value>Protactínio</value>
+  </data>
+  <data name="Name.092" xml:space="preserve">
+    <value>Urânio</value>
+  </data>
+  <data name="Name.093" xml:space="preserve">
+    <value>Netúnio</value>
+  </data>
+  <data name="Name.094" xml:space="preserve">
+    <value>Plutônio</value>
+  </data>
+  <data name="Name.095" xml:space="preserve">
+    <value>Amerício</value>
+  </data>
+  <data name="Name.096" xml:space="preserve">
+    <value>Cúrio</value>
+  </data>
+  <data name="Name.097" xml:space="preserve">
+    <value>Berquélio</value>
+  </data>
+  <data name="Name.098" xml:space="preserve">
+    <value>Califórnio</value>
+  </data>
+  <data name="Name.099" xml:space="preserve">
+    <value>Einstênio</value>
+  </data>
+  <data name="Name.100" xml:space="preserve">
+    <value>Férmio</value>
+  </data>
+  <data name="Name.101" xml:space="preserve">
+    <value>Mendelévio</value>
+  </data>
+  <data name="Name.102" xml:space="preserve">
+    <value>Nobélio</value>
+  </data>
+  <data name="Name.103" xml:space="preserve">
+    <value>Laurêncio</value>
+  </data>
+  <data name="Name.104" xml:space="preserve">
+    <value>Rutherfórdio</value>
+  </data>
+  <data name="Name.105" xml:space="preserve">
+    <value>Dúbnio</value>
+  </data>
+  <data name="Name.106" xml:space="preserve">
+    <value>Seabórgio</value>
+  </data>
+  <data name="Name.107" xml:space="preserve">
+    <value>Bóhrio</value>
+  </data>
+  <data name="Name.108" xml:space="preserve">
+    <value>Hássio</value>
+  </data>
+  <data name="Name.109" xml:space="preserve">
+    <value>Meitnério</value>
+  </data>
+  <data name="Name.110" xml:space="preserve">
+    <value>Darmstádio</value>
+  </data>
+  <data name="Name.111" xml:space="preserve">
+    <value>Roentgênio</value>
+  </data>
+  <data name="Name.112" xml:space="preserve">
+    <value>Copernício</value>
+  </data>
+  <data name="Name.113" xml:space="preserve">
+    <value>Nihonium</value>
+  </data>
+  <data name="Name.114" xml:space="preserve">
+    <value>Fleróvio</value>
+  </data>
+  <data name="Name.115" xml:space="preserve">
+    <value>Moscovium</value>
+  </data>
+  <data name="Name.116" xml:space="preserve">
+    <value>Livermório</value>
+  </data>
+  <data name="Name.117" xml:space="preserve">
+    <value>Tennessine</value>
+  </data>
+  <data name="Name.118" xml:space="preserve">
+    <value>Oganesson</value>
+  </data>
+  <data name="Wiki.001" xml:space="preserve">
+    <value>Hidrogénio</value>
+  </data>
+  <data name="Wiki.002" xml:space="preserve">
+    <value>Hélio</value>
+  </data>
+  <data name="Wiki.003" xml:space="preserve">
+    <value>Lítio</value>
+  </data>
+  <data name="Wiki.004" xml:space="preserve">
+    <value>Berílio</value>
+  </data>
+  <data name="Wiki.005" xml:space="preserve">
+    <value>Boro</value>
+  </data>
+  <data name="Wiki.006" xml:space="preserve">
+    <value>Carbono</value>
+  </data>
+  <data name="Wiki.007" xml:space="preserve">
+    <value>Azoto</value>
+  </data>
+  <data name="Wiki.008" xml:space="preserve">
+    <value>Oxigénio</value>
+  </data>
+  <data name="Wiki.009" xml:space="preserve">
+    <value>Flúor</value>
+  </data>
+  <data name="Wiki.010" xml:space="preserve">
+    <value>Néon</value>
+  </data>
+  <data name="Wiki.011" xml:space="preserve">
+    <value>Sódio</value>
+  </data>
+  <data name="Wiki.012" xml:space="preserve">
+    <value>Magnésio</value>
+  </data>
+  <data name="Wiki.013" xml:space="preserve">
+    <value>Alumínio</value>
+  </data>
+  <data name="Wiki.014" xml:space="preserve">
+    <value>Silício</value>
+  </data>
+  <data name="Wiki.015" xml:space="preserve">
+    <value>Fósforo</value>
+  </data>
+  <data name="Wiki.016" xml:space="preserve">
+    <value>Enxofre</value>
+  </data>
+  <data name="Wiki.017" xml:space="preserve">
+    <value>Cloro</value>
+  </data>
+  <data name="Wiki.018" xml:space="preserve">
+    <value>Árgon</value>
+  </data>
+  <data name="Wiki.019" xml:space="preserve">
+    <value>Potássio</value>
+  </data>
+  <data name="Wiki.020" xml:space="preserve">
+    <value>Cálcio</value>
+  </data>
+  <data name="Wiki.021" xml:space="preserve">
+    <value>Escândio</value>
+  </data>
+  <data name="Wiki.022" xml:space="preserve">
+    <value>Titânio</value>
+  </data>
+  <data name="Wiki.023" xml:space="preserve">
+    <value>Vanádio</value>
+  </data>
+  <data name="Wiki.024" xml:space="preserve">
+    <value>Crômio</value>
+  </data>
+  <data name="Wiki.025" xml:space="preserve">
+    <value>Manganês</value>
+  </data>
+  <data name="Wiki.026" xml:space="preserve">
+    <value>Ferro</value>
+  </data>
+  <data name="Wiki.027" xml:space="preserve">
+    <value>Cobalto</value>
+  </data>
+  <data name="Wiki.028" xml:space="preserve">
+    <value>Níquel</value>
+  </data>
+  <data name="Wiki.029" xml:space="preserve">
+    <value>Cobre</value>
+  </data>
+  <data name="Wiki.030" xml:space="preserve">
+    <value>Zinco</value>
+  </data>
+  <data name="Wiki.031" xml:space="preserve">
+    <value>Gálio</value>
+  </data>
+  <data name="Wiki.032" xml:space="preserve">
+    <value>Germânio</value>
+  </data>
+  <data name="Wiki.033" xml:space="preserve">
+    <value>Arsênio</value>
+  </data>
+  <data name="Wiki.034" xml:space="preserve">
+    <value>Selênio</value>
+  </data>
+  <data name="Wiki.035" xml:space="preserve">
+    <value>Bromo</value>
+  </data>
+  <data name="Wiki.036" xml:space="preserve">
+    <value>Crípton</value>
+  </data>
+  <data name="Wiki.037" xml:space="preserve">
+    <value>Rubídio</value>
+  </data>
+  <data name="Wiki.038" xml:space="preserve">
+    <value>Estrôncio</value>
+  </data>
+  <data name="Wiki.039" xml:space="preserve">
+    <value>Ítrio</value>
+  </data>
+  <data name="Wiki.040" xml:space="preserve">
+    <value>Zircônio</value>
+  </data>
+  <data name="Wiki.041" xml:space="preserve">
+    <value>Nióbio</value>
+  </data>
+  <data name="Wiki.042" xml:space="preserve">
+    <value>Molibdênio</value>
+  </data>
+  <data name="Wiki.043" xml:space="preserve">
+    <value>Tecnécio</value>
+  </data>
+  <data name="Wiki.044" xml:space="preserve">
+    <value>Rutênio</value>
+  </data>
+  <data name="Wiki.045" xml:space="preserve">
+    <value>Ródio</value>
+  </data>
+  <data name="Wiki.046" xml:space="preserve">
+    <value>Paládio</value>
+  </data>
+  <data name="Wiki.047" xml:space="preserve">
+    <value>Prata</value>
+  </data>
+  <data name="Wiki.048" xml:space="preserve">
+    <value>Cádmio</value>
+  </data>
+  <data name="Wiki.049" xml:space="preserve">
+    <value>Índio_(elemento_químico)</value>
+  </data>
+  <data name="Wiki.050" xml:space="preserve">
+    <value>Estanho</value>
+  </data>
+  <data name="Wiki.051" xml:space="preserve">
+    <value>Antimônio</value>
+  </data>
+  <data name="Wiki.052" xml:space="preserve">
+    <value>Telúrio</value>
+  </data>
+  <data name="Wiki.053" xml:space="preserve">
+    <value>Iodo</value>
+  </data>
+  <data name="Wiki.054" xml:space="preserve">
+    <value>Xenônio</value>
+  </data>
+  <data name="Wiki.055" xml:space="preserve">
+    <value>Césio</value>
+  </data>
+  <data name="Wiki.056" xml:space="preserve">
+    <value>Bário</value>
+  </data>
+  <data name="Wiki.057" xml:space="preserve">
+    <value>Lantânio</value>
+  </data>
+  <data name="Wiki.058" xml:space="preserve">
+    <value>Cério</value>
+  </data>
+  <data name="Wiki.059" xml:space="preserve">
+    <value>Praseodímio</value>
+  </data>
+  <data name="Wiki.060" xml:space="preserve">
+    <value>Neodímio</value>
+  </data>
+  <data name="Wiki.061" xml:space="preserve">
+    <value>Promécio</value>
+  </data>
+  <data name="Wiki.062" xml:space="preserve">
+    <value>Samário</value>
+  </data>
+  <data name="Wiki.063" xml:space="preserve">
+    <value>Európio</value>
+  </data>
+  <data name="Wiki.064" xml:space="preserve">
+    <value>Gadolínio</value>
+  </data>
+  <data name="Wiki.065" xml:space="preserve">
+    <value>Térbio</value>
+  </data>
+  <data name="Wiki.066" xml:space="preserve">
+    <value>Disprósio</value>
+  </data>
+  <data name="Wiki.067" xml:space="preserve">
+    <value>Hólmio</value>
+  </data>
+  <data name="Wiki.068" xml:space="preserve">
+    <value>Érbio</value>
+  </data>
+  <data name="Wiki.069" xml:space="preserve">
+    <value>Túlio</value>
+  </data>
+  <data name="Wiki.070" xml:space="preserve">
+    <value>Itérbio</value>
+  </data>
+  <data name="Wiki.071" xml:space="preserve">
+    <value>Lutécio</value>
+  </data>
+  <data name="Wiki.072" xml:space="preserve">
+    <value>Háfnio</value>
+  </data>
+  <data name="Wiki.073" xml:space="preserve">
+    <value>Tântalo_(elemento_químico)</value>
+  </data>
+  <data name="Wiki.074" xml:space="preserve">
+    <value>Tungstênio</value>
+  </data>
+  <data name="Wiki.075" xml:space="preserve">
+    <value>Rênio</value>
+  </data>
+  <data name="Wiki.076" xml:space="preserve">
+    <value>Ósmio</value>
+  </data>
+  <data name="Wiki.077" xml:space="preserve">
+    <value>Irídio</value>
+  </data>
+  <data name="Wiki.078" xml:space="preserve">
+    <value>Platina</value>
+  </data>
+  <data name="Wiki.079" xml:space="preserve">
+    <value>Ouro</value>
+  </data>
+  <data name="Wiki.080" xml:space="preserve">
+    <value>Mercúrio_(elemento_químico)</value>
+  </data>
+  <data name="Wiki.081" xml:space="preserve">
+    <value>Tálio</value>
+  </data>
+  <data name="Wiki.082" xml:space="preserve">
+    <value>Chumbo</value>
+  </data>
+  <data name="Wiki.083" xml:space="preserve">
+    <value>Bismuto</value>
+  </data>
+  <data name="Wiki.084" xml:space="preserve">
+    <value>Polônio</value>
+  </data>
+  <data name="Wiki.085" xml:space="preserve">
+    <value>Ástato</value>
+  </data>
+  <data name="Wiki.086" xml:space="preserve">
+    <value>Rádon</value>
+  </data>
+  <data name="Wiki.087" xml:space="preserve">
+    <value>Frâncio</value>
+  </data>
+  <data name="Wiki.088" xml:space="preserve">
+    <value>Rádio_(elemento_químico)</value>
+  </data>
+  <data name="Wiki.089" xml:space="preserve">
+    <value>Actínio</value>
+  </data>
+  <data name="Wiki.090" xml:space="preserve">
+    <value>Tório</value>
+  </data>
+  <data name="Wiki.091" xml:space="preserve">
+    <value>Protactínio</value>
+  </data>
+  <data name="Wiki.092" xml:space="preserve">
+    <value>Urânio</value>
+  </data>
+  <data name="Wiki.093" xml:space="preserve">
+    <value>Neptúnio</value>
+  </data>
+  <data name="Wiki.094" xml:space="preserve">
+    <value>Plutónio</value>
+  </data>
+  <data name="Wiki.095" xml:space="preserve">
+    <value>Amerício</value>
+  </data>
+  <data name="Wiki.096" xml:space="preserve">
+    <value>Cúrio</value>
+  </data>
+  <data name="Wiki.097" xml:space="preserve">
+    <value>Berquélio</value>
+  </data>
+  <data name="Wiki.098" xml:space="preserve">
+    <value>Califórnio</value>
+  </data>
+  <data name="Wiki.099" xml:space="preserve">
+    <value>Einstênio</value>
+  </data>
+  <data name="Wiki.100" xml:space="preserve">
+    <value>Férmio</value>
+  </data>
+  <data name="Wiki.101" xml:space="preserve">
+    <value>Mendelévio</value>
+  </data>
+  <data name="Wiki.102" xml:space="preserve">
+    <value>Nobélio</value>
+  </data>
+  <data name="Wiki.103" xml:space="preserve">
+    <value>Laurêncio</value>
+  </data>
+  <data name="Wiki.104" xml:space="preserve">
+    <value>Rutherfórdio</value>
+  </data>
+  <data name="Wiki.105" xml:space="preserve">
+    <value>Dúbnio</value>
+  </data>
+  <data name="Wiki.106" xml:space="preserve">
+    <value>Seabórgio</value>
+  </data>
+  <data name="Wiki.107" xml:space="preserve">
+    <value>Bóhrio</value>
+  </data>
+  <data name="Wiki.108" xml:space="preserve">
+    <value>Hássio</value>
+  </data>
+  <data name="Wiki.109" xml:space="preserve">
+    <value>Meitnério</value>
+  </data>
+  <data name="Wiki.110" xml:space="preserve">
+    <value>Darmstácio</value>
+  </data>
+  <data name="Wiki.111" xml:space="preserve">
+    <value>Roentgênio</value>
+  </data>
+  <data name="Wiki.112" xml:space="preserve">
+    <value>Copernício</value>
+  </data>
+  <data name="Wiki.113" xml:space="preserve">
+    <value>Nihonium</value>
+  </data>
+  <data name="Wiki.114" xml:space="preserve">
+    <value>Fleróvio</value>
+  </data>
+  <data name="Wiki.115" xml:space="preserve">
+    <value>Moscovium</value>
+  </data>
+  <data name="Wiki.116" xml:space="preserve">
+    <value>Livermório</value>
+  </data>
+  <data name="Wiki.117" xml:space="preserve">
+    <value>Tennessine</value>
+  </data>
+  <data name="Wiki.118" xml:space="preserve">
+    <value>Oganesson</value>
+  </data>
+  <data name="Wiki.Language" xml:space="preserve">
+    <value>pt</value>
+  </data>
+</root>
