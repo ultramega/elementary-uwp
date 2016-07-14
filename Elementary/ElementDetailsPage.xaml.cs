@@ -20,6 +20,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
+using Elementary.Model;
 using Elementary.ViewModels;
 using Windows.ApplicationModel.Resources;
 using Windows.UI.Core;
@@ -64,11 +65,13 @@ namespace Elementary
         {
             base.OnNavigatedTo(e);
 
+            var element = new ElementDetailsViewModel(Element.List[(int)e.Parameter - 1]);
+
             var titleFormat = ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
-            var title = string.Format(titleFormat, (e.Parameter as ElementDetailsViewModel).Name);
+            var title = string.Format(titleFormat, element.Name);
             MainPage.Current.PageTitle = title;
 
-            DataContext = e.Parameter;
+            DataContext = element;
 
             var systemNavigationManager = SystemNavigationManager.GetForCurrentView();
             systemNavigationManager.BackRequested += OnBackRequested;

@@ -171,8 +171,7 @@ namespace Elementary
             }
             else if (_selection != null)
             {
-                Frame.Navigate(typeof(ElementDetailsPage),
-                    new ElementDetailsViewModel(_selection.Element),
+                Frame.Navigate(typeof(ElementDetailsPage), _selection.Element.Number,
                     new SuppressNavigationTransitionInfo());
             }
         }
@@ -215,8 +214,7 @@ namespace Elementary
         private void OnItemClick(object sender, ItemClickEventArgs e)
         {
             _selection = e.ClickedItem as ElementListItemViewModel;
-            Frame.Navigate(typeof(ElementDetailsPage),
-                new ElementDetailsViewModel(_selection.Element),
+            Frame.Navigate(typeof(ElementDetailsPage), _selection.Element.Number,
                 new DrillInNavigationTransitionInfo());
         }
 
