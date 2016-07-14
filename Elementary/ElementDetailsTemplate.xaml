@@ -183,7 +183,7 @@
                         x:Uid="Button/Wiki"
                         Grid.Column="2"
                         Height="90"
-                        Margin="8"
+                        Margin="4"
                         VerticalAlignment="Center"
                         NavigateUri="{x:Bind Wiki}">
                         <Image
@@ -194,7 +194,7 @@
                         x:Uid="Button/Video"
                         Grid.Column="3"
                         Height="90"
-                        Margin="8"
+                        Margin="4"
                         VerticalAlignment="Center"
                         NavigateUri="{x:Bind Video}">
                         <Image
