@@ -72,7 +72,8 @@ namespace Elementary
 
             var systemNavigationManager = SystemNavigationManager.GetForCurrentView();
             systemNavigationManager.BackRequested += OnBackRequested;
-            systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Visible;
+            systemNavigationManager.AppViewBackButtonVisibility =
+                AppViewBackButtonVisibility.Visible;
         }
 
         /// <summary>
@@ -87,7 +88,8 @@ namespace Elementary
 
             var systemNavigationManager = SystemNavigationManager.GetForCurrentView();
             systemNavigationManager.BackRequested -= OnBackRequested;
-            systemNavigationManager.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+            systemNavigationManager.AppViewBackButtonVisibility =
+                AppViewBackButtonVisibility.Collapsed;
         }
 
         /// <summary>

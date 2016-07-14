@@ -141,7 +141,8 @@ namespace Elementary.UI.Controls
             BlockSize = new GridLength(blockSize);
             HeaderWidth = new GridLength(blockSize / 3);
             SpacerWidth = new GridLength(blockSize / 4);
-            LegendMargin = new Thickness(blockSize / 3, blockSize * 0.90, blockSize / 3, blockSize / 4);
+            LegendMargin =
+                new Thickness(blockSize / 3, blockSize * 0.90, blockSize / 3, blockSize / 4);
 
             NumberFontSize = blockSize / 4.5;
             SymbolFontSize = blockSize / 2.2;

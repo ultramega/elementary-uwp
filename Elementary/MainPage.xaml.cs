@@ -102,11 +102,13 @@ namespace Elementary
         {
             if ((sender as AppBarToggleButton).IsChecked == true)
             {
-                ContentFrame.Navigate(typeof(ElementListPage), null, new DrillInNavigationTransitionInfo());
+                ContentFrame.Navigate(typeof(ElementListPage), null,
+                    new DrillInNavigationTransitionInfo());
             }
             else
             {
-                ContentFrame.Navigate(typeof(PeriodicTablePage), null, new DrillInNavigationTransitionInfo());
+                ContentFrame.Navigate(typeof(PeriodicTablePage), null,
+                    new DrillInNavigationTransitionInfo());
             }
             ContentFrame.BackStack.Clear();
         }
@@ -152,7 +154,8 @@ namespace Elementary
         /// <param name="e">The event arguments.</param>
         private void OnContentFrameNavigated(object sender, NavigationEventArgs e)
         {
-            if (e.SourcePageType == typeof(PeriodicTablePage) || e.SourcePageType == typeof(ElementListPage))
+            if (e.SourcePageType == typeof(PeriodicTablePage)
+                || e.SourcePageType == typeof(ElementListPage))
             {
                 ListViewButton.Visibility = Visibility.Visible;
             }

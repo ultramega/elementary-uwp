@@ -45,7 +45,8 @@ namespace Elementary.ViewModels
         /// <summary>
         /// The localized string for unknown values.
         /// </summary>
-        private readonly string _unknownValue = ResourceLoader.GetForCurrentView().GetString("Unknown");
+        private readonly string _unknownValue =
+            ResourceLoader.GetForCurrentView().GetString("Unknown");
 
         /// <summary>
         /// Gets the Command to launch a Uri.
@@ -202,7 +203,8 @@ namespace Elementary.ViewModels
         {
             get
             {
-                return Regex.Replace(Element.Configuration, "(?<=[spdf])([0-9]+)", delegate (Match match)
+                return Regex.Replace(Element.Configuration, "(?<=[spdf])([0-9]+)",
+                    delegate (Match match)
                 {
                     var map = new Dictionary<char, char>()
                     {
@@ -259,7 +261,8 @@ namespace Elementary.ViewModels
         {
             get
             {
-                return new Uri(string.Format("http://dev.ultramegasoft.com/el/video?num={0}", Element.Number));
+                return new Uri(string.Format("http://dev.ultramegasoft.com/el/video?num={0}",
+                    Element.Number));
             }
         }
 

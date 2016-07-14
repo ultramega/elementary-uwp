@@ -44,7 +44,8 @@ namespace Elementary
         /// <summary>
         /// The format string for the title of the element details dialog.
         /// </summary>
-        private readonly string _detailsTitleFormat = ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
+        private readonly string _detailsTitleFormat =
+            ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
 
         /// <summary>
         /// The current title of the element details dialog.
@@ -83,7 +84,8 @@ namespace Elementary
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            DisplayInformation.AutoRotationPreferences = DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
+            DisplayInformation.AutoRotationPreferences =
+                DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
         }
 
         /// <summary>

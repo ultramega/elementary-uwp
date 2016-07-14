@@ -49,7 +49,8 @@ namespace Elementary
         /// <summary>
         /// The title to display in the CommandBar.
         /// </summary>
-        private readonly string _pageTitle = ResourceLoader.GetForCurrentView().GetString("Title/ElementList");
+        private readonly string _pageTitle =
+            ResourceLoader.GetForCurrentView().GetString("Title/ElementList");
 
         /// <summary>
         /// The full unsorted list of elements.
@@ -59,7 +60,8 @@ namespace Elementary
         /// <summary>
         /// Gets the data source for the ListView.
         /// </summary>
-        private ObservableCollection<ElementListItemViewModel> ListItems { get; } = new ObservableCollection<ElementListItemViewModel>();
+        private ObservableCollection<ElementListItemViewModel> ListItems { get; } =
+            new ObservableCollection<ElementListItemViewModel>();
 
         /// <summary>
         /// The field being used for sorting.
@@ -169,7 +171,9 @@ namespace Elementary
             }
             else if (_selection != null)
             {
-                Frame.Navigate(typeof(ElementDetailsPage), new ElementDetailsViewModel(_selection.Element), new SuppressNavigationTransitionInfo());
+                Frame.Navigate(typeof(ElementDetailsPage),
+                    new ElementDetailsViewModel(_selection.Element),
+                    new SuppressNavigationTransitionInfo());
             }
         }
 
@@ -197,7 +201,8 @@ namespace Elementary
             if (MasterList.SelectedItem != null)
             {
                 _selection = MasterList.SelectedItem as ElementListItemViewModel;
-                (FindName("DetailsFrame") as FrameworkElement).DataContext = new ElementDetailsViewModel(_selection.Element);
+                (FindName("DetailsFrame") as FrameworkElement).DataContext =
+                    new ElementDetailsViewModel(_selection.Element);
             }
         }
 
@@ -210,7 +215,9 @@ namespace Elementary
         private void OnItemClick(object sender, ItemClickEventArgs e)
         {
             _selection = e.ClickedItem as ElementListItemViewModel;
-            Frame.Navigate(typeof(ElementDetailsPage), new ElementDetailsViewModel(_selection.Element), new DrillInNavigationTransitionInfo());
+            Frame.Navigate(typeof(ElementDetailsPage),
+                new ElementDetailsViewModel(_selection.Element),
+                new DrillInNavigationTransitionInfo());
         }
 
         /// <summary>

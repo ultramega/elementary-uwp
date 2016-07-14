@@ -36,12 +36,14 @@ namespace Elementary.Utilities
         /// <summary>
         /// The reference to the ResourceLoader for the Elements resources.
         /// </summary>
-        private static readonly ResourceLoader _resources = ResourceLoader.GetForCurrentView("Elements");
+        private static readonly ResourceLoader _resources =
+            ResourceLoader.GetForCurrentView("Elements");
 
         /// <summary>
         /// Map of element categories to block backgrounds.
         /// </summary>
-        private static readonly Dictionary<object, Brush> _backgrounds = new Dictionary<object, Brush>()
+        private static readonly Dictionary<object, Brush> _backgrounds =
+            new Dictionary<object, Brush>()
         {
             { 0L, new SolidColorBrush(Color.FromArgb(0xFF, 0x2F, 0xF1, 0x2F)) },
             { 1L, new SolidColorBrush(Color.FromArgb(0xFF, 0x79, 0xB5, 0xFF)) },

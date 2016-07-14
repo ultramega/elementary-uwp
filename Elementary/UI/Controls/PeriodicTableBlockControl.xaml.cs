@@ -40,7 +40,8 @@ namespace Elementary.UI.Controls
             set { SetValue(ElementProperty, value); }
         }
         public static readonly DependencyProperty ElementProperty =
-            DependencyProperty.Register("Element", typeof(ElementBlockViewModel), typeof(PeriodicTableBlockControl), null);
+            DependencyProperty.Register("Element", typeof(ElementBlockViewModel),
+                typeof(PeriodicTableBlockControl), null);
 
         /// <summary>
         /// Gets or sets the FontSize of the atomic number.
@@ -51,7 +52,8 @@ namespace Elementary.UI.Controls
             set { SetValue(NumberFontSizeProperty, value); }
         }
         public static readonly DependencyProperty NumberFontSizeProperty =
-            DependencyProperty.Register("NumberFontSize", typeof(double), typeof(PeriodicTableBlockControl), new PropertyMetadata(13.0));
+            DependencyProperty.Register("NumberFontSize", typeof(double),
+                typeof(PeriodicTableBlockControl), new PropertyMetadata(13.0));
 
         /// <summary>
         /// Gets or sets the FontSize of the element symbol.
@@ -62,7 +64,8 @@ namespace Elementary.UI.Controls
             set { SetValue(SymbolFontSizeProperty, value); }
         }
         public static readonly DependencyProperty SymbolFontSizeProperty =
-            DependencyProperty.Register("SymbolFontSize", typeof(double), typeof(PeriodicTableBlockControl), new PropertyMetadata(27.0));
+            DependencyProperty.Register("SymbolFontSize", typeof(double),
+                typeof(PeriodicTableBlockControl), new PropertyMetadata(27.0));
 
         /// <summary>
         /// Gets or sets the FontSize of the block subtext.
@@ -73,7 +76,8 @@ namespace Elementary.UI.Controls
             set { SetValue(SubtextFontSizeProperty, value); }
         }
         public static readonly DependencyProperty SubtextFontSizeProperty =
-            DependencyProperty.Register("SubtextFontSize", typeof(double), typeof(PeriodicTableBlockControl), new PropertyMetadata(12.0));
+            DependencyProperty.Register("SubtextFontSize", typeof(double),
+                typeof(PeriodicTableBlockControl), new PropertyMetadata(12.0));
 
         /// <summary>
         /// Constructor.
