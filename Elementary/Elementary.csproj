@@ -133,7 +133,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="UI\LaunchUriCommand.cs" />
     <Compile Include="UI\BlockClickEventArgs.cs" />
     <Compile Include="UI\Controls\PeriodicTableBlockControl.xaml.cs">
       <DependentUpon>PeriodicTableBlockControl.xaml</DependentUpon>

@@ -21,7 +21,6 @@
   THE SOFTWARE.
 */
 using Elementary.Model;
-using Elementary.UI;
 using Elementary.Utilities;
 using System;
 using System.Collections.Generic;
@@ -47,11 +46,6 @@ namespace Elementary.ViewModels
         /// </summary>
         private readonly string _unknownValue =
             ResourceLoader.GetForCurrentView().GetString("Unknown");
-
-        /// <summary>
-        /// Gets the Command to launch a Uri.
-        /// </summary>
-        public LaunchUriCommand LaunchUri { get; } = new LaunchUriCommand();
 
         /// <summary>
         /// Gets the name of the element.

@@ -179,27 +179,27 @@
                         TextWrapping="NoWrap"
                         TextTrimming="CharacterEllipsis" />
 
-                    <Button
+                    <HyperlinkButton
                         x:Uid="Button/Wiki"
                         Grid.Column="2"
                         Height="90"
-                        Margin="4"
-                        Command="{x:Bind LaunchUri}"
-                        CommandParameter="{x:Bind Wiki}">
+                        Margin="8"
+                        VerticalAlignment="Center"
+                        NavigateUri="{x:Bind Wiki}">
                         <Image
                             Style="{ThemeResource WikiButton}" />
-                    </Button>
+                    </HyperlinkButton>
 
-                    <Button
+                    <HyperlinkButton
                         x:Uid="Button/Video"
                         Grid.Column="3"
                         Height="90"
-                        Margin="4"
-                        Command="{x:Bind LaunchUri}"
-                        CommandParameter="{x:Bind Video}">
+                        Margin="8"
+                        VerticalAlignment="Center"
+                        NavigateUri="{x:Bind Video}">
                         <Image
                             Style="{ThemeResource VideoButton}" />
-                    </Button>
+                    </HyperlinkButton>
                 </Grid>
 
                 <Grid
