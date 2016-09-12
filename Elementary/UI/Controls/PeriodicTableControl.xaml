@@ -51,8 +51,8 @@
     </UserControl.Resources>
 
     <Grid
-        HorizontalAlignment="Stretch"
-        VerticalAlignment="Stretch">
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
         <Grid.RowDefinitions>
             <RowDefinition
                 Height="{x:Bind HeaderWidth, Mode=OneWay}" />
