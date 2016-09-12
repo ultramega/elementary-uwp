@@ -182,7 +182,7 @@
     <value>Group, Period, Block:</value>
   </data>
   <data name="Label.Heat.Text" xml:space="preserve">
-    <value>Heat:</value>
+    <value>Specific Heat:</value>
   </data>
   <data name="Label.Melt.Text" xml:space="preserve">
     <value>Melting Point:</value>

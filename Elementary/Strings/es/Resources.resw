@@ -182,7 +182,7 @@
     <value>Grupo, Período, Bloque:</value>
   </data>
   <data name="Label.Heat.Text" xml:space="preserve">
-    <value>Calor:</value>
+    <value>Calor Especifico:</value>
   </data>
   <data name="Label.Melt.Text" xml:space="preserve">
     <value>Punto de Fusión:</value>
