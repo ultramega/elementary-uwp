@@ -159,6 +159,7 @@ namespace Elementary.UI.Controls
         private void OnUnloaded(object sender, RoutedEventArgs e)
         {
             Window.Current.SizeChanged -= OnWindowSizeChanged;
+            _resizeTimer.Change(Timeout.Infinite, Timeout.Infinite);
         }
 
         /// <summary>
