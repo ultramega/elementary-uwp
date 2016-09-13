@@ -2130,7 +2130,7 @@ namespace Elementary.Model
             },
             new Element {
                 Number = 113,
-                Symbol = "Uut",
+                Symbol = "Nh",
                 Group = 13,
                 Period = 7,
                 Block = "p",
@@ -2166,7 +2166,7 @@ namespace Elementary.Model
             },
             new Element {
                 Number = 115,
-                Symbol = "Uup",
+                Symbol = "Mc",
                 Group = 15,
                 Period = 7,
                 Block = "p",
@@ -2202,7 +2202,7 @@ namespace Elementary.Model
             },
             new Element {
                 Number = 117,
-                Symbol = "Uus",
+                Symbol = "Ts",
                 Group = 17,
                 Period = 7,
                 Block = "p",
@@ -2220,7 +2220,7 @@ namespace Elementary.Model
             },
             new Element {
                 Number = 118,
-                Symbol = "Uuo",
+                Symbol = "Og",
                 Group = 18,
                 Period = 7,
                 Block = "p",
