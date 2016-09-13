@@ -70,6 +70,16 @@ namespace Elementary
         }
 
         /// <summary>
+        /// Gets the ViewModel for the subtext value ComboBox.
+        /// </summary>
+        private SubtextValueViewModel SubtextValue { get; } = new SubtextValueViewModel();
+
+        /// <summary>
+        /// Gets the ViewModel for the block colors ComboBox.
+        /// </summary>
+        private BlockColorViewModel BlockColors { get; } = new BlockColorViewModel();
+
+        /// <summary>
         /// Constructor.
         /// </summary>
         public PeriodicTablePage()

@@ -167,6 +167,12 @@
     </Page.Resources>
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition
+                Height="Auto" />
+        </Grid.RowDefinitions>
+
         <ScrollViewer
             HorizontalScrollBarVisibility="Auto"
             VerticalScrollBarVisibility="Auto"
@@ -177,7 +183,31 @@
                 BlockClick="OnBlockClick" />
         </ScrollViewer>
 
+        <StackPanel
+            Grid.Row="1"
+            Orientation="Horizontal"
+            Padding="6,4">
+            <TextBlock
+                x:Uid="Label/SubtextValue"
+                VerticalAlignment="Center"
+                Margin="6,0"/>
+
+            <ComboBox
+                ItemsSource="{x:Bind SubtextValue.Items, Mode=OneWay}"
+                SelectedIndex="{x:Bind SubtextValue.SelectedItemIndex, Mode=TwoWay}" />
+
+            <TextBlock
+                x:Uid="Label/BlockColors"
+                VerticalAlignment="Center"
+                Margin="6,0"/>
+
+            <ComboBox
+                ItemsSource="{x:Bind BlockColors.Items}"
+                SelectedIndex="{x:Bind BlockColors.SelectedItemIndex, Mode=TwoWay}" />
+        </StackPanel>
+
         <ContentDialog
+            Grid.RowSpan="2"
             x:Uid="Dialog/Details"
             x:Name="DetailsDialog"
             Title="{x:Bind DetailsTitle, Mode=OneWay}"

@@ -163,6 +163,9 @@
   <data name="Label.Abundance.Text" xml:space="preserve">
     <value>Vorkommen:</value>
   </data>
+  <data name="Label.BlockColors.Text" xml:space="preserve">
+    <value>Färben nach:</value>
+  </data>
   <data name="Label.Boil.Text" xml:space="preserve">
     <value>Siedepunkt:</value>
   </data>
@@ -195,6 +198,9 @@
   </data>
   <data name="Label.Number.Text" xml:space="preserve">
     <value>Ordnungszahl:</value>
+  </data>
+  <data name="Label.SubtextValue.Text" xml:space="preserve">
+    <value>Anzeigen:</value>
   </data>
   <data name="Label.Symbol.Text" xml:space="preserve">
     <value>Symbol:</value>
@@ -237,6 +243,9 @@
   </data>
   <data name="Sort.Number.Text" xml:space="preserve">
     <value>Ordnungszahl</value>
+  </data>
+  <data name="SubtextValues" xml:space="preserve">
+    <value>Atommasse;Dichte (g/cm³);Schmelzpunkt (K);Siedepunkt (K);Spezifisch Hitze (J/g·K);Elektronegativität (Pauling);Vorkommen (mg/kg)</value>
   </data>
   <data name="Title.ElementDetails" xml:space="preserve">
     <value>Element Details - {0}</value>

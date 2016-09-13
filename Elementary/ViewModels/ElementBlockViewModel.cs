@@ -21,28 +21,69 @@
   THE SOFTWARE.
 */
 using Elementary.Model;
+using Elementary.Utilities;
+using System.ComponentModel;
+using System.Reflection;
 
 namespace Elementary.ViewModels
 {
     /// <summary>
     /// Represents a block on the periodic table.
     /// </summary>
-    public class ElementBlockViewModel : ElementBaseViewModel
+    public class ElementBlockViewModel : ElementBaseViewModel, INotifyPropertyChanged
     {
         /// <summary>
-        /// Gets the string to display under the element symbol. For stable elements, this is the
-        /// atomic weight with up to 4 decimal places. For unstable elements, this is the atomic
-        /// weight as a whole number surrounded by square braces.
+        /// Occurs when a mutable property changes.
+        /// </summary>
+        public new event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+        /// <summary>
+        /// Gets the string to display under the element symbol.
         /// </summary>
         public string Subtext
         {
             get
             {
-                if (Element.Unstable)
+                var key = Settings.SubtextValue;
+                if (key == "Weight")
                 {
-                    return string.Format("[{0:d}]", (long)Element.Weight);
+                    if (Element.Unstable)
+                    {
+                        return string.Format("[{0:d}]", (long)Element.Weight);
+                    }
+                    return Element.Weight.ToString("0.####");
                 }
-                return Element.Weight.ToString("0.####");
+                if (key == "Abundance")
+                {
+                    if (Element.Abundance.HasValue)
+                    {
+                        if (Element.Abundance.Value < 0.001)
+                        {
+                            return "<0.001";
+                        }
+                        return Element.Abundance.Value.ToString("0.####");
+                    }
+                }
+                var property = Element.GetType().GetProperty(key);
+                var value = property.GetValue(Element);
+                if (key == "Melt" || key == "Boil")
+                {
+                    if (value is double? && (value as double?).HasValue)
+                    {
+                        double tempValue = (value as double?).Value;
+                        switch (Settings.TemperatureUnits)
+                        {
+                            case "C":
+                                tempValue = UnitUtilities.KelvinToCelsius(tempValue);
+                                break;
+                            case "F":
+                                tempValue = UnitUtilities.KelvinToFahrenheit(tempValue);
+                                break;
+                        }
+                        return tempValue.ToString("0.####");
+                    }
+                }
+                return value == null ? "?" : value.ToString();
             }
         }
 
@@ -79,6 +120,21 @@ namespace Elementary.ViewModels
             {
                 Row = (int)element.Period;
                 Column = (int)element.Group;
+            }
+
+            Settings.SettingChanged += OnSettingChanged;
+        }
+
+        /// <summary>
+        /// Updates the Subtext property when the setting for subtext value is changed.
+        /// </summary>
+        /// <param name="key">The key for the setting that has changed.</param>
+        /// <param name="value">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object value)
+        {
+            if (key == Settings.Key.SubtextValue)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs("Subtext"));
             }
         }
     }

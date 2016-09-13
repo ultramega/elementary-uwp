@@ -105,6 +105,6 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom"
             FontSize="{x:Bind SubtextFontSize}"
-            Text="{x:Bind Element.Subtext}" />
+            Text="{x:Bind Element.Subtext, Mode=OneWay}" />
     </Grid>
 </Button>

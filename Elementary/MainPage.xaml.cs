@@ -81,7 +81,7 @@ namespace Elementary
         }
 
         /// <summary>
-        /// Updates the theme when the setting for the theme preference is changed.
+        /// Updates the interface when a preference is changed.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
         /// <param name="value">The new value for the setting.</param>
@@ -90,6 +90,17 @@ namespace Elementary
             if (key == Settings.Key.DarkTheme)
             {
                 RequestedTheme = (bool)value ? ElementTheme.Dark : ElementTheme.Light;
+            }
+            else if (key == Settings.Key.ElementColors)
+            {
+                if (Settings.ElementColors == "cat")
+                {
+                    (ElementColorsSetting.Children[0] as RadioButton).IsChecked = true;
+                }
+                else
+                {
+                    (ElementColorsSetting.Children[1] as RadioButton).IsChecked = true;
+                }
             }
         }
 

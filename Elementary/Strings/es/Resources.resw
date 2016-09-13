@@ -163,6 +163,9 @@
   <data name="Label.Abundance.Text" xml:space="preserve">
     <value>Abundancia:</value>
   </data>
+  <data name="Label.BlockColors.Text" xml:space="preserve">
+    <value>Colorear por:</value>
+  </data>
   <data name="Label.Boil.Text" xml:space="preserve">
     <value>Punto de Ebullición:</value>
   </data>
@@ -195,6 +198,9 @@
   </data>
   <data name="Label.Number.Text" xml:space="preserve">
     <value>Número Atómico:</value>
+  </data>
+  <data name="Label.SubtextValue.Text" xml:space="preserve">
+    <value>Mostrar:</value>
   </data>
   <data name="Label.Symbol.Text" xml:space="preserve">
     <value>Símbolo:</value>
@@ -237,6 +243,9 @@
   </data>
   <data name="Sort.Number.Text" xml:space="preserve">
     <value>Número Atómico</value>
+  </data>
+  <data name="SubtextValues" xml:space="preserve">
+    <value>Masa Atómica;Densidad (g/cm³);Punto de Fusión (K);Punto de Ebullición (K);Calor Especifico (J/g·K);Electronegatividad (Pauling);Abundancia (mg/kg)</value>
   </data>
   <data name="Title.ElementDetails" xml:space="preserve">
     <value>Detalles Elemento - {0}</value>

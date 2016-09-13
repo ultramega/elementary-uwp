@@ -163,11 +163,13 @@
     <Compile Include="Settings.cs" />
     <Compile Include="Utilities\ElementUtilities.cs" />
     <Compile Include="Utilities\UnitUtilities.cs" />
+    <Compile Include="ViewModels\BlockColorViewModel.cs" />
     <Compile Include="ViewModels\ElementBaseViewModel.cs" />
     <Compile Include="ViewModels\ElementBlockViewModel.cs" />
     <Compile Include="ViewModels\ElementDetailsViewModel.cs" />
     <Compile Include="ViewModels\ElementListItemViewModel.cs" />
     <Compile Include="ViewModels\LegendItemViewModel.cs" />
+    <Compile Include="ViewModels\SubtextValueViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
