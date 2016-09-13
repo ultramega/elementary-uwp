@@ -149,6 +149,9 @@ namespace Elementary.UI.Controls
             SubtextFontSize = blockSize / 5;
             LegendFontSize = blockSize / 4;
 
+            Width = blockSize * 18.3;
+            Height = blockSize * 9.9;
+
             PropertyChanged(this, new PropertyChangedEventArgs(null));
         }
 
