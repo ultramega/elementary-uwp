@@ -52,7 +52,8 @@
                     x:Uid="Menu/Settings">
                     <AppBarButton.Flyout>
                         <Flyout>
-                            <StackPanel>
+                            <StackPanel
+                                MaxWidth="300">
                                 <TextBlock
                                     x:Uid="Title/Settings"
                                     Style="{ThemeResource TitleTextBlockStyle}"
@@ -65,10 +66,13 @@
                                         x:Uid="Settings/DarkTheme/Header"
                                         Style="{ThemeResource SubtitleTextBlockStyle}" />
 
-                                    <ToggleMenuFlyoutItem
-                                        x:Uid="Settings/DarkTheme/Button"
+                                    <ToggleButton
                                         x:Name="DarkThemeSetting"
-                                        Click="OnDarkThemeToggled" />
+                                        Click="OnDarkThemeToggled">
+                                        <TextBlock
+                                            x:Uid="Settings/DarkTheme/Button"
+                                            TextWrapping="Wrap" />
+                                    </ToggleButton>
                                 </StackPanel>
 
                                 <MenuFlyoutSeparator />

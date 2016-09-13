@@ -132,7 +132,7 @@ namespace Elementary
         private void OnDarkThemeToggled(object sender, RoutedEventArgs e)
         {
             SettingsButton.Flyout.Hide();
-            Settings.DarkTheme = DarkThemeSetting.IsChecked;
+            Settings.DarkTheme = DarkThemeSetting.IsChecked.Value;
         }
 
         /// <summary>
