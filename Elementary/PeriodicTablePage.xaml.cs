@@ -38,11 +38,14 @@ namespace Elementary
     public sealed partial class PeriodicTablePage : Page, INotifyPropertyChanged
     {
         /// <summary>
+        /// The amount to zoom in or out for programmatic zooms.
+        /// </summary>
+        private static readonly float _zoomStep = 0.5f;
+
+        /// <summary>
         /// Occurs when a property changes.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
-
-        private static readonly float _zoomStep = 0.5f;
 
         /// <summary>
         /// The format string for the title of the element details dialog.
@@ -73,26 +76,26 @@ namespace Elementary
         }
 
         /// <summary>
-        /// Gets or sets whether the view can be zoomed in.
+        /// Gets whether the view can be zoomed in.
         /// </summary>
         public bool CanZoomIn
         {
-            get { return (bool)GetValue(CanZoomInProperty); }
-            set { SetValue(CanZoomInProperty, value); }
+            get
+            {
+                return Zoomer.ZoomFactor < Zoomer.MaxZoomFactor;
+            }
         }
-        public static readonly DependencyProperty CanZoomInProperty =
-            DependencyProperty.Register("CanZoomIn", typeof(bool), typeof(PeriodicTablePage), new PropertyMetadata(true));
 
         /// <summary>
-        /// Gets of sets whether the view can be zoomed out.
+        /// Gets whether the view can be zoomed out.
         /// </summary>
         public bool CanZoomOut
         {
-            get { return (bool)GetValue(CanZoomOutProperty); }
-            set { SetValue(CanZoomOutProperty, value); }
+            get
+            {
+                return Zoomer.ZoomFactor > Zoomer.MinZoomFactor;
+            }
         }
-        public static readonly DependencyProperty CanZoomOutProperty =
-            DependencyProperty.Register("CanZoomOut", typeof(bool), typeof(PeriodicTablePage), new PropertyMetadata(false));
 
         /// <summary>
         /// Gets the ViewModel for the subtext value ComboBox.
@@ -110,7 +113,6 @@ namespace Elementary
         public PeriodicTablePage()
         {
             InitializeComponent();
-            DataContext = this;
         }
 
         /// <summary>
@@ -174,8 +176,8 @@ namespace Elementary
         /// <param name="e">The event arguments.</param>
         private void OnViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
         {
-            CanZoomIn = Zoomer.ZoomFactor < Zoomer.MaxZoomFactor;
-            CanZoomOut = Zoomer.ZoomFactor > Zoomer.MinZoomFactor;
+            PropertyChanged(this, new PropertyChangedEventArgs("CanZoomIn"));
+            PropertyChanged(this, new PropertyChangedEventArgs("CanZoomOut"));
         }
     }
 }
