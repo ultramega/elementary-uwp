@@ -156,7 +156,7 @@ namespace Elementary.ViewModels
                 {
                     return _unknownValue;
                 }
-                return string.Format("{0:0.########} V", Element.Negativity);
+                return Element.Negativity.Value.ToString("0.########");
             }
         }
 
