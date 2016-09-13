@@ -34,7 +34,7 @@ namespace Elementary.UI.Controls
     /// <summary>
     /// Control for displaying the Periodic Table.
     /// </summary>
-    public sealed partial class PeriodicTableControl : UserControl, INotifyPropertyChanged
+    public sealed partial class PeriodicTableControl : UserControl, INotifyPropertyChanged, IDisposable
     {
         /// <summary>
         /// The Timer for delaying resizing operations.
@@ -216,6 +216,14 @@ namespace Elementary.UI.Controls
         private void OnItemClicked(object sender, RoutedEventArgs e)
         {
             BlockClick(this, new BlockClickEventArgs((sender as FrameworkElement).Tag as Element));
+        }
+
+        /// <summary>
+        /// Disposes of resources.
+        /// </summary>
+        public void Dispose()
+        {
+            _resizeTimer.Dispose();
         }
     }
 }
