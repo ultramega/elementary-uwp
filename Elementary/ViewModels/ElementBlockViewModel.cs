@@ -22,7 +22,6 @@
 */
 using Elementary.Model;
 using Elementary.Utilities;
-using System.ComponentModel;
 using System.Reflection;
 
 namespace Elementary.ViewModels
@@ -30,13 +29,8 @@ namespace Elementary.ViewModels
     /// <summary>
     /// Represents a block on the periodic table.
     /// </summary>
-    public class ElementBlockViewModel : ElementBaseViewModel, INotifyPropertyChanged
+    public class ElementBlockViewModel : ElementBaseViewModel
     {
-        /// <summary>
-        /// Occurs when a mutable property changes.
-        /// </summary>
-        public new event PropertyChangedEventHandler PropertyChanged = delegate { };
-
         /// <summary>
         /// Gets the string to display under the element symbol.
         /// </summary>
@@ -134,7 +128,7 @@ namespace Elementary.ViewModels
         {
             if (key == Settings.Key.SubtextValue)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs("Subtext"));
+                RaisePropertyChanged("Subtext");
             }
         }
     }

@@ -24,7 +24,6 @@ using Elementary.Model;
 using Elementary.Utilities;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Text;
 using System.Text.RegularExpressions;
 using Windows.ApplicationModel.Resources;
@@ -34,13 +33,8 @@ namespace Elementary.ViewModels
     /// <summary>
     /// The ViewModel containing the full details of an element.
     /// </summary>
-    public class ElementDetailsViewModel : ElementBaseViewModel, INotifyPropertyChanged
+    public class ElementDetailsViewModel : ElementBaseViewModel
     {
-        /// <summary>
-        /// Occurs when a mutable property changes.
-        /// </summary>
-        public new event PropertyChangedEventHandler PropertyChanged = delegate { };
-
         /// <summary>
         /// The localized string for unknown values.
         /// </summary>
@@ -279,8 +273,8 @@ namespace Elementary.ViewModels
         {
             if (key == Settings.Key.TemperatureUnits)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs("Melt"));
-                PropertyChanged(this, new PropertyChangedEventArgs("Boil"));
+                RaisePropertyChanged("Melt");
+                RaisePropertyChanged("Boil");
             }
         }
 

@@ -24,6 +24,7 @@ using Elementary.Model;
 using Elementary.Utilities;
 using System;
 using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using Windows.UI.Xaml.Media;
 
 namespace Elementary.ViewModels
@@ -91,6 +92,15 @@ namespace Elementary.ViewModels
         }
 
         /// <summary>
+        /// Triggers the PropertyChanged event for the indicated property.
+        /// </summary>
+        /// <param name="name">The name of the property that changed.</param>
+        protected virtual void RaisePropertyChanged([CallerMemberName]string name = null)
+        {
+            PropertyChanged(this, new PropertyChangedEventArgs(name));
+        }
+
+        /// <summary>
         /// Sets the Color when the setting for element colors is changed.
         /// </summary>
         /// <param name="key">The key for the setting that has changed.</param>
@@ -99,7 +109,7 @@ namespace Elementary.ViewModels
         {
             if (key == Settings.Key.ElementColors)
             {
-                PropertyChanged(this, new PropertyChangedEventArgs("Color"));
+                RaisePropertyChanged("Color");
             }
         }
     }
