@@ -45,16 +45,16 @@ namespace Elementary.Utilities
         private static readonly Dictionary<object, Brush> _backgrounds =
             new Dictionary<object, Brush>()
         {
-            { 0L, new SolidColorBrush(Color.FromArgb(0xFF, 0x2F, 0xF1, 0x2F)) },
-            { 1L, new SolidColorBrush(Color.FromArgb(0xFF, 0x79, 0xB5, 0xFF)) },
-            { 2L, new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0xAA, 0x00)) },
-            { 3L, new SolidColorBrush(Color.FromArgb(0xFF, 0xF3, 0xF3, 0x00)) },
-            { 4L, new SolidColorBrush(Color.FromArgb(0xFF, 0x55, 0xCC, 0x88)) },
-            { 5L, new SolidColorBrush(Color.FromArgb(0xFF, 0x00, 0xDD, 0xBB)) },
-            { 6L, new SolidColorBrush(Color.FromArgb(0xFF, 0x99, 0xBB, 0xAA)) },
-            { 7L, new SolidColorBrush(Color.FromArgb(0xFF, 0xDD, 0x99, 0x99)) },
-            { 8L, new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0xB7, 0x9B)) },
-            { 9L, new SolidColorBrush(Color.FromArgb(0xFF, 0xDD, 0xAA, 0xCC)) },
+            { 0, new SolidColorBrush(Color.FromArgb(0xFF, 0x2F, 0xF1, 0x2F)) },
+            { 1, new SolidColorBrush(Color.FromArgb(0xFF, 0x79, 0xB5, 0xFF)) },
+            { 2, new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0xAA, 0x00)) },
+            { 3, new SolidColorBrush(Color.FromArgb(0xFF, 0xF3, 0xF3, 0x00)) },
+            { 4, new SolidColorBrush(Color.FromArgb(0xFF, 0x55, 0xCC, 0x88)) },
+            { 5, new SolidColorBrush(Color.FromArgb(0xFF, 0x00, 0xDD, 0xBB)) },
+            { 6, new SolidColorBrush(Color.FromArgb(0xFF, 0x99, 0xBB, 0xAA)) },
+            { 7, new SolidColorBrush(Color.FromArgb(0xFF, 0xDD, 0x99, 0x99)) },
+            { 8, new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0xB7, 0x9B)) },
+            { 9, new SolidColorBrush(Color.FromArgb(0xFF, 0xDD, 0xAA, 0xCC)) },
             { "s", new SolidColorBrush(Color.FromArgb(0xFF, 0x66, 0x99, 0xFF)) },
             { "p", new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0xCC, 0x00)) },
             { "d", new SolidColorBrush(Color.FromArgb(0xFF, 0xFF, 0x99, 0x99)) },
@@ -114,7 +114,7 @@ namespace Elementary.Utilities
         /// </summary>
         /// <param name="number">The atomic number of the element.</param>
         /// <returns>The name of the element.</returns>
-        public static string GetElementName(long number)
+        public static string GetElementName(int number)
         {
             return _resources.GetString(string.Format("Name/{0:d3}", number));
         }
@@ -124,7 +124,7 @@ namespace Elementary.Utilities
         /// </summary>
         /// <param name="number">The atomic number of the element.</param>
         /// <returns>The URL to the Wikipedia page for the element.</returns>
-        public static string GetElementWiki(long number)
+        public static string GetElementWiki(int number)
         {
             var language = _resources.GetString("Wiki/Language");
             var page = _resources.GetString(string.Format("Wiki/{0:d3}", number));

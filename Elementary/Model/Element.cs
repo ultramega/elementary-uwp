@@ -30,7 +30,7 @@ namespace Elementary.Model
         /// <summary>
         /// The element number.
         /// </summary>
-        public long Number { get; internal set; }
+        public int Number { get; internal set; }
 
         /// <summary>
         /// The element symbol.
@@ -40,12 +40,12 @@ namespace Elementary.Model
         /// <summary>
         /// The element group.
         /// </summary>
-        public long Group { get; internal set; }
+        public int Group { get; internal set; }
 
         /// <summary>
         /// The element period.
         /// </summary>
-        public long Period { get; internal set; }
+        public int Period { get; internal set; }
 
         /// <summary>
         /// The element block.
@@ -90,7 +90,7 @@ namespace Elementary.Model
         /// <summary>
         /// The element category.
         /// </summary>
-        public long Category { get; internal set; }
+        public int Category { get; internal set; }
 
         /// <summary>
         /// The electron configuration of the element.

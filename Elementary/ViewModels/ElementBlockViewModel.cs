@@ -113,18 +113,18 @@ namespace Elementary.ViewModels
                 if (element.Period == 6)
                 {
                     Row = 9;
-                    Column = (int)element.Number - 54;
+                    Column = element.Number - 54;
                 }
                 else if (element.Period == 7)
                 {
                     Row = 10;
-                    Column = (int)element.Number - 86;
+                    Column = element.Number - 86;
                 }
             }
             else
             {
-                Row = (int)element.Period;
-                Column = (int)element.Group;
+                Row = element.Period;
+                Column = element.Group;
             }
 
             Settings.SettingChanged += OnSettingChanged;

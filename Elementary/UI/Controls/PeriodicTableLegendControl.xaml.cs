@@ -85,7 +85,7 @@ namespace Elementary.UI.Controls
             var colSpan = 4 - (int)Math.Ceiling(names.Length / 4d);
             for (var i = 0; i < names.Length; i++)
             {
-                var key = useCategory ? (long)i : names[i] as object;
+                var key = useCategory ? i : names[i] as object;
                 var item = new LegendItemViewModel()
                 {
                     Text = names[i],
