@@ -47,6 +47,17 @@ namespace Elementary.ViewModels
                     }
                     return Element.Weight.ToString("0.####");
                 }
+                if (key == "Density")
+                {
+                    if (Element.Density.HasValue)
+                    {
+                        if(Element.Density.Value < 0.0001)
+                        {
+                            return "<0.0001";
+                        }
+                        return Element.Density.Value.ToString("0.#####");
+                    }
+                }
                 if (key == "Abundance")
                 {
                     if (Element.Abundance.HasValue)
