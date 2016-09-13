@@ -24,8 +24,10 @@ using Elementary.Model;
 using Elementary.ViewModels;
 using System;
 using System.ComponentModel;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using System.Threading;
 
 namespace Elementary.UI.Controls
 {
@@ -34,6 +36,16 @@ namespace Elementary.UI.Controls
     /// </summary>
     public sealed partial class PeriodicTableControl : UserControl, INotifyPropertyChanged
     {
+        /// <summary>
+        /// The Timer for delaying resizing operations.
+        /// </summary>
+        private readonly Timer _resizeTimer;
+
+        /// <summary>
+        /// The AsyncOperation for calling methods on the main thread.
+        /// </summary>
+        private readonly AsyncOperation _async;
+
         /// <summary>
         /// Occurs when an element block in the table is clicked.
         /// </summary>
@@ -107,10 +119,18 @@ namespace Elementary.UI.Controls
         public PeriodicTableControl()
         {
             InitializeComponent();
+            _async = AsyncOperationManager.CreateOperation(null);
+            _resizeTimer = new Timer(e =>
+              {
+                  _async.Post(d =>
+                  {
+                      CalculateSizes();
+                  }, null);
+              }, null, Timeout.Infinite, Timeout.Infinite);
         }
 
         /// <summary>
-        /// Loads the blocks into the Grid.
+        /// Loads the blocks into the Grid when the Control is loaded.
         /// </summary>
         /// <param name="sender">This UserControl.</param>
         /// <param name="e">The event arguments.</param>
@@ -127,6 +147,28 @@ namespace Elementary.UI.Controls
                 element.SubtextFontSize = SubtextFontSize;
                 children.Add(element);
             }
+
+            Window.Current.SizeChanged += OnWindowSizeChanged;
+        }
+
+        /// <summary>
+        /// Remove the Window resize event handler when the Control is unloaded.
+        /// </summary>
+        /// <param name="sender">This UserControl.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnUnloaded(object sender, RoutedEventArgs e)
+        {
+            Window.Current.SizeChanged -= OnWindowSizeChanged;
+        }
+
+        /// <summary>
+        /// Recalculates the sizes after a delay when the window is resized.
+        /// </summary>
+        /// <param name="sender">The Window.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnWindowSizeChanged(object sender, WindowSizeChangedEventArgs e)
+        {
+            _resizeTimer.Change(200, Timeout.Infinite);
         }
 
         /// <summary>
@@ -134,7 +176,8 @@ namespace Elementary.UI.Controls
         /// </summary>
         private void CalculateSizes()
         {
-            var blockSize = Math.Min(ActualWidth / 18.3, ActualHeight / 9.9);
+            var blockSize = Math.Min((Parent as FrameworkElement).ActualWidth / 18.3,
+                (Parent as FrameworkElement).ActualHeight / 9.9);
 
             HeaderFontSize = blockSize / 4;
             TitleFontSize = blockSize / 2;
@@ -153,6 +196,15 @@ namespace Elementary.UI.Controls
             Height = blockSize * 9.9;
 
             PropertyChanged(this, new PropertyChangedEventArgs(null));
+            foreach (object block in (Content as Panel).Children)
+            {
+                if (block is PeriodicTableBlockControl)
+                {
+                    (block as PeriodicTableBlockControl).NumberFontSize = NumberFontSize;
+                    (block as PeriodicTableBlockControl).SymbolFontSize = SymbolFontSize;
+                    (block as PeriodicTableBlockControl).SubtextFontSize = SubtextFontSize;
+                }
+            }
         }
 
         /// <summary>

@@ -90,21 +90,21 @@
             HorizontalAlignment="Left"
             VerticalAlignment="Top"
             Margin="2,0,0,0"
-            FontSize="{x:Bind NumberFontSize}"
+            FontSize="{x:Bind NumberFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Number}" />
 
         <TextBlock
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             Padding="0,0,0,2"
-            FontSize="{x:Bind SymbolFontSize}"
+            FontSize="{x:Bind SymbolFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Symbol}"
             FontWeight="SemiBold" />
 
         <TextBlock
             HorizontalAlignment="Center"
             VerticalAlignment="Bottom"
-            FontSize="{x:Bind SubtextFontSize}"
+            FontSize="{x:Bind SubtextFontSize, Mode=OneWay}"
             Text="{x:Bind Element.Subtext, Mode=OneWay}" />
     </Grid>
 </Button>

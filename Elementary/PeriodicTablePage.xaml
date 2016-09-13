@@ -181,7 +181,7 @@
             MinZoomFactor="1"
             ViewChanged="OnViewChanged">
             <c:PeriodicTableControl
-                Margin="4"
+                Padding="4"
                 BlockClick="OnBlockClick" />
         </ScrollViewer>
 
