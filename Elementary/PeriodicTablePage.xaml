@@ -167,6 +167,22 @@
     </Page.Resources>
 
     <Grid>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState>
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger
+                            MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+
+                    <VisualState.Setters>
+                        <Setter
+                            Target="BlockColorsPanel.Visibility"
+                            Value="Visible" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
             <RowDefinition />
             <RowDefinition
@@ -189,6 +205,10 @@
             Grid.Row="1"
             Padding="6,4">
             <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="Auto" />
+                <ColumnDefinition
+                    Width="Auto" />
                 <ColumnDefinition />
                 <ColumnDefinition
                     Width="Auto" />
@@ -204,7 +224,13 @@
                 <ComboBox
                     ItemsSource="{x:Bind SubtextValue.Items, Mode=OneWay}"
                     SelectedIndex="{x:Bind SubtextValue.SelectedItemIndex, Mode=TwoWay}" />
+            </StackPanel>
 
+            <StackPanel
+                Grid.Column="1"
+                x:Name="BlockColorsPanel"
+                Orientation="Horizontal"
+                Visibility="Collapsed">
                 <TextBlock
                     x:Uid="Label/BlockColors"
                     VerticalAlignment="Center"
@@ -216,7 +242,7 @@
             </StackPanel>
 
             <StackPanel
-                Grid.Column="1"
+                Grid.Column="3"
                 Orientation="Horizontal">
                 <RepeatButton
                     IsEnabled="{x:Bind CanZoomOut, Mode=OneWay}"
