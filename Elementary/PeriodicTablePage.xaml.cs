@@ -26,6 +26,7 @@ using System;
 using System.ComponentModel;
 using Windows.ApplicationModel.Resources;
 using Windows.Graphics.Display;
+using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 
@@ -40,6 +41,8 @@ namespace Elementary
         /// Occurs when a property changes.
         /// </summary>
         public event PropertyChangedEventHandler PropertyChanged = delegate { };
+
+        private static readonly float _zoomStep = 0.5f;
 
         /// <summary>
         /// The format string for the title of the element details dialog.
@@ -70,6 +73,28 @@ namespace Elementary
         }
 
         /// <summary>
+        /// Gets or sets whether the view can be zoomed in.
+        /// </summary>
+        public bool CanZoomIn
+        {
+            get { return (bool)GetValue(CanZoomInProperty); }
+            set { SetValue(CanZoomInProperty, value); }
+        }
+        public static readonly DependencyProperty CanZoomInProperty =
+            DependencyProperty.Register("CanZoomIn", typeof(bool), typeof(PeriodicTablePage), new PropertyMetadata(true));
+
+        /// <summary>
+        /// Gets of sets whether the view can be zoomed out.
+        /// </summary>
+        public bool CanZoomOut
+        {
+            get { return (bool)GetValue(CanZoomOutProperty); }
+            set { SetValue(CanZoomOutProperty, value); }
+        }
+        public static readonly DependencyProperty CanZoomOutProperty =
+            DependencyProperty.Register("CanZoomOut", typeof(bool), typeof(PeriodicTablePage), new PropertyMetadata(false));
+
+        /// <summary>
         /// Gets the ViewModel for the subtext value ComboBox.
         /// </summary>
         private SubtextValueViewModel SubtextValue { get; } = new SubtextValueViewModel();
@@ -85,6 +110,7 @@ namespace Elementary
         public PeriodicTablePage()
         {
             InitializeComponent();
+            DataContext = this;
         }
 
         /// <summary>
@@ -119,6 +145,37 @@ namespace Elementary
             DetailsTitle = element.Name;
             DetailsDialog.DataContext = element;
             await DetailsDialog.ShowAsync();
+        }
+
+        /// <summary>
+        /// Called when the zoom in button is clicked.
+        /// </summary>
+        /// <param name="sender">The zoom in Button.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnZoomIn(object sender, RoutedEventArgs e)
+        {
+            Zoomer.ChangeView(null, null, Zoomer.ZoomFactor + Zoomer.ZoomFactor * _zoomStep);
+        }
+
+        /// <summary>
+        /// Called when the zoom out button is clicked.
+        /// </summary>
+        /// <param name="sender">The zoom out Button.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnZoomOut(object sender, RoutedEventArgs e)
+        {
+            Zoomer.ChangeView(null, null, Zoomer.ZoomFactor - Zoomer.ZoomFactor * _zoomStep);
+        }
+
+        /// <summary>
+        /// Updates the zoom buttons when the view changes.
+        /// </summary>
+        /// <param name="sender">The ScrollViewer.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnViewChanged(object sender, ScrollViewerViewChangedEventArgs e)
+        {
+            CanZoomIn = Zoomer.ZoomFactor < Zoomer.MaxZoomFactor;
+            CanZoomOut = Zoomer.ZoomFactor > Zoomer.MinZoomFactor;
         }
     }
 }
