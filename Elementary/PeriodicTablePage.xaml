@@ -172,7 +172,7 @@
                 <VisualState>
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger
-                            MinWindowWidth="600" />
+                            MinWindowWidth="720" />
                     </VisualState.StateTriggers>
 
                     <VisualState.Setters>
