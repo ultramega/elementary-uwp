@@ -1,4 +1,12 @@
-﻿- v.1.1.5.0 (7/1/16):
+﻿- v.1.1.6.0 (9/13/16):
+   * Updated names and symbols for elements 113, 115, 117, and 118
+   * Added buttons to zoom in and out
+   * Added ComboBox to select what to display in each block in the Periodic Table view
+   * Added ComboBox to set the coloring of the blocks from the Periodic Table view
+   * Changed the label for Heat to Specific Heat
+   * Fixed navigation to the details page from the list on smaller devices
+   * Miscellaneous interface adjustments
+- v.1.1.5.0 (7/1/16):
    * Added Brazilian Portuguese translation ([amalvarenga](https://github.com/amalvarenga))
 - v.1.1.4.0 (6/14/16):
    * Added French translation ([Poussinou](https://github.com/Poussinou))
