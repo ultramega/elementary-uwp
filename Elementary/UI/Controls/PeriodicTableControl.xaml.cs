@@ -34,7 +34,8 @@ namespace Elementary.UI.Controls
     /// <summary>
     /// Control for displaying the Periodic Table.
     /// </summary>
-    public sealed partial class PeriodicTableControl : UserControl, INotifyPropertyChanged, IDisposable
+    public sealed partial class PeriodicTableControl : UserControl, INotifyPropertyChanged,
+        IDisposable
     {
         /// <summary>
         /// The Timer for delaying resizing operations.

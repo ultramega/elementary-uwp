@@ -34,7 +34,8 @@ namespace Elementary.ViewModels
         /// <summary>
         /// The list of available options.
         /// </summary>
-        private static string[] _items = ResourceLoader.GetForCurrentView().GetString("SubtextValues").Split(';');
+        private static string[] _items =
+            ResourceLoader.GetForCurrentView().GetString("SubtextValues").Split(';');
 
         /// <summary>
         /// The keys associated with each option.

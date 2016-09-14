@@ -31,12 +31,17 @@ namespace Elementary.ViewModels
     class BlockColorViewModel : INotifyPropertyChanged
     {
         /// <summary>
+        /// The reference to the ResourceLoader for the Elements resources.
+        /// </summary>
+        private static readonly ResourceLoader _resources = ResourceLoader.GetForCurrentView();
+
+        /// <summary>
         /// The list of available options.
         /// </summary>
         private static string[] _items = new string[]
         {
-            ResourceLoader.GetForCurrentView().GetString("Settings/ElementColors/Category/Content"),
-            ResourceLoader.GetForCurrentView().GetString("Settings/ElementColors/Block/Content")
+            _resources.GetString("Settings/ElementColors/Category/Content"),
+            _resources.GetString("Settings/ElementColors/Block/Content")
         };
 
         /// <summary>
