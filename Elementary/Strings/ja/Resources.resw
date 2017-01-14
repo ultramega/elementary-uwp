@@ -229,6 +229,18 @@
   <data name="Settings.ElementColors.Header.Text" xml:space="preserve">
     <value>元素の色</value>
   </data>
+  <data name="Settings.ShowControls.Description.Content" xml:space="preserve">
+    <value>表表示で周期表のコントロールを表示します</value>
+  </data>
+  <data name="Settings.ShowControls.Header.Text" xml:space="preserve">
+    <value>周期表のコントロール</value>
+  </data>
+  <data name="Settings.SubtextValue.Description.Text" xml:space="preserve">
+    <value>元素記号の下に表示する値</value>
+  </data>
+  <data name="Settings.SubtextValue.Header.Text" xml:space="preserve">
+    <value>ブロック値</value>
+  </data>
   <data name="Settings.TemperatureUnits.Description.Text" xml:space="preserve">
     <value>温度の表示に使用される単位</value>
   </data>

@@ -203,7 +203,8 @@
 
         <Grid
             Grid.Row="1"
-            Padding="6,4">
+            Padding="6,4"
+            Visibility="{x:Bind ControlsVisibility, Mode=OneWay}">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition
                     Width="Auto" />

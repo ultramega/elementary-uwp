@@ -20,6 +20,7 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
+using Elementary.ViewModels;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
@@ -49,6 +50,11 @@ namespace Elementary
             DependencyProperty.Register("PageTitle", typeof(string), typeof(MainPage), null);
 
         /// <summary>
+        /// Gets the ViewModel for the subtext value ComboBox.
+        /// </summary>
+        private SubtextValueViewModel SubtextValue { get; } = new SubtextValueViewModel();
+
+        /// <summary>
         /// Constructor.
         /// </summary>
         public MainPage()
@@ -76,6 +82,8 @@ namespace Elementary
                     break;
                 }
             }
+
+            ShowControlsSetting.IsChecked = Settings.ShowControls;
 
             Settings.SettingChanged += OnSettingChanged;
         }
@@ -155,6 +163,17 @@ namespace Elementary
         private void OnElementColorsChecked(object sender, RoutedEventArgs e)
         {
             Settings.ElementColors = (sender as FrameworkElement).Tag as string;
+        }
+
+        /// <summary>
+        /// Sets the preference for whether to show the controls under the Periodic Table when the
+        /// setting CheckBox is toggled.
+        /// </summary>
+        /// <param name="sender">The CheckBox.</param>
+        /// <param name="e">The event arguments.</param>
+        private void OnShowControlsToggled(object sender, RoutedEventArgs e)
+        {
+            Settings.ShowControls = ShowControlsSetting.IsChecked.Value;
         }
 
         /// <summary>

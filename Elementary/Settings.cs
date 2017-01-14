@@ -38,7 +38,8 @@ namespace Elementary
             DarkTheme,
             TemperatureUnits,
             ElementColors,
-            SubtextValue
+            SubtextValue,
+            ShowControls
         }
 
         /// <summary>
@@ -147,6 +148,24 @@ namespace Elementary
             {
                 _settings["subtextValue"] = value;
                 SettingChanged(Key.SubtextValue, value);
+            }
+        }
+
+        /// <summary>
+        /// Gets or sets the value of the setting for whether to show the controls under the
+        /// Periodic Table.
+        /// </summary>
+        public static bool ShowControls
+        {
+            get
+            {
+                var ret = _settings["showControls"];
+                return ret != null ? (bool)ret : true;
+            }
+            set
+            {
+                _settings["showControls"] = value;
+                SettingChanged(Key.ShowControls, value);
             }
         }
     }

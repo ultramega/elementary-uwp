@@ -229,6 +229,18 @@
   <data name="Settings.ElementColors.Header.Text" xml:space="preserve">
     <value>Colore degli elementi</value>
   </data>
+  <data name="Settings.ShowControls.Description.Content" xml:space="preserve">
+    <value>Mostra i controlli per la Tavola Periodica nella vista tabella</value>
+  </data>
+  <data name="Settings.ShowControls.Header.Text" xml:space="preserve">
+    <value>Controlli della Tavola Periodica</value>
+  </data>
+  <data name="Settings.SubtextValue.Description.Text" xml:space="preserve">
+    <value>Il valore da mostrare sotto il simbolo dell'elemento</value>
+  </data>
+  <data name="Settings.SubtextValue.Header.Text" xml:space="preserve">
+    <value>Valore della casella</value>
+  </data>
   <data name="Settings.TemperatureUnits.Description.Text" xml:space="preserve">
     <value>Unità usata nel campo di temperatura</value>
   </data>

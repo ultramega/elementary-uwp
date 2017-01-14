@@ -98,6 +98,17 @@ namespace Elementary
         }
 
         /// <summary>
+        /// Gets the visibility of the controls.
+        /// </summary>
+        public Visibility ControlsVisibility
+        {
+            get
+            {
+                return Settings.ShowControls ? Visibility.Visible : Visibility.Collapsed;
+            }
+        }
+
+        /// <summary>
         /// Gets the ViewModel for the subtext value ComboBox.
         /// </summary>
         private SubtextValueViewModel SubtextValue { get; } = new SubtextValueViewModel();
@@ -124,6 +135,7 @@ namespace Elementary
             base.OnNavigatedTo(e);
             DisplayInformation.AutoRotationPreferences =
                 DisplayOrientations.Landscape | DisplayOrientations.LandscapeFlipped;
+            Settings.SettingChanged += OnSettingChanged;
         }
 
         /// <summary>
@@ -134,6 +146,20 @@ namespace Elementary
         {
             base.OnNavigatedFrom(e);
             DisplayInformation.AutoRotationPreferences = DisplayOrientations.None;
+            Settings.SettingChanged -= OnSettingChanged;
+        }
+
+        /// <summary>
+        /// Updates the interface when a preference is changed.
+        /// </summary>
+        /// <param name="key">The key for the setting that has changed.</param>
+        /// <param name="value">The new value for the setting.</param>
+        private void OnSettingChanged(Settings.Key key, object value)
+        {
+            if (key == Settings.Key.ShowControls)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs("ControlsVisibility"));
+            }
         }
 
         /// <summary>

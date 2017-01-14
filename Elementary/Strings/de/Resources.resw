@@ -229,6 +229,18 @@
   <data name="Settings.ElementColors.Header.Text" xml:space="preserve">
     <value>Elementfarben</value>
   </data>
+  <data name="Settings.ShowControls.Description.Content" xml:space="preserve">
+    <value>Zeigen Sie die Bedienelemente für das Periodensystem in der Tabellenansicht</value>
+  </data>
+  <data name="Settings.ShowControls.Header.Text" xml:space="preserve">
+    <value>Tabellenansicht Steuerung</value>
+  </data>
+  <data name="Settings.SubtextValue.Description.Text" xml:space="preserve">
+    <value>Der Wert unter dem Elementsymbol angezeigt</value>
+  </data>
+  <data name="Settings.SubtextValue.Header.Text" xml:space="preserve">
+    <value>Blockwert</value>
+  </data>
   <data name="Settings.TemperatureUnits.Description.Text" xml:space="preserve">
     <value>Bevorzugtes Einheitensystem</value>
   </data>

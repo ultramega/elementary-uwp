@@ -137,6 +137,10 @@ namespace Elementary.ViewModels
                 UpdateTempUnit();
                 PropertyChanged(this, new PropertyChangedEventArgs(null));
             }
+            else if (key == Settings.Key.SubtextValue)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs("SelectedItemIndex"));
+            }
         }
     }
 }

@@ -128,7 +128,36 @@
                                             GroupName="ElementColors" />
                                     </StackPanel>
                                 </StackPanel>
+
+                                <MenuFlyoutSeparator />
+
+                                <StackPanel>
+                                    <TextBlock
+                                        x:Uid="Settings/SubtextValue/Header"
+                                        Style="{ThemeResource SubtitleTextBlockStyle}" />
+
+                                    <TextBlock
+                                        x:Uid="Settings/SubtextValue/Description"
+                                        TextWrapping="Wrap" />
+
+                                    <ComboBox
+                                        ItemsSource="{x:Bind SubtextValue.Items, Mode=OneWay}"
+                                        SelectedIndex="{x:Bind SubtextValue.SelectedItemIndex, Mode=TwoWay}" />
                                 </StackPanel>
+
+                                <MenuFlyoutSeparator />
+
+                                <StackPanel>
+                                    <TextBlock
+                                        x:Uid="Settings/ShowControls/Header"
+                                        Style="{ThemeResource SubtitleTextBlockStyle}" />
+
+                                    <CheckBox
+                                        x:Name="ShowControlsSetting"
+                                        x:Uid="Settings/ShowControls/Description"
+                                        Click="OnShowControlsToggled" />
+                                </StackPanel>
+                            </StackPanel>
                         </Flyout>
                     </AppBarButton.Flyout>
                 </AppBarButton>
