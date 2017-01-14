@@ -217,9 +217,6 @@
   <data name="Settings.DarkTheme.Button.Text" xml:space="preserve">
     <value>Use the dark theme</value>
   </data>
-  <data name="Settings.DarkTheme.Header.Text" xml:space="preserve">
-    <value>Dark Theme</value>
-  </data>
   <data name="Settings.ElementColors.Block.Content" xml:space="preserve">
     <value>Block</value>
   </data>

@@ -217,9 +217,6 @@
   <data name="Settings.DarkTheme.Button.Text" xml:space="preserve">
     <value>Bessere Lesbarkeit in lichtschwacher Umgebung</value>
   </data>
-  <data name="Settings.DarkTheme.Header.Text" xml:space="preserve">
-    <value>Dunkles Theme</value>
-  </data>
   <data name="Settings.ElementColors.Block.Content" xml:space="preserve">
     <value>Block</value>
   </data>

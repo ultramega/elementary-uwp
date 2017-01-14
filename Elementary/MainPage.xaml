@@ -61,19 +61,13 @@
 
                                 <MenuFlyoutSeparator />
 
-                                <StackPanel>
+                                <ToggleButton
+                                    x:Name="DarkThemeSetting"
+                                    Click="OnDarkThemeToggled">
                                     <TextBlock
-                                        x:Uid="Settings/DarkTheme/Header"
-                                        Style="{ThemeResource SubtitleTextBlockStyle}" />
-
-                                    <ToggleButton
-                                        x:Name="DarkThemeSetting"
-                                        Click="OnDarkThemeToggled">
-                                        <TextBlock
-                                            x:Uid="Settings/DarkTheme/Button"
-                                            TextWrapping="Wrap" />
-                                    </ToggleButton>
-                                </StackPanel>
+                                        x:Uid="Settings/DarkTheme/Button"
+                                        TextWrapping="Wrap" />
+                                </ToggleButton>
 
                                 <MenuFlyoutSeparator />
 
@@ -134,7 +128,7 @@
                                             GroupName="ElementColors" />
                                     </StackPanel>
                                 </StackPanel>
-                            </StackPanel>
+                                </StackPanel>
                         </Flyout>
                     </AppBarButton.Flyout>
                 </AppBarButton>
