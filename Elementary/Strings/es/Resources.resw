@@ -149,7 +149,7 @@
     <value>Clase</value>
   </data>
   <data name="Button.Video.ToolTipService.ToolTip" xml:space="preserve">
-    <value>Ver Video</value>
+    <value>Ver video</value>
   </data>
   <data name="Button.Wiki.ToolTipService.ToolTip" xml:space="preserve">
     <value>Wikipedia</value>
@@ -161,58 +161,58 @@
     <value>Filtrar por nombre o símbolo</value>
   </data>
   <data name="Label.Abundance.Text" xml:space="preserve">
-    <value>Abundancia:</value>
+    <value>Abundancia</value>
   </data>
   <data name="Label.BlockColors.Text" xml:space="preserve">
-    <value>Colorear por:</value>
+    <value>Colorear por</value>
   </data>
   <data name="Label.Boil.Text" xml:space="preserve">
-    <value>Punto de Ebullición:</value>
+    <value>Punto de ebullición</value>
   </data>
   <data name="Label.Category.Text" xml:space="preserve">
-    <value>Serie Química:</value>
+    <value>Serie química</value>
   </data>
   <data name="Label.Configuration.Text" xml:space="preserve">
-    <value>Configuración Electrónica:</value>
+    <value>Configuración electrónica</value>
   </data>
   <data name="Label.Density.Text" xml:space="preserve">
-    <value>Densidad:</value>
+    <value>Densidad</value>
   </data>
   <data name="Label.Electrons.Text" xml:space="preserve">
-    <value>Electrones por Nivel:</value>
+    <value>Electrones por nivel</value>
   </data>
   <data name="Label.GPB.Text" xml:space="preserve">
-    <value>Grupo, Período, Bloque:</value>
+    <value>Grupo, período, bloque</value>
   </data>
   <data name="Label.Heat.Text" xml:space="preserve">
-    <value>Calor Especifico:</value>
+    <value>Calor especifico</value>
   </data>
   <data name="Label.Melt.Text" xml:space="preserve">
-    <value>Punto de Fusión:</value>
+    <value>Punto de fusión</value>
   </data>
   <data name="Label.Name.Text" xml:space="preserve">
-    <value>Nombre:</value>
+    <value>Nombre</value>
   </data>
   <data name="Label.Negativity.Text" xml:space="preserve">
-    <value>Electronegatividad:</value>
+    <value>Electronegatividad</value>
   </data>
   <data name="Label.Number.Text" xml:space="preserve">
-    <value>Número Atómico:</value>
+    <value>Número atómico</value>
   </data>
   <data name="Label.SubtextValue.Text" xml:space="preserve">
-    <value>Mostrar:</value>
+    <value>Mostrar</value>
   </data>
   <data name="Label.Symbol.Text" xml:space="preserve">
-    <value>Símbolo:</value>
+    <value>Símbolo</value>
   </data>
   <data name="Label.Weight.Text" xml:space="preserve">
-    <value>Masa Atómica:</value>
+    <value>Peso atómica</value>
   </data>
   <data name="Menu.ListView.Label" xml:space="preserve">
-    <value>Vista de la Lista</value>
+    <value>Vista de la lista</value>
   </data>
   <data name="Menu.Settings.Label" xml:space="preserve">
-    <value>Opciones</value>
+    <value>Ajustes</value>
   </data>
   <data name="Settings.DarkTheme.Button.Text" xml:space="preserve">
     <value>Utilice el tema oscuro</value>
@@ -221,43 +221,43 @@
     <value>Bloque</value>
   </data>
   <data name="Settings.ElementColors.Category.Content" xml:space="preserve">
-    <value>Serie Química</value>
+    <value>Serie química</value>
   </data>
   <data name="Settings.ElementColors.Description.Text" xml:space="preserve">
     <value>Propiedad utiliza para dar color a los elementos</value>
   </data>
   <data name="Settings.ElementColors.Header.Text" xml:space="preserve">
-    <value>Colores Elemento</value>
+    <value>Colores elemento</value>
   </data>
   <data name="Settings.TemperatureUnits.Description.Text" xml:space="preserve">
     <value>Unidades utilizan para mostrar los valores de temperatura</value>
   </data>
   <data name="Settings.TemperatureUnits.Header.Text" xml:space="preserve">
-    <value>Unidades Temperatura</value>
+    <value>Unidades temperatura</value>
   </data>
   <data name="Sort.Name.Text" xml:space="preserve">
-    <value>Nombre de Elemento</value>
+    <value>Nombre de elemento</value>
   </data>
   <data name="Sort.Number.Text" xml:space="preserve">
-    <value>Número Atómico</value>
+    <value>Número atómico</value>
   </data>
   <data name="SubtextValues" xml:space="preserve">
-    <value>Masa Atómica;Densidad (g/cm³);Punto de Fusión (K);Punto de Ebullición (K);Calor Especifico (J/g·K);Electronegatividad (Pauling);Abundancia (mg/kg)</value>
+    <value>Masa atómica;Densidad (g/cm³);Punto de fusión (K);Punto de ebullición (K);Calor especifico (J/g·K);Electronegatividad (Pauling);Abundancia (mg/kg)</value>
   </data>
   <data name="Title.ElementDetails" xml:space="preserve">
-    <value>Detalles Elemento - {0}</value>
+    <value>Detalles elemento por {0}</value>
   </data>
   <data name="Title.ElementList" xml:space="preserve">
-    <value>Lista de Elementos</value>
+    <value>Lista de elementos</value>
   </data>
   <data name="Title.PeriodicTable.Text" xml:space="preserve">
     <value>Tabla Periódica de los Elementos</value>
   </data>
   <data name="Title.Settings.Text" xml:space="preserve">
-    <value>Opciones de Elementary</value>
+    <value>Ajustes de Elementary</value>
   </data>
   <data name="Title.Sort.Text" xml:space="preserve">
-    <value>Ordenar por:</value>
+    <value>Ordenar por</value>
   </data>
   <data name="Unknown" xml:space="preserve">
     <value>desconocido</value>

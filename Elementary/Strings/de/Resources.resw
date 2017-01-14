@@ -161,61 +161,61 @@
     <value>Nach Name oder Symbol sortieren</value>
   </data>
   <data name="Label.Abundance.Text" xml:space="preserve">
-    <value>Vorkommen:</value>
+    <value>Vorkommen</value>
   </data>
   <data name="Label.BlockColors.Text" xml:space="preserve">
-    <value>Färben nach:</value>
+    <value>Färben nach</value>
   </data>
   <data name="Label.Boil.Text" xml:space="preserve">
-    <value>Siedepunkt:</value>
+    <value>Siedepunkt</value>
   </data>
   <data name="Label.Category.Text" xml:space="preserve">
-    <value>Serie:</value>
+    <value>Serie</value>
   </data>
   <data name="Label.Configuration.Text" xml:space="preserve">
-    <value>Elektronenkonfiguration:</value>
+    <value>Elektronenkonfiguration</value>
   </data>
   <data name="Label.Density.Text" xml:space="preserve">
-    <value>Dichte:</value>
+    <value>Dichte</value>
   </data>
   <data name="Label.Electrons.Text" xml:space="preserve">
-    <value>Elektronen pro Schale:</value>
+    <value>Elektronen pro Schale</value>
   </data>
   <data name="Label.GPB.Text" xml:space="preserve">
-    <value>Gruppe, Periode, Block:</value>
+    <value>Gruppe, Periode, Block</value>
   </data>
   <data name="Label.Heat.Text" xml:space="preserve">
-    <value>Spezifisch Hitze:</value>
+    <value>Spezifisch Hitze</value>
   </data>
   <data name="Label.Melt.Text" xml:space="preserve">
-    <value>Schmelzpunkt:</value>
+    <value>Schmelzpunkt</value>
   </data>
   <data name="Label.Name.Text" xml:space="preserve">
-    <value>Name:</value>
+    <value>Name</value>
   </data>
   <data name="Label.Negativity.Text" xml:space="preserve">
-    <value>Elektronegativität:</value>
+    <value>Elektronegativität</value>
   </data>
   <data name="Label.Number.Text" xml:space="preserve">
-    <value>Ordnungszahl:</value>
+    <value>Ordnungszahl</value>
   </data>
   <data name="Label.SubtextValue.Text" xml:space="preserve">
-    <value>Anzeigen:</value>
+    <value>Anzeigen</value>
   </data>
   <data name="Label.Symbol.Text" xml:space="preserve">
-    <value>Symbol:</value>
+    <value>Symbol</value>
   </data>
   <data name="Label.Weight.Text" xml:space="preserve">
-    <value>Atommasse:</value>
+    <value>Atommasse</value>
   </data>
   <data name="Menu.ListView.Label" xml:space="preserve">
     <value>Listen-Ansicht</value>
   </data>
   <data name="Menu.Settings.Label" xml:space="preserve">
-    <value>Optionen</value>
+    <value>Einstellungen</value>
   </data>
   <data name="Settings.DarkTheme.Button.Text" xml:space="preserve">
-    <value>Bessere Lesbarkeit in lichtschwacher Umgebung</value>
+    <value>Dunkles Theme</value>
   </data>
   <data name="Settings.ElementColors.Block.Content" xml:space="preserve">
     <value>Block</value>
@@ -245,7 +245,7 @@
     <value>Atommasse;Dichte (g/cm³);Schmelzpunkt (K);Siedepunkt (K);Spezifisch Hitze (J/g·K);Elektronegativität (Pauling);Vorkommen (mg/kg)</value>
   </data>
   <data name="Title.ElementDetails" xml:space="preserve">
-    <value>Element Details - {0}</value>
+    <value>Element Details für {0}</value>
   </data>
   <data name="Title.ElementList" xml:space="preserve">
     <value>Liste aller Elemente</value>
@@ -254,12 +254,12 @@
     <value>Periodensystem der Elemente</value>
   </data>
   <data name="Title.Settings.Text" xml:space="preserve">
-    <value>Elementary Optionen</value>
+    <value>Elementary Einstellungen</value>
   </data>
   <data name="Title.Sort.Text" xml:space="preserve">
-    <value>Sortieren nach:</value>
+    <value>Sortieren nach</value>
   </data>
   <data name="Unknown" xml:space="preserve">
-    <value>Unbekannt</value>
+    <value>unbekannt</value>
   </data>
 </root>
