@@ -65,7 +65,7 @@ namespace Elementary
         {
             base.OnNavigatedTo(e);
 
-            var element = new ElementDetailsViewModel(Element.List[(int)e.Parameter - 1]);
+            var element = new ElementDetailsViewModel(Elements.List[(int)e.Parameter - 1]);
 
             var titleFormat = ResourceLoader.GetForCurrentView().GetString("Title/ElementDetails");
             var title = string.Format(titleFormat, element.Name);

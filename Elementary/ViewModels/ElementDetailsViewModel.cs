@@ -23,9 +23,7 @@
 using Elementary.Model;
 using Elementary.Utilities;
 using System;
-using System.Collections.Generic;
 using System.Text;
-using System.Text.RegularExpressions;
 using Windows.ApplicationModel.Resources;
 
 namespace Elementary.ViewModels
@@ -191,21 +189,18 @@ namespace Elementary.ViewModels
         {
             get
             {
-                return Regex.Replace(Element.Configuration, "(?<=[spdf])([0-9]+)",
-                    delegate (Match match)
+                var super = new char[] { '⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹' };
+                var ret = new StringBuilder();
+                if (Element.Configuration.BaseElement != null)
                 {
-                    var map = new Dictionary<char, char>()
-                    {
-                        { '0', '⁰' }, { '1', '¹' }, { '2', '²' }, { '3', '³' }, { '4', '⁴' },
-                        { '5', '⁵' }, { '6', '⁶' }, { '7', '⁷' }, { '8', '⁸' }, { '9', '⁹' }
-                    };
-                    var ret = new StringBuilder();
-                    foreach (var c in match.Value.ToCharArray())
-                    {
-                        ret.Append(map[c]);
-                    }
-                    return ret.ToString();
-                });
+                    ret.Append('[').Append(Element.Configuration.BaseElement).Append("] ");
+                }
+                foreach (var o in Element.Configuration.Orbitals)
+                {
+                    ret.Append(o.Shell).Append(o.Type).Append(super[o.Electrons]).Append(' ');
+                }
+                ret.Remove(ret.Length - 1, 1);
+                return ret.ToString();
             }
         }
 
@@ -216,7 +211,7 @@ namespace Elementary.ViewModels
         {
             get
             {
-                return Element.Electrons.Replace(",", ", ");
+                return string.Join(", ", Element.Electrons);
             }
         }
 
@@ -227,7 +222,7 @@ namespace Elementary.ViewModels
         {
             get
             {
-                return Element.Electrons.Replace(",", "\n");
+                return string.Join("\n", Element.Electrons);
             }
         }
 
