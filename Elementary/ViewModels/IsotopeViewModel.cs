@@ -20,59 +20,49 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
   THE SOFTWARE.
 */
-using System.Text;
+using Elementary.Model;
 
-namespace Elementary.Model
+namespace Elementary.ViewModels
 {
     /// <summary>
-    /// Represents an isotope of an element.
+    /// Contains data backing an isotope list item.
     /// </summary>
-    public class Isotope
+    public class IsotopeViewModel
     {
         /// <summary>
-        /// Constructor.
+        /// Gets the Isotope being represented by this ViewModel.
         /// </summary>
-        /// <param name="number">The mass number of the isotope.</param>
-        /// <param name="symbol">The symbol for the isotope.</param>
-        /// <param name="mass">The relative atomic mass of the isotope.</param>
-        internal Isotope(int number, string symbol, double mass)
-        {
-            Number = number;
-            _symbol = symbol;
-            Mass = mass;
-        }
+        public Isotope Isotope { get; private set; }
 
         /// <summary>
-        /// The mass number of the isotope.
-        /// </summary>
-        public int Number { get; private set; }
-
-        /// <summary>
-        /// The symbol for the isotope.
-        /// </summary>
-        private string _symbol;
-
-        /// <summary>
-        /// Gets the formatted symbol for the isotope.
+        /// Gets the isotope symbol as a string.
         /// </summary>
         public string Symbol
         {
             get
             {
-                var super = new char[] { '⁰', '¹', '²', '³', '⁴', '⁵', '⁶', '⁷', '⁸', '⁹' };
-                var ret = new StringBuilder();
-                foreach (var c in Number.ToString())
-                {
-                    ret.Append(super[int.Parse(c.ToString())]);
-                }
-                ret.Append(_symbol);
-                return ret.ToString();
+                return Isotope.Symbol;
             }
         }
 
         /// <summary>
-        /// The relative atomic mass of the isotope.
+        /// Gets the isotope mass as a string.
         /// </summary>
-        public double Mass { get; private set; }
+        public string Mass
+        {
+            get
+            {
+                return Isotope.Mass.ToString("0.########");
+            }
+        }
+
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="isotope">The Isotope to represent.</param>
+        public IsotopeViewModel(Isotope isotope)
+        {
+            Isotope = isotope;
+        }
     }
 }

@@ -32,6 +32,7 @@ namespace Elementary.Model
         /// </summary>
         public static Isotope[][] List { get; } = new Isotope[][]
         {
+            new Isotope[] {},
             new Isotope[]
             {
                 new Isotope(1, "H", 1.00782503),

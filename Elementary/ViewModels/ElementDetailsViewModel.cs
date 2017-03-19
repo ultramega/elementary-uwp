@@ -23,6 +23,7 @@
 using Elementary.Model;
 using Elementary.Utilities;
 using System;
+using System.Collections.Generic;
 using System.Text;
 using Windows.ApplicationModel.Resources;
 
@@ -223,6 +224,22 @@ namespace Elementary.ViewModels
             get
             {
                 return string.Join("\n", Element.Electrons);
+            }
+        }
+
+        /// <summary>
+        /// Gets the list of common isotopes.
+        /// </summary>
+        public List<IsotopeViewModel> IsotopeList
+        {
+            get
+            {
+                var ret = new List<IsotopeViewModel>();
+                foreach(var isotope in Isotopes.List[Element.Number])
+                {
+                    ret.Add(new IsotopeViewModel(isotope));
+                }
+                return ret;
             }
         }
 

@@ -187,6 +187,9 @@
   <data name="Label.Heat.Text" xml:space="preserve">
     <value>Chaleur spécifique</value>
   </data>
+  <data name="Label.Isotopes.Text" xml:space="preserve">
+    <value>Isotopes communs</value>
+  </data>
   <data name="Label.Melt.Text" xml:space="preserve">
     <value>Point de fusion</value>
   </data>
