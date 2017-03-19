@@ -143,6 +143,8 @@
     </Compile>
     <Compile Include="Model\Configuration.cs" />
     <Compile Include="Model\Elements.cs" />
+    <Compile Include="Model\Isotope.cs" />
+    <Compile Include="Model\Isotopes.cs" />
     <Compile Include="Model\Orbital.cs" />
     <Compile Include="UI\BlockClickEventArgs.cs" />
     <Compile Include="UI\Controls\PeriodicTableBlockControl.xaml.cs">
