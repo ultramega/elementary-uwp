@@ -501,7 +501,7 @@
     <value>Wasserstoff</value>
   </data>
   <data name="Wiki.002" xml:space="preserve">
-    <value>Hwikiium</value>
+    <value>Helium</value>
   </data>
   <data name="Wiki.003" xml:space="preserve">
     <value>Lithium</value>
@@ -543,7 +543,7 @@
     <value>Phosphor</value>
   </data>
   <data name="Wiki.016" xml:space="preserve">
-    <value>Schwefwiki</value>
+    <value>Schwefel</value>
   </data>
   <data name="Wiki.017" xml:space="preserve">
     <value>Chlor</value>
@@ -579,7 +579,7 @@
     <value>Cobalt</value>
   </data>
   <data name="Wiki.028" xml:space="preserve">
-    <value>Nickwiki</value>
+    <value>Nickel</value>
   </data>
   <data name="Wiki.029" xml:space="preserve">
     <value>Kupfer</value>
@@ -597,7 +597,7 @@
     <value>Arsen</value>
   </data>
   <data name="Wiki.034" xml:space="preserve">
-    <value>Swikien</value>
+    <value>Selen</value>
   </data>
   <data name="Wiki.035" xml:space="preserve">
     <value>Brom</value>
@@ -651,7 +651,7 @@
     <value>Antimon</value>
   </data>
   <data name="Wiki.052" xml:space="preserve">
-    <value>Twikilur</value>
+    <value>Tellur</value>
   </data>
   <data name="Wiki.053" xml:space="preserve">
     <value>Iod</value>
@@ -786,7 +786,7 @@
     <value>Curium</value>
   </data>
   <data name="Wiki.097" xml:space="preserve">
-    <value>Berkwikiium</value>
+    <value>Berkelium</value>
   </data>
   <data name="Wiki.098" xml:space="preserve">
     <value>Californium</value>
@@ -798,10 +798,10 @@
     <value>Fermium</value>
   </data>
   <data name="Wiki.101" xml:space="preserve">
-    <value>Mendwikievium</value>
+    <value>Mendelevium</value>
   </data>
   <data name="Wiki.102" xml:space="preserve">
-    <value>Nobwikiium</value>
+    <value>Nobelium</value>
   </data>
   <data name="Wiki.103" xml:space="preserve">
     <value>Lawrencium</value>
