@@ -22,7 +22,7 @@ Elementary はシンプルな周期表と元素を参照するアプリケーシ
 ビデオは Periodic Videos によって提供されます (http://www.periodicvideos.com/)
 
 MIT ライセンスに基づいてライセンスされます
-ソースは以下で利用できます: https://github.com/ultramega/elementary
+ソースは以下で利用できます: https://github.com/ultramega/elementary-uwp
 
 Twitter: https://twitter.com/ultramegasoft
 Facebook: https://www.facebook.com/ultramegasoft

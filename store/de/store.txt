@@ -22,7 +22,7 @@ Eigenschaften:
 Videos von Periodic Videos zur Verfügung gestellt (http://www.periodicvideos.com/)
 
 Unter der MIT-Lizenz
-Quelle verfügbar unter: https://github.com/ultramega/elementary
+Quelle verfügbar unter: https://github.com/ultramega/elementary-uwp
 
 Twitter: https://twitter.com/ultramegasoft
 Facebook: https://www.facebook.com/ultramegasoft

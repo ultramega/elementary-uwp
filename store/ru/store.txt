@@ -24,7 +24,7 @@ Elementary: периодическая таблица
 видео предоставляется Periodic Videos (http://www.periodicvideos.com/)
 
 Лицензия The MIT License
-Исходные коды доступны: https://github.com/ultramega/elementary
+Исходные коды доступны: https://github.com/ultramega/elementary-uwp
 
 Twitter: https://twitter.com/ultramegasoft
 Facebook: https://www.facebook.com/ultramegasoft
