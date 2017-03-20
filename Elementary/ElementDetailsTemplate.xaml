@@ -113,6 +113,10 @@
         <Setter
             Property="Grid.Column"
             Value="1" />
+
+        <Setter
+            Property="IsTextSelectionEnabled"
+            Value="True" />
     </Style>
 
     <DataTemplate
@@ -182,7 +186,8 @@
                         VerticalAlignment="Center"
                         Text="{x:Bind Name}"
                         TextWrapping="NoWrap"
-                        TextTrimming="CharacterEllipsis" />
+                        TextTrimming="CharacterEllipsis"
+                        IsTextSelectionEnabled="True" />
 
                     <HyperlinkButton
                         x:Uid="Button/Wiki"

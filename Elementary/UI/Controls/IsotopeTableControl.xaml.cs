@@ -70,11 +70,13 @@ namespace Elementary.UI.Controls
                 var symbol = new TextBlock();
                 Grid.SetRow(symbol, row);
                 symbol.HorizontalAlignment = HorizontalAlignment.Right;
+                symbol.IsTextSelectionEnabled = true;
                 symbol.Text = item.Symbol;
 
                 var mass = new TextBlock();
                 Grid.SetRow(mass, row++);
                 Grid.SetColumn(mass, 2);
+                mass.IsTextSelectionEnabled = true;
                 mass.Text = item.Mass;
 
                 table.Children.Add(symbol);
