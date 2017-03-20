@@ -87,38 +87,6 @@
             Value="3" />
     </Style>
 
-    <Style
-        x:Key="Label"
-        TargetType="TextBlock">
-        <Setter
-            Property="Margin"
-            Value="4" />
-
-        <Setter
-            Property="FontWeight"
-            Value="SemiBold" />
-
-        <Setter
-            Property="TextAlignment"
-            Value="Right" />
-    </Style>
-
-    <Style
-        x:Key="Value"
-        TargetType="TextBlock">
-        <Setter
-            Property="Margin"
-            Value="4" />
-
-        <Setter
-            Property="Grid.Column"
-            Value="1" />
-
-        <Setter
-            Property="IsTextSelectionEnabled"
-            Value="True" />
-    </Style>
-
     <DataTemplate
         x:Key="ElementDetailsTemplate"
         x:DataType="vm:ElementDetailsViewModel">
