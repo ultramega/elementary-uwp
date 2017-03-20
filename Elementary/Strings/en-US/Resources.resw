@@ -139,6 +139,41 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About.Citation.Text" xml:space="preserve">
+    <value>Coursey, J.S., Schwab, D.J., Tsai, J.J., and Dragoset, R.A. (2015), Atomic Weights and Isotopic Compositions (version 4.1). [Online] Available: http://physics.nist.gov/Comp [2016, December 17]. National Institute of Standards and Technology, Gaithersburg, MD.
+
+Dayah, M. (1997, October 1). Dynamic Periodic Table. Retrieved December 18, 2016, from Ptable: http://www.ptable.com</value>
+  </data>
+  <data name="About.Copyright.Text" xml:space="preserve">
+    <value>Copyright © 2017 UltraMega Software</value>
+  </data>
+  <data name="About.Email.Content" xml:space="preserve">
+    <value>elementary@ultramegasoft.com</value>
+  </data>
+  <data name="About.License.Text" xml:space="preserve">
+    <value>License</value>
+  </data>
+  <data name="About.LicenseName.Content" xml:space="preserve">
+    <value>MIT License</value>
+  </data>
+  <data name="About.LicenseName.NavigateUri" xml:space="preserve">
+    <value>https://raw.githubusercontent.com/ultramega/elementary-uwp/master/LICENSE.txt</value>
+  </data>
+  <data name="About.Sources.Text" xml:space="preserve">
+    <value>Sources</value>
+  </data>
+  <data name="About.Support.Text" xml:space="preserve">
+    <value>Support</value>
+  </data>
+  <data name="About.Version.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="About.Website.Text" xml:space="preserve">
+    <value>Website</value>
+  </data>
+  <data name="About.WebsiteUrl.Content" xml:space="preserve">
+    <value>https://github.com/ultramega/elementary-uwp</value>
+  </data>
   <data name="AppDescription" xml:space="preserve">
     <value>Open-source Periodic Table of the Elements and element reference app.</value>
   </data>
@@ -153,6 +188,12 @@
   </data>
   <data name="Button.Wiki.ToolTipService.ToolTip" xml:space="preserve">
     <value>Wikipedia</value>
+  </data>
+  <data name="Dialog.About.Title" xml:space="preserve">
+    <value>About Elementary</value>
+  </data>
+  <data name="Dialog.About.PrimaryButtonText" xml:space="preserve">
+    <value>Close</value>
   </data>
   <data name="Dialog.Details.PrimaryButtonText" xml:space="preserve">
     <value>Close</value>
@@ -210,6 +251,9 @@
   </data>
   <data name="Label.Weight.Text" xml:space="preserve">
     <value>Atomic weight</value>
+  </data>
+  <data name="Menu.About.Label" xml:space="preserve">
+    <value>About</value>
   </data>
   <data name="Menu.ListView.Label" xml:space="preserve">
     <value>List view</value>

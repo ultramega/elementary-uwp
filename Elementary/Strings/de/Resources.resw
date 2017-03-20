@@ -139,6 +139,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About.License.Text" xml:space="preserve">
+    <value>Lizenz</value>
+  </data>
+  <data name="About.Sources.Text" xml:space="preserve">
+    <value>Quellen</value>
+  </data>
+  <data name="About.Support.Text" xml:space="preserve">
+    <value>Unterstützung</value>
+  </data>
+  <data name="About.Version.Text" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="About.Website.Text" xml:space="preserve">
+    <value>Webseite</value>
+  </data>
   <data name="AppDescription" xml:space="preserve">
     <value>Open-Source-Periodensystem der Elemente und Elementverweis App.</value>
   </data>
@@ -153,6 +168,12 @@
   </data>
   <data name="Button.Wiki.ToolTipService.ToolTip" xml:space="preserve">
     <value>Wikipedia</value>
+  </data>
+  <data name="Dialog.About.Title" xml:space="preserve">
+    <value>Über Elementary</value>
+  </data>
+  <data name="Dialog.About.PrimaryButtonText" xml:space="preserve">
+    <value>Schließen</value>
   </data>
   <data name="Dialog.Details.PrimaryButtonText" xml:space="preserve">
     <value>Schließen</value>
@@ -210,6 +231,9 @@
   </data>
   <data name="Label.Weight.Text" xml:space="preserve">
     <value>Atommasse</value>
+  </data>
+  <data name="Menu.About.Label" xml:space="preserve">
+    <value>Information</value>
   </data>
   <data name="Menu.ListView.Label" xml:space="preserve">
     <value>Listen-Ansicht</value>

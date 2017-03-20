@@ -139,6 +139,21 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About.License.Text" xml:space="preserve">
+    <value>ライセンス</value>
+  </data>
+  <data name="About.Sources.Text" xml:space="preserve">
+    <value>ソース</value>
+  </data>
+  <data name="About.Support.Text" xml:space="preserve">
+    <value>サポート</value>
+  </data>
+  <data name="About.Version.Text" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="About.Website.Text" xml:space="preserve">
+    <value>Webサイト</value>
+  </data>
   <data name="AppDescription" xml:space="preserve">
     <value>オープンソースの、元素の周期表と元素を参照するアプリ。</value>
   </data>
@@ -153,6 +168,12 @@
   </data>
   <data name="Button.Wiki.ToolTipService.ToolTip" xml:space="preserve">
     <value>Wikipedia</value>
+  </data>
+  <data name="Dialog.About.Title" xml:space="preserve">
+    <value>Elementary について</value>
+  </data>
+  <data name="Dialog.About.PrimaryButtonText" xml:space="preserve">
+    <value>閉じる</value>
   </data>
   <data name="Dialog.Details.PrimaryButtonText" xml:space="preserve">
     <value>閉じる</value>
@@ -210,6 +231,9 @@
   </data>
   <data name="Label.Weight.Text" xml:space="preserve">
     <value>原子量</value>
+  </data>
+  <data name="Menu.About.Label" xml:space="preserve">
+    <value>アプリについて</value>
   </data>
   <data name="Menu.ListView.Label" xml:space="preserve">
     <value>一覧表示</value>

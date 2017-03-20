@@ -21,6 +21,8 @@
   THE SOFTWARE.
 */
 using Elementary.ViewModels;
+using System;
+using Windows.ApplicationModel;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Media.Animation;
@@ -53,6 +55,29 @@ namespace Elementary
         /// Gets the ViewModel for the subtext value ComboBox.
         /// </summary>
         private SubtextValueViewModel SubtextValue { get; } = new SubtextValueViewModel();
+
+        /// <summary>
+        /// Gets the application version name as a string.
+        /// </summary>
+        private string AboutVersion
+        {
+            get
+            {
+                var version = Package.Current.Id.Version;
+                return string.Join(".", new object[] { version.Major, version.Minor, version.Build, version.Revision });
+            }
+        }
+
+        /// <summary>
+        /// Gets the support email link.
+        /// </summary>
+        private string AboutEmailLink
+        {
+            get
+            {
+                return "mailto:elementary@ultramegasoft.com?subject=Elementary " + AboutVersion;
+            }
+        }
 
         /// <summary>
         /// Constructor.
@@ -174,6 +199,16 @@ namespace Elementary
         private void OnShowControlsToggled(object sender, RoutedEventArgs e)
         {
             Settings.ShowControls = ShowControlsSetting.IsChecked.Value;
+        }
+
+        /// <summary>
+        /// Opens the about dialog when the about button is clicked.
+        /// </summary>
+        /// <param name="sender">The AppBarButton.</param>
+        /// <param name="e">The event arguments.</param>
+        private async void OnAboutButtonClicked(object sender, RoutedEventArgs e)
+        {
+            await AboutDialog.ShowAsync();
         }
 
         /// <summary>
