@@ -96,6 +96,12 @@
     <None Include="Elementary.licenseheader" />
     <None Include="Elementary_StoreKey.pfx" />
     <None Include="project.json" />
+    <PRIResource Include="Strings\ru\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+    <PRIResource Include="Strings\ru\Elements.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
     <PRIResource Include="Strings\ja\Resources.resw">
       <SubType>Designer</SubType>
     </PRIResource>
