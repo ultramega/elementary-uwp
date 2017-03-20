@@ -28,6 +28,136 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+    <Page.Resources>
+        <ControlTemplate
+            TargetType="ContentDialog"
+            x:Key="MyContentDialogControlTemplate">
+            <Border
+                x:Name="Container">
+                <Grid
+                    x:Name="LayoutRoot">
+                    <Grid.RowDefinitions>
+                        <RowDefinition
+                            Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition
+                            Width="Auto" />
+                    </Grid.ColumnDefinitions>
+
+                    <Border
+                        x:Name="BackgroundElement"
+                        Background="{TemplateBinding Background}"
+                        FlowDirection="{TemplateBinding FlowDirection}"
+                        BorderThickness="{ThemeResource ContentDialogBorderWidth}"
+                        BorderBrush="{ThemeResource SystemControlForegroundAccentBrush}"
+                        MaxWidth="{TemplateBinding MaxWidth}"
+                        MaxHeight="{TemplateBinding MaxHeight}"
+                        MinWidth="{TemplateBinding MinWidth}"
+                        MinHeight="{TemplateBinding MinHeight}">
+                        <Grid
+                            x:Name="DialogSpace"
+                            VerticalAlignment="Stretch">
+                            <Grid.RowDefinitions>
+                                <RowDefinition
+                                    Height="Auto" />
+                                <RowDefinition
+                                    Height="Auto" />
+                                <RowDefinition
+                                    Height="Auto" />
+                            </Grid.RowDefinitions>
+
+                            <ScrollViewer
+                                x:Name="ContentScrollViewer"
+                                HorizontalScrollBarVisibility="Disabled"
+                                VerticalScrollBarVisibility="Disabled"
+                                ZoomMode="Disabled"
+                                Margin="{ThemeResource ContentDialogContentScrollViewerMargin}"
+                                IsTabStop="False">
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition
+                                            Height="Auto" />
+                                        <RowDefinition />
+                                    </Grid.RowDefinitions>
+
+                                    <ContentControl
+                                        x:Name="Title"
+                                        Margin="{ThemeResource ContentDialogTitleMargin}"
+                                        Content="{TemplateBinding Title}"
+                                        ContentTemplate="{TemplateBinding TitleTemplate}"
+                                        FontSize="20"
+                                        FontFamily="Segoe UI"
+                                        FontWeight="Normal"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Top"
+                                        IsTabStop="False"
+                                        MaxHeight="{ThemeResource ContentDialogTitleMaxHeight}">
+                                        <ContentControl.Template>
+                                            <ControlTemplate
+                                                TargetType="ContentControl">
+                                                <ContentPresenter
+                                                    Content="{TemplateBinding Content}"
+                                                    MaxLines="2"
+                                                    TextWrapping="Wrap"
+                                                    ContentTemplate="{TemplateBinding ContentTemplate}"
+                                                    Margin="{TemplateBinding Padding}"
+                                                    ContentTransitions="{TemplateBinding ContentTransitions}"
+                                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                            </ControlTemplate>
+                                        </ContentControl.Template>
+                                    </ContentControl>
+
+                                    <ContentPresenter
+                                        x:Name="Content"
+                                        ContentTemplate="{TemplateBinding ContentTemplate}"
+                                        Content="{TemplateBinding Content}"
+                                        FontSize="{ThemeResource ControlContentThemeFontSize}"
+                                        FontFamily="{ThemeResource ContentControlThemeFontFamily}"
+                                        Margin="{ThemeResource ContentDialogContentMargin}"
+                                        Foreground="{TemplateBinding Foreground}"
+                                        Grid.Row="1"
+                                        TextWrapping="Wrap" />
+                                </Grid>
+                            </ScrollViewer>
+
+                            <Grid
+                                x:Name="CommandSpace"
+                                Grid.Row="1"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Bottom">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+
+                                <Border
+                                    x:Name="Button1Host"
+                                    Margin="{ThemeResource ContentDialogButton1HostMargin}"
+                                    MinWidth="{ThemeResource ContentDialogButtonMinWidth}"
+                                    MaxWidth="{ThemeResource ContentDialogButtonMaxWidth}"
+                                    Height="{ThemeResource ContentDialogButtonHeight}"
+                                    HorizontalAlignment="Stretch" />
+
+                                <Border
+                                    x:Name="Button2Host"
+                                    Margin="{ThemeResource ContentDialogButton2HostMargin}"
+                                    MinWidth="{ThemeResource ContentDialogButtonMinWidth}"
+                                    MaxWidth="{ThemeResource ContentDialogButtonMaxWidth}"
+                                    Height="{ThemeResource ContentDialogButtonHeight}"
+                                    Grid.Column="1"
+                                    HorizontalAlignment="Stretch" />
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </Grid>
+            </Border>
+        </ControlTemplate>
+    </Page.Resources>
+
     <Grid
         Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.RowDefinitions>
@@ -186,88 +316,91 @@
         <ContentDialog
             Grid.RowSpan="2"
             x:Uid="Dialog/About"
-            x:Name="AboutDialog">
+            x:Name="AboutDialog"
+            Template="{StaticResource MyContentDialogControlTemplate}">
             <ContentDialog.Content>
-                <StackPanel>
-                    <TextBlock
-                        x:Uid="Title/About"
-                        Style="{ThemeResource TitleTextBlockStyle}"
-                        HorizontalAlignment="Center" />
+                <ScrollViewer>
+                    <StackPanel>
+                        <TextBlock
+                            x:Uid="Title/About"
+                            Style="{ThemeResource TitleTextBlockStyle}"
+                            HorizontalAlignment="Center" />
 
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                            <RowDefinition />
-                        </Grid.RowDefinitions>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition />
+                            </Grid.RowDefinitions>
 
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition
-                                Width="Auto" />
-                            <ColumnDefinition />
-                        </Grid.ColumnDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition
+                                    Width="Auto" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <TextBlock
+                                x:Uid="About/Version"
+                                Style="{StaticResource Label}" />
+
+                            <TextBlock
+                                Style="{StaticResource Value}"
+                                Text="{x:Bind AboutVersion}" />
+
+                            <TextBlock
+                                x:Uid="About/Support"
+                                Grid.Row="1"
+                                Style="{StaticResource Label}" />
+
+                            <HyperlinkButton
+                                Grid.Row="1"
+                                Grid.Column="1"
+                                x:Uid="About/Email"
+                                Padding="4"
+                                NavigateUri="{x:Bind AboutEmailLink}" />
+
+                            <TextBlock
+                                x:Uid="About/Website"
+                                Grid.Row="2"
+                                Style="{StaticResource Label}" />
+
+                            <HyperlinkButton
+                                Grid.Row="2"
+                                Grid.Column="1"
+                                Padding="4"
+                                x:Uid="About/WebsiteUrl"
+                                NavigateUri="{Binding Content, RelativeSource={RelativeSource Mode=Self}}" />
+
+                            <TextBlock
+                                x:Uid="About/License"
+                                Grid.Row="3"
+                                Style="{StaticResource Label}" />
+
+                            <HyperlinkButton
+                                Grid.Row="3"
+                                Grid.Column="1"
+                                Padding="4"
+                                x:Uid="About/LicenseName" />
+                        </Grid>
 
                         <TextBlock
-                            x:Uid="About/Version"
-                            Style="{StaticResource Label}" />
+                            x:Uid="About/Sources"
+                            Style="{StaticResource Label}"
+                            HorizontalAlignment="Center" />
 
                         <TextBlock
-                            Style="{StaticResource Value}"
-                            Text="{x:Bind AboutVersion}" />
+                            x:Uid="About/Citation"
+                            TextWrapping="Wrap"
+                            Style="{ThemeResource CaptionTextBlockStyle}"
+                            IsTextSelectionEnabled="True" />
 
                         <TextBlock
-                            x:Uid="About/Support"
-                            Grid.Row="1"
-                            Style="{StaticResource Label}" />
-
-                        <HyperlinkButton
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            x:Uid="About/Email"
-                            Padding="4"
-                            NavigateUri="{x:Bind AboutEmailLink}" />
-
-                        <TextBlock
-                            x:Uid="About/Website"
-                            Grid.Row="2"
-                            Style="{StaticResource Label}" />
-
-                        <HyperlinkButton
-                            Grid.Row="2"
-                            Grid.Column="1"
-                            Padding="4"
-                            x:Uid="About/WebsiteUrl"
-                            NavigateUri="{Binding Content, RelativeSource={RelativeSource Mode=Self}}" />
-
-                        <TextBlock
-                            x:Uid="About/License"
-                            Grid.Row="3"
-                            Style="{StaticResource Label}" />
-
-                        <HyperlinkButton
-                            Grid.Row="3"
-                            Grid.Column="1"
-                            Padding="4"
-                            x:Uid="About/LicenseName" />
-                    </Grid>
-
-                    <TextBlock
-                        x:Uid="About/Sources"
-                        Style="{StaticResource Label}"
-                        HorizontalAlignment="Center" />
-
-                    <TextBlock
-                        x:Uid="About/Citation"
-                        TextWrapping="Wrap"
-                        Style="{ThemeResource CaptionTextBlockStyle}"
-                        IsTextSelectionEnabled="True" />
-
-                    <TextBlock
-                        x:Uid="About/Copyright"
-                        Margin="0,12,0,0"
-                        HorizontalAlignment="Center" />
-                </StackPanel>
+                            x:Uid="About/Copyright"
+                            Margin="0,12,0,0"
+                            HorizontalAlignment="Center" />
+                    </StackPanel>
+                </ScrollViewer>
             </ContentDialog.Content>
         </ContentDialog>
     </Grid>
