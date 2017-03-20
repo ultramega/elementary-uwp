@@ -1,4 +1,11 @@
-﻿- v.1.1.6.0 (9/13/16):
+﻿- v.1.1.7.0 (3/20/17):
+   * Added Japanese and Russian translations
+   * Added a list of common isotopes for each element
+   * Added settings for the subtext value and whether to show the controls
+   * Fixed broken Wikipedia links
+   * Enabled text selection for values
+   * Added an About dialog with application information
+- v.1.1.6.0 (9/13/16):
    * Updated names and symbols for elements 113, 115, 117, and 118
    * Added buttons to zoom in and out
    * Added ComboBox to select what to display in each block in the Periodic Table view
