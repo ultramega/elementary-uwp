@@ -93,7 +93,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-    <None Include="Elementary.licenseheader" />
     <None Include="Elementary_StoreKey.pfx" />
     <None Include="project.json" />
     <PRIResource Include="Strings\ru\Resources.resw">
