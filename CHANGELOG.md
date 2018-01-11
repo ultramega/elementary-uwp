@@ -1,4 +1,6 @@
-﻿- v.1.1.7.0 (3/20/17):
+﻿- v.1.1.8.0 (1/10/18):
+   * Fixed digits being cut off in the electron configurations
+- v.1.1.7.0 (3/20/17):
    * Added Japanese and Russian translations
    * Added a list of common isotopes for each element
    * Added settings for the subtext value and whether to show the controls
