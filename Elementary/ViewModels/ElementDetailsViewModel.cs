@@ -198,7 +198,12 @@ namespace Elementary.ViewModels
                 }
                 foreach (var o in Element.Configuration.Orbitals)
                 {
-                    ret.Append(o.Shell).Append(o.Type).Append(super[o.Electrons]).Append(' ');
+                    ret.Append(o.Shell).Append(o.Type);
+                    foreach (var d in o.Electrons.ToString().ToCharArray())
+                    {
+                        ret.Append(super[int.Parse(d.ToString())]);
+                    }
+                    ret.Append(' ');
                 }
                 ret.Remove(ret.Length - 1, 1);
                 return ret.ToString();

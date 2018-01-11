@@ -721,7 +721,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Ar",
                     Orbitals = new Orbital[]{
-                        new Orbital(3, 'd', 1),
+                        new Orbital(3, 'd', 10),
                         new Orbital(4, 's', 1),
                     }
                 },
@@ -745,7 +745,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Ar",
                     Orbitals = new Orbital[]{
-                        new Orbital(3, 'd', 1),
+                        new Orbital(3, 'd', 10),
                         new Orbital(4, 's', 2),
                     }
                 },
@@ -769,7 +769,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Ar",
                     Orbitals = new Orbital[]{
-                        new Orbital(3, 'd', 1),
+                        new Orbital(3, 'd', 10),
                         new Orbital(4, 's', 2),
                         new Orbital(4, 'p', 1),
                     }
@@ -794,7 +794,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Ar",
                     Orbitals = new Orbital[]{
-                        new Orbital(3, 'd', 1),
+                        new Orbital(3, 'd', 10),
                         new Orbital(4, 's', 2),
                         new Orbital(4, 'p', 2),
                     }
@@ -819,7 +819,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Ar",
                     Orbitals = new Orbital[]{
-                        new Orbital(3, 'd', 1),
+                        new Orbital(3, 'd', 10),
                         new Orbital(4, 's', 2),
                         new Orbital(4, 'p', 3),
                     }
@@ -844,7 +844,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Ar",
                     Orbitals = new Orbital[]{
-                        new Orbital(3, 'd', 1),
+                        new Orbital(3, 'd', 10),
                         new Orbital(4, 's', 2),
                         new Orbital(4, 'p', 4),
                     }
@@ -869,7 +869,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Ar",
                     Orbitals = new Orbital[]{
-                        new Orbital(3, 'd', 1),
+                        new Orbital(3, 'd', 10),
                         new Orbital(4, 's', 2),
                         new Orbital(4, 'p', 5),
                     }
@@ -894,7 +894,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Ar",
                     Orbitals = new Orbital[]{
-                        new Orbital(3, 'd', 1),
+                        new Orbital(3, 'd', 10),
                         new Orbital(4, 's', 2),
                         new Orbital(4, 'p', 6),
                     }
@@ -1133,7 +1133,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                     }
                 },
                 Electrons = new int[] {2, 8, 18, 18},
@@ -1156,7 +1156,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                         new Orbital(5, 's', 1),
                     }
                 },
@@ -1180,7 +1180,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                         new Orbital(5, 's', 2),
                     }
                 },
@@ -1204,7 +1204,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                         new Orbital(5, 's', 2),
                         new Orbital(5, 'p', 1),
                     }
@@ -1229,7 +1229,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                         new Orbital(5, 's', 2),
                         new Orbital(5, 'p', 2),
                     }
@@ -1254,7 +1254,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                         new Orbital(5, 's', 2),
                         new Orbital(5, 'p', 3),
                     }
@@ -1279,7 +1279,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                         new Orbital(5, 's', 2),
                         new Orbital(5, 'p', 4),
                     }
@@ -1304,7 +1304,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                         new Orbital(5, 's', 2),
                         new Orbital(5, 'p', 5),
                     }
@@ -1329,7 +1329,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Kr",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'd', 1),
+                        new Orbital(4, 'd', 10),
                         new Orbital(5, 's', 2),
                         new Orbital(5, 'p', 6),
                     }
@@ -1618,7 +1618,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 10),
                         new Orbital(6, 's', 2),
                     }
                 },
@@ -1642,7 +1642,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 11),
                         new Orbital(6, 's', 2),
                     }
                 },
@@ -1666,7 +1666,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 12),
                         new Orbital(6, 's', 2),
                     }
                 },
@@ -1690,7 +1690,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 13),
                         new Orbital(6, 's', 2),
                     }
                 },
@@ -1714,7 +1714,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(6, 's', 2),
                     }
                 },
@@ -1738,7 +1738,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(5, 'd', 1),
                         new Orbital(6, 's', 2),
                     }
@@ -1763,7 +1763,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(5, 'd', 2),
                         new Orbital(6, 's', 2),
                     }
@@ -1788,7 +1788,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(5, 'd', 3),
                         new Orbital(6, 's', 2),
                     }
@@ -1813,7 +1813,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(5, 'd', 4),
                         new Orbital(6, 's', 2),
                     }
@@ -1838,7 +1838,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(5, 'd', 5),
                         new Orbital(6, 's', 2),
                     }
@@ -1863,7 +1863,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(5, 'd', 6),
                         new Orbital(6, 's', 2),
                     }
@@ -1888,7 +1888,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(5, 'd', 7),
                         new Orbital(6, 's', 2),
                     }
@@ -1913,7 +1913,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
+                        new Orbital(4, 'f', 14),
                         new Orbital(5, 'd', 9),
                         new Orbital(6, 's', 1),
                     }
@@ -1938,8 +1938,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
-                        new Orbital(5, 'd', 1),
+                        new Orbital(4, 'f', 14),
+                        new Orbital(5, 'd', 10),
                         new Orbital(6, 's', 1),
                     }
                 },
@@ -1963,8 +1963,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
-                        new Orbital(5, 'd', 1),
+                        new Orbital(4, 'f', 14),
+                        new Orbital(5, 'd', 10),
                         new Orbital(6, 's', 2),
                     }
                 },
@@ -1988,8 +1988,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
-                        new Orbital(5, 'd', 1),
+                        new Orbital(4, 'f', 14),
+                        new Orbital(5, 'd', 10),
                         new Orbital(6, 's', 2),
                         new Orbital(6, 'p', 1),
                     }
@@ -2014,8 +2014,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
-                        new Orbital(5, 'd', 1),
+                        new Orbital(4, 'f', 14),
+                        new Orbital(5, 'd', 10),
                         new Orbital(6, 's', 2),
                         new Orbital(6, 'p', 2),
                     }
@@ -2040,8 +2040,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
-                        new Orbital(5, 'd', 1),
+                        new Orbital(4, 'f', 14),
+                        new Orbital(5, 'd', 10),
                         new Orbital(6, 's', 2),
                         new Orbital(6, 'p', 3),
                     }
@@ -2066,8 +2066,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
-                        new Orbital(5, 'd', 1),
+                        new Orbital(4, 'f', 14),
+                        new Orbital(5, 'd', 10),
                         new Orbital(6, 's', 2),
                         new Orbital(6, 'p', 4),
                     }
@@ -2092,8 +2092,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
-                        new Orbital(5, 'd', 1),
+                        new Orbital(4, 'f', 14),
+                        new Orbital(5, 'd', 10),
                         new Orbital(6, 's', 2),
                         new Orbital(6, 'p', 5),
                     }
@@ -2118,8 +2118,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Xe",
                     Orbitals = new Orbital[]{
-                        new Orbital(4, 'f', 1),
-                        new Orbital(5, 'd', 1),
+                        new Orbital(4, 'f', 14),
+                        new Orbital(5, 'd', 10),
                         new Orbital(6, 's', 2),
                         new Orbital(6, 'p', 6),
                     }
@@ -2410,7 +2410,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 10),
                         new Orbital(7, 's', 2),
                     }
                 },
@@ -2434,7 +2434,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 11),
                         new Orbital(7, 's', 2),
                     }
                 },
@@ -2458,7 +2458,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 12),
                         new Orbital(7, 's', 2),
                     }
                 },
@@ -2482,7 +2482,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 13),
                         new Orbital(7, 's', 2),
                     }
                 },
@@ -2506,7 +2506,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(7, 's', 2),
                     }
                 },
@@ -2530,7 +2530,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(7, 's', 2),
                         new Orbital(7, 'p', 1),
                     }
@@ -2555,7 +2555,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(6, 'd', 2),
                         new Orbital(7, 's', 2),
                     }
@@ -2580,7 +2580,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(6, 'd', 3),
                         new Orbital(7, 's', 2),
                     }
@@ -2606,7 +2606,7 @@ namespace Elementary.Model
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
                         new Orbital(7, 's', 2),
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(6, 'd', 4),
                     }
                 },
@@ -2630,7 +2630,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(6, 'd', 5),
                         new Orbital(7, 's', 2),
                     }
@@ -2655,7 +2655,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(6, 'd', 6),
                         new Orbital(7, 's', 2),
                     }
@@ -2681,7 +2681,7 @@ namespace Elementary.Model
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
                         new Orbital(7, 's', 2),
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(6, 'd', 7),
                     }
                 },
@@ -2706,7 +2706,7 @@ namespace Elementary.Model
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
                         new Orbital(7, 's', 2),
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(6, 'd', 8),
                     }
                 },
@@ -2730,7 +2730,7 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
+                        new Orbital(5, 'f', 14),
                         new Orbital(6, 'd', 9),
                         new Orbital(7, 's', 2),
                     }
@@ -2755,8 +2755,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
-                        new Orbital(6, 'd', 1),
+                        new Orbital(5, 'f', 14),
+                        new Orbital(6, 'd', 10),
                         new Orbital(7, 's', 2),
                     }
                 },
@@ -2780,8 +2780,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
-                        new Orbital(6, 'd', 1),
+                        new Orbital(5, 'f', 14),
+                        new Orbital(6, 'd', 10),
                         new Orbital(7, 's', 2),
                         new Orbital(7, 'p', 1),
                     }
@@ -2806,8 +2806,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
-                        new Orbital(6, 'd', 1),
+                        new Orbital(5, 'f', 14),
+                        new Orbital(6, 'd', 10),
                         new Orbital(7, 's', 2),
                         new Orbital(7, 'p', 2),
                     }
@@ -2832,8 +2832,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
-                        new Orbital(6, 'd', 1),
+                        new Orbital(5, 'f', 14),
+                        new Orbital(6, 'd', 10),
                         new Orbital(7, 's', 2),
                         new Orbital(7, 'p', 3),
                     }
@@ -2858,8 +2858,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
-                        new Orbital(6, 'd', 1),
+                        new Orbital(5, 'f', 14),
+                        new Orbital(6, 'd', 10),
                         new Orbital(7, 's', 2),
                         new Orbital(7, 'p', 4),
                     }
@@ -2884,8 +2884,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
-                        new Orbital(6, 'd', 1),
+                        new Orbital(5, 'f', 14),
+                        new Orbital(6, 'd', 10),
                         new Orbital(7, 's', 2),
                         new Orbital(7, 'p', 5),
                     }
@@ -2910,8 +2910,8 @@ namespace Elementary.Model
                 Configuration = new Configuration {
                     BaseElement = "Rn",
                     Orbitals = new Orbital[]{
-                        new Orbital(5, 'f', 1),
-                        new Orbital(6, 'd', 1),
+                        new Orbital(5, 'f', 14),
+                        new Orbital(6, 'd', 10),
                         new Orbital(7, 's', 2),
                         new Orbital(7, 'p', 6),
                     }
