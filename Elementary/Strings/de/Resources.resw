@@ -263,7 +263,7 @@
     <value>Tabellenansicht Steuerung</value>
   </data>
   <data name="Settings.SubtextValue.Description.Text" xml:space="preserve">
-    <value>Der Wert unter dem Elementsymbol angezeigt</value>
+    <value>Der unter dem Elementsymbol angezeigte Wert</value>
   </data>
   <data name="Settings.SubtextValue.Header.Text" xml:space="preserve">
     <value>Blockwert</value>
