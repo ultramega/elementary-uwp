@@ -186,8 +186,7 @@
         <ContentDialog
             Grid.RowSpan="2"
             x:Uid="Dialog/About"
-            x:Name="AboutDialog"
-            Template="{StaticResource MyContentDialogControlTemplate}">
+            x:Name="AboutDialog">
             <ContentDialog.Content>
                 <ScrollViewer>
                     <StackPanel>
