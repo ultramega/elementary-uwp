@@ -106,5 +106,10 @@ namespace Elementary.Model
         /// Whether the element is unstable.
         /// </summary>
         public bool Unstable { get; internal set; }
+
+        /// <summary>
+        /// The link code for the YouTube video.
+        /// </summary>
+        public string Video { get; internal set; }
     }
 }

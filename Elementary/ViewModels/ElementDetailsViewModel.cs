@@ -266,8 +266,8 @@ namespace Elementary.ViewModels
         {
             get
             {
-                return new Uri(string.Format("http://dev.ultramegasoft.com/el/video?num={0}",
-                    Element.Number));
+                return new Uri(string.Format("https://www.youtube.com/watch?v={0}",
+                    Element.Video));
             }
         }
 
