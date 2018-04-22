@@ -1,4 +1,10 @@
-﻿- v.1.1.8.0 (1/10/18):
+﻿- v.1.1.9.0 (4/22/18):
+   * Updated Brazilian Portuguese translation ([amalvarenga](https://github.com/amalvarenga))
+   * Updated German translation ([andim2](https://github.com/andim2))
+   * Fixed incorrect block assignments for La, Ac, Lu, Lr
+   * Replaced video links with direct YouTube links
+   * Fixed the About dialog layout
+- v.1.1.8.0 (1/10/18):
    * Fixed digits being cut off in the electron configurations
 - v.1.1.7.0 (3/20/17):
    * Added Japanese and Russian translations
