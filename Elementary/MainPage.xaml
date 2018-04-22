@@ -219,18 +219,6 @@
                                 Text="{x:Bind AboutVersion}" />
 
                             <TextBlock
-                                x:Uid="About/Support"
-                                Grid.Row="1"
-                                Style="{StaticResource Label}" />
-
-                            <HyperlinkButton
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                x:Uid="About/Email"
-                                Padding="4"
-                                NavigateUri="{x:Bind AboutEmailLink}" />
-
-                            <TextBlock
                                 x:Uid="About/Website"
                                 Grid.Row="2"
                                 Style="{StaticResource Label}" />

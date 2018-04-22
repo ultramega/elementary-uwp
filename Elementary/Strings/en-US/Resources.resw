@@ -147,9 +147,6 @@ Dayah, M. (1997, October 1). Dynamic Periodic Table. Retrieved December 18, 2016
   <data name="About.Copyright.Text" xml:space="preserve">
     <value>Copyright © 2016 UltraMega Software</value>
   </data>
-  <data name="About.Email.Content" xml:space="preserve">
-    <value>elementary@ultramegasoft.com</value>
-  </data>
   <data name="About.License.Text" xml:space="preserve">
     <value>License</value>
   </data>
@@ -161,9 +158,6 @@ Dayah, M. (1997, October 1). Dynamic Periodic Table. Retrieved December 18, 2016
   </data>
   <data name="About.Sources.Text" xml:space="preserve">
     <value>Sources</value>
-  </data>
-  <data name="About.Support.Text" xml:space="preserve">
-    <value>Support</value>
   </data>
   <data name="About.Version.Text" xml:space="preserve">
     <value>Version</value>

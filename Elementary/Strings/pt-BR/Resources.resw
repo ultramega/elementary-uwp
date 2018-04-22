@@ -145,9 +145,6 @@
   <data name="About.Sources.Text" xml:space="preserve">
     <value>Fontes</value>
   </data>
-  <data name="About.Support.Text" xml:space="preserve">
-    <value>Suporte</value>
-  </data>
   <data name="About.Version.Text" xml:space="preserve">
     <value>Versão</value>
   </data>

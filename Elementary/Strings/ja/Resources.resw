@@ -145,9 +145,6 @@
   <data name="About.Sources.Text" xml:space="preserve">
     <value>ソース</value>
   </data>
-  <data name="About.Support.Text" xml:space="preserve">
-    <value>サポート</value>
-  </data>
   <data name="About.Version.Text" xml:space="preserve">
     <value>バージョン</value>
   </data>
