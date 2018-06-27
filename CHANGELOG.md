@@ -1,4 +1,6 @@
-﻿- v.1.1.9.0 (4/22/18):
+﻿- v.1.1.10.0 (6/27/18):
+   * Updated video for Nitrogen
+- v.1.1.9.0 (4/22/18):
    * Updated Brazilian Portuguese translation ([amalvarenga](https://github.com/amalvarenga))
    * Updated German translation ([andim2](https://github.com/andim2))
    * Fixed incorrect block assignments for La, Ac, Lu, Lr
