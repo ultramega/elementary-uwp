@@ -22,7 +22,7 @@
   THE SOFTWARE.
 -->
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" IgnorableNamespaces="uap mp">
-  <Identity Name="34386UltraMegaSoftware.ElementaryPeriodicTable" Publisher="CN=4EBF1613-6E41-4B47-AAE8-942568085E9D" Version="1.1.9.0" />
+  <Identity Name="34386UltraMegaSoftware.ElementaryPeriodicTable" Publisher="CN=4EBF1613-6E41-4B47-AAE8-942568085E9D" Version="1.1.10.0" />
   <mp:PhoneIdentity PhoneProductId="d3a35103-1a7b-44b9-8a7b-de9ee54b7711" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
     <DisplayName>Elementary (Periodic Table)</DisplayName>
