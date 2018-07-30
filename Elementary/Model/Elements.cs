@@ -482,7 +482,7 @@ namespace Elementary.Model
                 },
                 Electrons = new int[] {2, 8, 8},
                 Unstable = false,
-                Video = "nrHVOFG2V-c",
+                Video = "N0Gw6-xMLlo",
             },
             new Element {
                 Number = 19,
