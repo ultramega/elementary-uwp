@@ -1,4 +1,8 @@
-﻿- v.1.1.10.0 (6/27/18):
+﻿- v.1.1.11.0 (9/24/18):
+   * Updated video for Argon
+   * Updated video for Tin
+   * Updated video for Dubnium
+- v.1.1.10.0 (6/27/18):
    * Updated video for Nitrogen
 - v.1.1.9.0 (4/22/18):
    * Updated Brazilian Portuguese translation ([amalvarenga](https://github.com/amalvarenga))
