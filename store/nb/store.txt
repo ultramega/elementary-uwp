@@ -1,0 +1,25 @@
+[title]
+Elementary: Det periodiske system
+
+[keywords]
+Vitenskap
+Kjemi
+Grunnstoffer
+Periodiske system
+
+[short-description]
+En åpen kildekode-app med det periodiske system og grunnstoffreferanser.
+
+[description]
+Elementary er en enkel app med det periodiske system og grunnstoffreferanser.
+
+Funksjoner:
+- Det periodiske system er zoombart
+- Trykk på et grunnstoff for å vise noen grunnleggende detaljer
+- Lett tilgang til Wikipedia og en YouTube-video om grunnstoffet
+- Gratis og helt uten reklame!
+
+Videoer levert av Periodic Videos (http://www.periodicvideos.com/)
+
+Lisensiert under The MIT License
+Kildekoden tilgjengelig på: https://github.com/ultramega/elementary-uwp
