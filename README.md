@@ -29,6 +29,9 @@ If you find this application useful, please consider supporting the project by d
 - Italian translation: [rapgenic](https://github.com/rapgenic)
 - French translation: [Poussinou](https://github.com/Poussinou)
 - Brazilian Portuguese translation: [amalvarenga](https://github.com/amalvarenga)
+- Japanese translation: [naofum](https://github.com/naofum)
+- Russian translation: [ashed](https://github.com/ashed)
+- Norwegian translation: [FTno](https://github.com/FTno)
 
 ## License
 
