@@ -858,7 +858,7 @@ namespace Elementary.Model
                 },
                 Electrons = new int[] {2, 8, 18, 5},
                 Unstable = false,
-                Video = "a2AbKwAvyos",
+                Video = "yD8Vz-mFHgI",
             },
             new Element {
                 Number = 34,
