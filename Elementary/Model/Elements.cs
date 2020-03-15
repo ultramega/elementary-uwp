@@ -1259,7 +1259,7 @@ namespace Elementary.Model
                 },
                 Electrons = new int[] {2, 8, 18, 18, 3},
                 Unstable = false,
-                Video = "4opHafNmgCw",
+                Video = "TviX7V-ay5I",
             },
             new Element {
                 Number = 50,
