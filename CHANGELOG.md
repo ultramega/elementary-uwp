@@ -1,4 +1,7 @@
-﻿- v.1.1.12.0 (10/29/18):
+﻿- v.1.1.13.0 (5/20/20):
+   * Updated video for Arsenic
+   * Updated video for Indium
+- v.1.1.12.0 (10/29/18):
    * Added Norwegian (nb) translation ([FTno](https://github.com/FTno))
 - v.1.1.11.0 (9/24/18):
    * Updated video for Argon
