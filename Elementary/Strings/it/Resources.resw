@@ -179,7 +179,7 @@
     <value>Filtra per nome o per simbolo</value>
   </data>
   <data name="Label.Abundance.Text" xml:space="preserve">
-    <value>Abondanza</value>
+    <value>Abbondanza</value>
   </data>
   <data name="Label.BlockColors.Text" xml:space="preserve">
     <value>Colorare per</value>
