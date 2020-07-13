@@ -102,6 +102,12 @@
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
     <None Include="Elementary_StoreKey.pfx" />
+    <PRIResource Include="Strings\nl\Resources.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
+    <PRIResource Include="Strings\nl\Elements.resw">
+      <SubType>Designer</SubType>
+    </PRIResource>
     <PRIResource Include="Strings\nb\Resources.resw">
       <SubType>Designer</SubType>
     </PRIResource>
