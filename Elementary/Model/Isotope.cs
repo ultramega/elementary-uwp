@@ -35,11 +35,13 @@ namespace Elementary.Model
         /// <param name="number">The mass number of the isotope.</param>
         /// <param name="symbol">The symbol for the isotope.</param>
         /// <param name="mass">The relative atomic mass of the isotope.</param>
-        internal Isotope(int number, string symbol, double mass)
+        /// <param name="ic">The isotopic composition of the isotope.</param>
+        internal Isotope(int number, string symbol, double mass, double? ic)
         {
             Number = number;
             _symbol = symbol;
             Mass = mass;
+            Ic = ic;
         }
 
         /// <summary>
@@ -74,5 +76,10 @@ namespace Elementary.Model
         /// The relative atomic mass of the isotope.
         /// </summary>
         public double Mass { get; private set; }
+
+        /// <summary>
+        /// The isotopic composition of the isotope.
+        /// </summary>
+        public double? Ic { get; private set; }
     }
 }

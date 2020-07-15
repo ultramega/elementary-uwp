@@ -222,6 +222,9 @@ Dayah, M. (1997, October 1). Dynamic Periodic Table. Retrieved December 18, 2016
   <data name="Label.Heat.Text" xml:space="preserve">
     <value>Specific heat</value>
   </data>
+  <data name="Label.IsoComp.Text" xml:space="preserve">
+    <value>Isotopic composition</value>
+  </data>
   <data name="Label.Isotopes.Text" xml:space="preserve">
     <value>Common isotopes</value>
   </data>

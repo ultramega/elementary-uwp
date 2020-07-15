@@ -58,7 +58,7 @@ namespace Elementary.UI.Controls
         private void OnIsotopeListChanged(DependencyObject sender, DependencyProperty dp)
         {
             var table = (Grid)Content;
-            for (var i = table.Children.Count - 1; i > 2; i--)
+            for (var i = table.Children.Count - 1; i > 3; i--)
             {
                 table.Children.RemoveAt(i);
             }
@@ -74,13 +74,20 @@ namespace Elementary.UI.Controls
                 symbol.Text = item.Symbol;
 
                 var mass = new TextBlock();
-                Grid.SetRow(mass, row++);
+                Grid.SetRow(mass, row);
                 Grid.SetColumn(mass, 2);
                 mass.IsTextSelectionEnabled = true;
                 mass.Text = item.Mass;
 
+                var ic = new TextBlock();
+                Grid.SetRow(ic, row++);
+                Grid.SetColumn(ic, 4);
+                ic.IsTextSelectionEnabled = true;
+                ic.Text = item.Ic;
+
                 table.Children.Add(symbol);
                 table.Children.Add(mass);
+                table.Children.Add(ic);
             }
         }
     }

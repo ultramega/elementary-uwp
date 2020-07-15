@@ -205,6 +205,9 @@
   <data name="Label.Heat.Text" xml:space="preserve">
     <value>比熱</value>
   </data>
+  <data name="Label.IsoComp.Text" xml:space="preserve">
+    <value>同位体組成</value>
+  </data>
   <data name="Label.Isotopes.Text" xml:space="preserve">
     <value>共通同位体</value>
   </data>

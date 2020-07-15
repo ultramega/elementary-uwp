@@ -21,6 +21,7 @@
   THE SOFTWARE.
 */
 using Elementary.Model;
+using Windows.ApplicationModel.Resources;
 
 namespace Elementary.ViewModels
 {
@@ -29,6 +30,12 @@ namespace Elementary.ViewModels
     /// </summary>
     public class IsotopeViewModel
     {
+        /// <summary>
+        /// The localized string for unknown values.
+        /// </summary>
+        private readonly string _unknownValue =
+            ResourceLoader.GetForCurrentView().GetString("Unknown");
+
         /// <summary>
         /// Gets the Isotope being represented by this ViewModel.
         /// </summary>
@@ -53,6 +60,24 @@ namespace Elementary.ViewModels
             get
             {
                 return Isotope.Mass.ToString("0.########");
+            }
+        }
+
+        /// <summary>
+        /// Gets the isotopic composition as a string.
+        /// </summary>
+        public string Ic
+        {
+            get
+            {
+                if (Isotope.Ic.HasValue)
+                {
+                    return Isotope.Ic.Value.ToString("0.########");
+                }
+                else
+                {
+                    return _unknownValue;
+                }
             }
         }
 

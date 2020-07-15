@@ -205,6 +205,9 @@
   <data name="Label.Heat.Text" xml:space="preserve">
     <value>Spezifisch Hitze</value>
   </data>
+  <data name="Label.IsoComp.Text" xml:space="preserve">
+    <value>Isotopenzusammensetzung</value>
+  </data>
   <data name="Label.Isotopes.Text" xml:space="preserve">
     <value>Gemeinsame Isotope</value>
   </data>
