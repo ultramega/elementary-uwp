@@ -1,4 +1,8 @@
-﻿- v.1.1.13.0 (5/20/20):
+﻿- v.1.1.14.0 (7/15/20):
+   * Added isotopic composition column to the isotopes chart
+   * Added Dutch translation ([eddriesen](https://github.com/eddriesen))
+   * Updated Italian translation ([RGB-es](https://github.com/RGB-es))
+- v.1.1.13.0 (5/20/20):
    * Updated video for Arsenic
    * Updated video for Indium
 - v.1.1.12.0 (10/29/18):
